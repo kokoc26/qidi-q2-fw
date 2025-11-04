@@ -82,10 +82,26 @@ jobs:
           release_name: ${{ env.VERSION }}
           body: |
             ## Изменения (Russian):
-            ${{ steps.firmware_info.outputs.description_ru }} 
+            ${{ steps.firmware_info.outputs.description_ru }}
+
+            #### Инструкция по загрузке
+
+            Скачайте архивный файл и после распаковки переименуйте папку в QD_Update и поместите в корневой каталог USB-накопителя. Затем подключите USB-накопитель к принтеру для обновления.
+
+            > [!WARNING]
+            > Воздержитесь от понижения версии прошивки. Обновление с более высокой версии на более низкую может привести к различным проблемам в работе. Всегда обновляйтесь до той же или более высокой версии.
+
 
             ## Changelog (English):
             ${{ steps.firmware_info.outputs.description_en }}
+
+            #### Download Instruction
+
+            Download the archive file and, after unzipping it, rename the folder to QD_Update and place it in the root directory of a USB drive. Then connect the USB drive to the printer to update.
+
+            > [!WARNING]
+            > Please refrain from downgrading the firmware. Updating from a higher version to a lower version can lead to various operational issues. Always ensure to update to either the same or a higher version.
+
           draft: false
           prerelease: false
 
@@ -129,6 +145,13 @@ jobs:
           if [ ! -f "$ROOT_README_FILE" ]; then
               echo "# Прошивки QIDI Q2" > "$ROOT_README_FILE"
               echo "" >> "$ROOT_README_FILE"
+              echo "## Инструкция по загрузке" >> "$ROOT_README_FILE"
+              echo "" >> "$ROOT_README_FILE"
+              echo "Скачайте архивный файл и после распаковки переименуйте папку в QD_Update и поместите в корневой каталог USB-накопителя. Затем подключите USB-накопитель к принтеру для обновления." >> "$ROOT_README_FILE"
+              echo "" >> "$ROOT_README_FILE"
+              echo "> [!WARNING]" >> "$ROOT_README_FILE"
+              echo "> Воздержитесь от понижения версии прошивки. Обновление с более высокой версии на более низкую может привести к различным проблемам в работе. Всегда обновляйтесь до той же или более высокой версии." >> "$ROOT_README_FILE"
+              echo "" >> "$ROOT_README_FILE"
               echo "[English Version](./README.en.md) 🇺🇸" >> "$ROOT_README_FILE"
               echo "" >> "$ROOT_README_FILE"
               echo "$CHANGELOG_HEADER_RU" >> "$ROOT_README_FILE"
@@ -163,7 +186,14 @@ jobs:
 
           if [ ! -f "$ROOT_README_EN_FILE" ]; then
               echo "# QIDI Q2 Firmware" > "$ROOT_README_EN_FILE"
-              echo "" >> "$ROOT_README_EN_FILE"
+              echo "" >> "$ROOT_README_FILE"
+              echo "## Download Instruction" >> "$ROOT_README_FILE"
+              echo "" >> "$ROOT_README_FILE"
+              echo "Download the archive file and, after unzipping it, rename the folder to QD_Update and place it in the root directory of a USB drive. Then connect the USB drive to the printer to update." >> "$ROOT_README_FILE"
+              echo "" >> "$ROOT_README_FILE"
+              echo "> [!WARNING]" >> "$ROOT_README_FILE"
+              echo "> Please refrain from downgrading the firmware. Updating from a higher version to a lower version can lead to various operational issues. Always ensure to update to either the same or a higher version." >> "$ROOT_README_FILE"
+              echo "" >> "$ROOT_README_FILE"
               echo "[Русская версия](./README.md) 🇷🇺" >> "$ROOT_README_EN_FILE"
               echo "" >> "$ROOT_README_EN_FILE"
               echo "$CHANGELOG_HEADER_EN" >> "$ROOT_README_EN_FILE"
