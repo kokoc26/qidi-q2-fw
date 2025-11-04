@@ -1,0 +1,210 @@
+name: Check and Download Firmware
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 3 * * *"
+jobs:
+  check_and_update:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Install JQ
+        run: sudo apt-get install -y jq
+
+      - name: Fetch Firmware Info and Parse JSON
+        id: firmware_info
+        run: |
+          API_URL="https://api.qidi3dprinter.com/code/x_q_2_version_info"
+          FIRMWARE_JSON=$(curl -s "$API_URL")
+
+          VERSION=$(echo "$FIRMWARE_JSON" | jq -r '.firmware.version')
+          SIZE=$(echo "$FIRMWARE_JSON" | jq -r '.firmware.size')
+          DATE=$(echo "$FIRMWARE_JSON" | jq -r '.firmware.date')
+
+          DESCRIPTION_RU=$(echo "$FIRMWARE_JSON" | jq -r '.firmware.description.ru_RU')
+          DESCRIPTION_EN=$(echo "$FIRMWARE_JSON" | jq -r '.firmware.description.en_US')
+
+          echo "VERSION=$VERSION" >> $GITHUB_ENV
+          echo "SIZE=$SIZE" >> $GITHUB_ENV
+          echo "DATE=$DATE" >> $GITHUB_ENV
+
+          echo "description_ru<<EOF_RU" >> $GITHUB_OUTPUT
+          echo "$DESCRIPTION_RU" | tr -d '\r' >> $GITHUB_OUTPUT
+          echo "EOF_RU" >> $GITHUB_OUTPUT
+
+          echo "description_en<<EOF_EN" >> $GITHUB_OUTPUT
+          echo "$DESCRIPTION_EN" | tr -d '\r' >> $GITHUB_OUTPUT
+          echo "EOF_EN" >> $GITHUB_OUTPUT
+
+          echo "$DESCRIPTION_RU" | tr -d '\r' > firmware_description_ru.txt
+          echo "$DESCRIPTION_EN" | tr -d '\r' > firmware_description_en.txt
+
+      - name: Check if release/tag exists
+        id: release_check
+        run: |
+          TAG_EXISTS=$(git tag -l ${{ env.VERSION }})
+          if [ -n "$TAG_EXISTS" ]; then
+            echo "Release for ${{ env.VERSION }} already exists. Skipping all next steps."
+            echo "skip=true" >> $GITHUB_OUTPUT
+          else
+            echo "Release for ${{ env.VERSION }} does not exist. Proceeding."
+            echo "skip=false" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Download Firmware
+        if: steps.release_check.outputs.skip == 'false'
+        run: |
+          VERSION=${{ env.VERSION }}
+          ZIP_FILENAME="Q2_${VERSION}.zip"
+          DOWNLOAD_URL="https://download_aws.qidi3dprinter.com/QD_Q2/${ZIP_FILENAME}"
+
+          echo "Downloading firmware $ZIP_FILENAME..."
+          curl -L -o "$ZIP_FILENAME" "$DOWNLOAD_URL"
+
+          echo "ZIP_FILENAME=$ZIP_FILENAME" >> $GITHUB_ENV
+
+      - name: Create GitHub Release
+        id: create_release
+        if: steps.release_check.outputs.skip == 'false'
+        uses: actions/create-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tag_name: ${{ env.VERSION }}
+          release_name: ${{ env.VERSION }}
+          body: |
+            ## Изменения (Russian):
+            ${{ steps.firmware_info.outputs.description_ru }} 
+
+            ## Changelog (English):
+            ${{ steps.firmware_info.outputs.description_en }}
+          draft: false
+          prerelease: false
+
+      - name: Upload Release Asset
+        if: steps.release_check.outputs.skip == 'false'
+        uses: actions/upload-release-asset@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          upload_url: ${{ steps.create_release.outputs.upload_url }}
+          asset_path: ./${{ env.ZIP_FILENAME }}
+          asset_name: ${{ env.ZIP_FILENAME }}
+          asset_content_type: application/zip
+
+      - name: Generate Direct Asset Link
+        id: link_gen
+        if: steps.release_check.outputs.skip == 'false'
+        run: |
+          REPO_NAME=${{ github.repository }}
+          TAG_NAME=${{ env.VERSION }}
+          ZIP_FILENAME=${{ env.ZIP_FILENAME }}
+
+          RELEASE_ASSET_URL="https://github.com/${REPO_NAME}/releases/download/${TAG_NAME}/${ZIP_FILENAME}"
+          echo "RELEASE_ASSET_URL=$RELEASE_ASSET_URL" >> $GITHUB_ENV
+
+      - name: Update READMEs and Cleanup
+        if: steps.release_check.outputs.skip == 'false'
+        run: |
+          VERSION=${{ env.VERSION }}
+          SIZE=${{ env.SIZE }}
+          DATE=${{ env.DATE }}
+          RELEASE_ASSET_URL=${{ env.RELEASE_ASSET_URL }}
+          DESCRIPTION_RU=$(cat firmware_description_ru.txt)
+          DESCRIPTION_EN=$(cat firmware_description_en.txt)
+
+          rm -f ${{ env.ZIP_FILENAME }}
+
+          ROOT_README_FILE="README.md"
+          CHANGELOG_HEADER_RU="## Список изменений (Changelog)"
+
+          if [ ! -f "$ROOT_README_FILE" ]; then
+              echo "# Прошивки QIDI Q2" > "$ROOT_README_FILE"
+              echo "" >> "$ROOT_README_FILE"
+              echo "[English Version](./README.en.md) 🇺🇸" >> "$ROOT_README_FILE"
+              echo "" >> "$ROOT_README_FILE"
+              echo "$CHANGELOG_HEADER_RU" >> "$ROOT_README_FILE"
+              echo "" >> "$ROOT_README_FILE"
+          fi
+
+          awk '/^## / {exit} {print}' "$ROOT_README_FILE" > README_HEADER_TEMP
+          awk '/^## / {found=1; next} {if (found) print}' "$ROOT_README_FILE" > README_CHANGELOG_TEMP
+
+          DOWNLOAD_LINK_UNIVERSAL_RU="[Скачать архив ($SIZE)](${RELEASE_ASSET_URL})"
+
+          {
+            cat README_HEADER_TEMP
+            echo ""
+            echo "$CHANGELOG_HEADER_RU"
+            echo ""
+            echo "### $VERSION - $DATE"
+            echo ""
+            echo "#### Ссылка на прошивку:"
+            echo "* $DOWNLOAD_LINK_UNIVERSAL_RU"
+            echo ""
+            echo "#### Изменения:"
+            echo ""
+            echo "$DESCRIPTION_RU" | sed 's/^/  * /'
+            echo ""
+            cat README_CHANGELOG_TEMP
+            
+          } > README_TEMP && mv README_TEMP "$ROOT_README_FILE"
+
+          ROOT_README_EN_FILE="README.en.md"
+          CHANGELOG_HEADER_EN="## Changelog"
+
+          if [ ! -f "$ROOT_README_EN_FILE" ]; then
+              echo "# QIDI Q2 Firmware" > "$ROOT_README_EN_FILE"
+              echo "" >> "$ROOT_README_EN_FILE"
+              echo "[Русская версия](./README.md) 🇷🇺" >> "$ROOT_README_EN_FILE"
+              echo "" >> "$ROOT_README_EN_FILE"
+              echo "$CHANGELOG_HEADER_EN" >> "$ROOT_README_EN_FILE"
+              echo "" >> "$ROOT_README_EN_FILE"
+          fi
+
+          awk '/^## / {exit} {print}' "$ROOT_README_EN_FILE" > README_EN_HEADER_TEMP
+          awk '/^## / {found=1; next} {if (found) print}' "$ROOT_README_EN_FILE" > README_EN_CHANGELOG_TEMP
+
+          DOWNLOAD_LINK_UNIVERSAL_EN="[Download archive ($SIZE)](${RELEASE_ASSET_URL})"
+
+          {
+            cat README_EN_HEADER_TEMP
+            echo ""
+            echo "$CHANGELOG_HEADER_EN"
+            echo ""
+            echo "### $VERSION - $DATE"
+            echo ""
+            echo "#### Firmware Link:"
+            echo "* $DOWNLOAD_LINK_UNIVERSAL_EN"
+            echo ""
+            echo "#### Changes:"
+            echo ""
+            echo "$DESCRIPTION_EN" | sed 's/^/  * /'
+            echo ""
+            cat README_EN_CHANGELOG_TEMP
+            
+          } > README_EN_TEMP && mv README_EN_TEMP "$ROOT_README_EN_FILE"
+
+          rm -f firmware_description_ru.txt firmware_description_en.txt README_HEADER_TEMP README_CHANGELOG_TEMP README_EN_HEADER_TEMP README_EN_CHANGELOG_TEMP
+
+      - name: Commit and Push README Changes
+        if: steps.release_check.outputs.skip == 'false'
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+
+          git add README.md README.en.md
+          git commit -m "chore(release): Update Changelog with Release link for ${{ env.VERSION }}"
+          git push
+
+      - name: Inform about skip
+        if: steps.release_check.outputs.skip == 'true'
+        run: echo "No new firmware version found to commit."
