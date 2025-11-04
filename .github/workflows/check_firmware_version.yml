@@ -84,7 +84,7 @@ jobs:
             ## Изменения (Russian):
             ${{ steps.firmware_info.outputs.description_ru }}
 
-            #### Инструкция по загрузке
+            ### Инструкция по загрузке
 
             Скачайте архивный файл и после распаковки переименуйте папку в QD_Update и поместите в корневой каталог USB-накопителя. Затем подключите USB-накопитель к принтеру для обновления.
 
@@ -95,7 +95,7 @@ jobs:
             ## Changelog (English):
             ${{ steps.firmware_info.outputs.description_en }}
 
-            #### Download Instruction
+            ### Download Instruction
 
             Download the archive file and, after unzipping it, rename the folder to QD_Update and place it in the root directory of a USB drive. Then connect the USB drive to the printer to update.
 
