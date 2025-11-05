@@ -4,6 +4,7 @@ on:
   workflow_dispatch:
   schedule:
     - cron: "0 3 * * *"
+
 jobs:
   check_and_update:
     runs-on: ubuntu-latest
@@ -71,15 +72,12 @@ jobs:
 
           echo "ZIP_FILENAME=$ZIP_FILENAME" >> $GITHUB_ENV
 
-      - name: Create GitHub Release
-        id: create_release
+      - name: Create Github Release
         if: steps.release_check.outputs.skip == 'false'
-        uses: actions/create-release@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        uses: softprops/action-gh-release@v1
         with:
           tag_name: ${{ env.VERSION }}
-          release_name: ${{ env.VERSION }}
+          name: ${{ env.VERSION }}
           body: |
             ## Изменения (Russian):
             ${{ steps.firmware_info.outputs.description_ru }}
@@ -104,17 +102,10 @@ jobs:
 
           draft: false
           prerelease: false
-
-      - name: Upload Release Asset
-        if: steps.release_check.outputs.skip == 'false'
-        uses: actions/upload-release-asset@v1
+          files: |
+            ./${{ env.ZIP_FILENAME }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: ./${{ env.ZIP_FILENAME }}
-          asset_name: ${{ env.ZIP_FILENAME }}
-          asset_content_type: application/zip
 
       - name: Generate Direct Asset Link
         id: link_gen
