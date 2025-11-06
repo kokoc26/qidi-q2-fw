@@ -84,21 +84,18 @@ jobs:
 
             ### Инструкция по загрузке
 
-            Скачайте архивный файл и после распаковки переименуйте папку в QD_Update и поместите в корневой каталог USB-накопителя. Затем подключите USB-накопитель к принтеру для обновления.
+            > [!IMPORTANT]
+            > При обновлении следуйте иструциям из [официального wiki QIDI Q2](https://wiki.qidi3d.com/en/Q2/firmware-update).
 
-            > [!WARNING]
-            > Воздержитесь от понижения версии прошивки. Обновление с более высокой версии на более низкую может привести к различным проблемам в работе. Всегда обновляйтесь до той же или более высокой версии.
-
+            ---
 
             ## Changelog (English):
             ${{ steps.firmware_info.outputs.description_en }}
 
             ### Download Instruction
 
-            Download the archive file and, after unzipping it, rename the folder to QD_Update and place it in the root directory of a USB drive. Then connect the USB drive to the printer to update.
-
-            > [!WARNING]
-            > Please refrain from downgrading the firmware. Updating from a higher version to a lower version can lead to various operational issues. Always ensure to update to either the same or a higher version.
+            > [!IMPORTANT]
+            > Before updating, please follow the instructions on the [official QIDI Q2 wiki](https://wiki.qidi3d.com/en/Q2/firmware-update).
 
           draft: false
           prerelease: false
@@ -143,7 +140,7 @@ jobs:
               echo "" >> "$ROOT_README_FILE"
               echo "## Инструкция по загрузке" >> "$ROOT_README_FILE"
               echo "" >> "$ROOT_README_FILE"
-              echo "> [!INFO]" >> "$ROOT_README_FILE"
+              echo "> [!IMPORTANT]" >> "$ROOT_README_FILE"
               echo "> При обновлении следуйте иструциям из [официального wiki QIDI Q2](https://wiki.qidi3d.com/en/Q2/firmware-update)." >> "$ROOT_README_FILE"
               echo "" >> "$ROOT_README_FILE"
               echo "$CHANGELOG_HEADER_RU" >> "$ROOT_README_FILE"
@@ -186,7 +183,7 @@ jobs:
               echo "" >> "$ROOT_README_EN_FILE"
               echo "## Download Instruction" >> "$ROOT_README_EN_FILE"
               echo "" >> "$ROOT_README_EN_FILE"
-              echo "> [!INFO]" >> "$ROOT_README_EN_FILE"
+              echo "> [!IMPORTANT]" >> "$ROOT_README_EN_FILE"
               echo "> Before updating, please follow the instructions on the [official QIDI Q2 wiki](https://wiki.qidi3d.com/en/Q2/firmware-update)." >> "$ROOT_README_EN_FILE" 
               echo "" >> "$ROOT_README_EN_FILE"
               echo "$CHANGELOG_HEADER_EN" >> "$ROOT_README_EN_FILE"

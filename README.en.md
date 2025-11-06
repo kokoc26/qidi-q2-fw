@@ -7,7 +7,7 @@
 
 ## Download Instruction
 
-> [!INFO]
+> [!IMPORTANT]
 > Before updating, please follow the instructions on the [official QIDI Q2 wiki](https://wiki.qidi3d.com/en/Q2/firmware-update).
 
 ## Changelog
