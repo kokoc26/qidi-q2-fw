@@ -87,6 +87,10 @@ jobs:
             > [!IMPORTANT]
             > При обновлении следуйте иструциям из [официального wiki QIDI Q2](https://wiki.qidi3d.com/en/Q2/firmware-update).
 
+            > [!NOTE]
+            > Загрузите архив, после извлечения переименуйте папку в `QD_Update` и поместите её в корневой каталог вашей флешки.
+            > Затем подключите флешку к принтеру, чтобы приступить к офлайн обновлению.
+
             ---
 
             ## Changelog (English):
@@ -96,6 +100,10 @@ jobs:
 
             > [!IMPORTANT]
             > Before updating, please follow the instructions on the [official QIDI Q2 wiki](https://wiki.qidi3d.com/en/Q2/firmware-update).
+
+            > [!NOTE]
+            > Download the archive, rename the folder to `QD_Update` after extraction, and place it in the root directory of your USB device.
+            > Then connect the USB device to the printer to start the offline update.
 
           draft: false
           prerelease: false
@@ -143,6 +151,12 @@ jobs:
               echo "> [!IMPORTANT]" >> "$ROOT_README_FILE"
               echo "> При обновлении следуйте иструциям из [официального wiki QIDI Q2](https://wiki.qidi3d.com/en/Q2/firmware-update)." >> "$ROOT_README_FILE"
               echo "" >> "$ROOT_README_FILE"
+              echo "> [!NOTE]" >> "$ROOT_README_FILE"
+              echo "> Загрузите архив, после извлечения переименуйте папку в `QD_Update` и поместите её в корневой каталог вашей флешки." >> "$ROOT_README_FILE"
+              echo "> Затем подключите флешку к принтеру, чтобы приступить к офлайн обновлению." >> "$ROOT_README_FILE"
+              echo "" >> "$ROOT_README_FILE"
+              echo "---" >> "$ROOT_README_FILE"
+              echo "" >> "$ROOT_README_FILE"
               echo "$CHANGELOG_HEADER_RU" >> "$ROOT_README_FILE"
               echo "" >> "$ROOT_README_FILE"
           fi
@@ -185,6 +199,12 @@ jobs:
               echo "" >> "$ROOT_README_EN_FILE"
               echo "> [!IMPORTANT]" >> "$ROOT_README_EN_FILE"
               echo "> Before updating, please follow the instructions on the [official QIDI Q2 wiki](https://wiki.qidi3d.com/en/Q2/firmware-update)." >> "$ROOT_README_EN_FILE" 
+              echo "" >> "$ROOT_README_EN_FILE"
+              echo "> [!NOTE]" >> "$ROOT_README_EN_FILE"
+              echo "> Download the archive, rename the folder to `QD_Update` after extraction, and place it in the root directory of your USB device." >> "$ROOT_README_EN_FILE"
+              echo "> Then connect the USB device to the printer to start the offline update." >> "$ROOT_README_EN_FILE"
+              echo "" >> "$ROOT_README_EN_FILE"
+              echo "---" >> "$ROOT_README_EN_FILE"
               echo "" >> "$ROOT_README_EN_FILE"
               echo "$CHANGELOG_HEADER_EN" >> "$ROOT_README_EN_FILE"
               echo "" >> "$ROOT_README_EN_FILE"
