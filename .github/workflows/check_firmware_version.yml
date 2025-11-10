@@ -38,15 +38,15 @@ jobs:
           echo "DATE=$DATE" >> $GITHUB_ENV
 
           echo "description_ru<<EOF_RU" >> $GITHUB_OUTPUT
-          echo "$DESCRIPTION_RU" | tr -d '\r' >> $GITHUB_OUTPUT
+          echo "$DESCRIPTION_RU" | tr '\r' '\n' | sed 's/^/  - /' >> $GITHUB_OUTPUT
           echo "EOF_RU" >> $GITHUB_OUTPUT
 
           echo "description_en<<EOF_EN" >> $GITHUB_OUTPUT
-          echo "$DESCRIPTION_EN" | tr -d '\r' >> $GITHUB_OUTPUT
+          echo "$DESCRIPTION_EN" | tr '\r' '\n' | sed 's/^/  - /' >> $GITHUB_OUTPUT
           echo "EOF_EN" >> $GITHUB_OUTPUT
 
-          echo "$DESCRIPTION_RU" | tr -d '\r' > firmware_description_ru.txt
-          echo "$DESCRIPTION_EN" | tr -d '\r' > firmware_description_en.txt
+          echo "$DESCRIPTION_RU" | tr '\r' '\n' > firmware_description_ru.txt
+          echo "$DESCRIPTION_EN" | tr '\r' '\n' > firmware_description_en.txt
 
       - name: Check if release/tag exists
         id: release_check
@@ -174,11 +174,12 @@ jobs:
             echo "### $VERSION - $DATE"
             echo ""
             echo "#### Ссылка на прошивку:"
-            echo "* $DOWNLOAD_LINK_UNIVERSAL_RU"
+            echo ""
+            echo "- $DOWNLOAD_LINK_UNIVERSAL_RU"
             echo ""
             echo "#### Изменения:"
             echo ""
-            echo "$DESCRIPTION_RU" | sed 's/^/  * /'
+            echo "$DESCRIPTION_RU" | sed 's/^/  - /'
             echo ""
             cat README_CHANGELOG_TEMP
             
@@ -223,11 +224,12 @@ jobs:
             echo "### $VERSION - $DATE"
             echo ""
             echo "#### Firmware Link:"
-            echo "* $DOWNLOAD_LINK_UNIVERSAL_EN"
+            echo ""
+            echo "- $DOWNLOAD_LINK_UNIVERSAL_EN"
             echo ""
             echo "#### Changes:"
             echo ""
-            echo "$DESCRIPTION_EN" | sed 's/^/  * /'
+            echo "$DESCRIPTION_EN" | sed 's/^/  - /'
             echo ""
             cat README_EN_CHANGELOG_TEMP
             
