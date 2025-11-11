@@ -16,7 +16,20 @@
 
 ---
 
+
 ## Changelog
+
+### V1.1.0 - 2025/11/10
+
+#### Firmware Link:
+
+- [Download archive (133M)](https://github.com/kokoc26/qidi-q2-fw/releases/download/V1.1.0/Q2_V1.1.0.zip)
+
+#### Changes:
+
+  - Optimized the user experience of the multi-color box.
+  - Fixed some bugs.
+
 
 ### V1.0.9 - 2025/10/27
 
