@@ -30,7 +30,7 @@ class SaveVariables:
             'calibration_step': 0,
 
             'auto_reload_detect': 0, 'auto_read_rfid': 0, 'auto_init_detect': 0,
-            'box_count': 0, 'enable_box': 0,
+            'box_count': 0, 'enable_box': 0, 'load_retry_num':0,
             'slot_sync': "", 'retry_step': "", 'last_load_slot': ""
         }
         
