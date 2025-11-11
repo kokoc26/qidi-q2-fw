@@ -3,8 +3,7 @@ name: Check and Download Firmware
 on:
   workflow_dispatch:
   schedule:
-    - cron: "0 3 * * *"
-
+    - cron: "0 14 * * *"
 jobs:
   check_and_update:
     runs-on: ubuntu-latest
@@ -17,34 +16,29 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Install JQ
-        run: sudo apt-get install -y jq
+      - name: Install necessary tools
+        run: sudo apt-get install -y jq p7zip-full tar
 
       - name: Fetch Firmware Info and Parse JSON
         id: firmware_info
         run: |
           API_URL="https://api.qidi3dprinter.com/code/x_q_2_version_info"
           FIRMWARE_JSON=$(curl -s "$API_URL")
-
           VERSION=$(echo "$FIRMWARE_JSON" | jq -r '.firmware.version')
           SIZE=$(echo "$FIRMWARE_JSON" | jq -r '.firmware.size')
           DATE=$(echo "$FIRMWARE_JSON" | jq -r '.firmware.date')
-
           DESCRIPTION_RU=$(echo "$FIRMWARE_JSON" | jq -r '.firmware.description.ru_RU')
           DESCRIPTION_EN=$(echo "$FIRMWARE_JSON" | jq -r '.firmware.description.en_US')
 
           echo "VERSION=$VERSION" >> $GITHUB_ENV
           echo "SIZE=$SIZE" >> $GITHUB_ENV
           echo "DATE=$DATE" >> $GITHUB_ENV
-
           echo "description_ru<<EOF_RU" >> $GITHUB_OUTPUT
           echo "$DESCRIPTION_RU" | tr '\r' '\n' | sed 's/^/  - /' >> $GITHUB_OUTPUT
           echo "EOF_RU" >> $GITHUB_OUTPUT
-
           echo "description_en<<EOF_EN" >> $GITHUB_OUTPUT
           echo "$DESCRIPTION_EN" | tr '\r' '\n' | sed 's/^/  - /' >> $GITHUB_OUTPUT
           echo "EOF_EN" >> $GITHUB_OUTPUT
-
           echo "$DESCRIPTION_RU" | tr '\r' '\n' > firmware_description_ru.txt
           echo "$DESCRIPTION_EN" | tr '\r' '\n' > firmware_description_en.txt
 
@@ -60,57 +54,64 @@ jobs:
             echo "skip=false" >> $GITHUB_OUTPUT
           fi
 
+      - name: Create working directories
+        if: steps.release_check.outputs.skip == 'false'
+        run: |
+          mkdir -p work/q2
+          mkdir -p work/soc
+          mkdir -p firmware
+
       - name: Download Firmware
         if: steps.release_check.outputs.skip == 'false'
         run: |
           VERSION=${{ env.VERSION }}
           ZIP_FILENAME="Q2_${VERSION}.zip"
           DOWNLOAD_URL="https://download_aws.qidi3dprinter.com/QD_Q2/${ZIP_FILENAME}"
-
           echo "Downloading firmware $ZIP_FILENAME..."
           curl -L -o "$ZIP_FILENAME" "$DOWNLOAD_URL"
-
           echo "ZIP_FILENAME=$ZIP_FILENAME" >> $GITHUB_ENV
 
-      - name: Create Github Release
+      - name: Unzip main archive
         if: steps.release_check.outputs.skip == 'false'
-        uses: softprops/action-gh-release@v2
-        with:
-          tag_name: ${{ env.VERSION }}
-          name: ${{ env.VERSION }}
-          body: |
-            ## Изменения (Russian):
-            ${{ steps.firmware_info.outputs.description_ru }}
+        run: |
+          ZIP_FILENAME=${{ env.ZIP_FILENAME }}
+          7z x "$ZIP_FILENAME" -o"work/q2"
 
-            ### Инструкция по загрузке
+      - name: Find and unzip inner SOC archive
+        if: steps.release_check.outputs.skip == 'false'
+        id: find_soc
+        run: |
+          SOC_ARCHIVE=$(find work/q2 -type f -name "QD_Q2_SOC*" -print -quit)
+          if [ -z "$SOC_ARCHIVE" ]; then
+            echo "::error::SOC archive (QD_Q2_SOC*) not found."
+            exit 1
+          fi
+          echo "Found SOC archive: $SOC_ARCHIVE"
+          7z x "$SOC_ARCHIVE" -o"work/soc"
 
-            > [!IMPORTANT]
-            > При обновлении следуйте иструциям из [официального wiki QIDI Q2](https://wiki.qidi3d.com/en/Q2/firmware-update).
+      - name: Extract data.tar content
+        if: steps.release_check.outputs.skip == 'false'
+        run: |
+          if [ ! -f work/soc/data.tar ]; then
+            echo "::error::data.tar not found in work/soc."
+            exit 1
+          fi
+          echo "Extracting data.tar..."
+          tar -xf work/soc/data.tar -C firmware/
 
-            > [!NOTE]
-            > Загрузите архив, после извлечения переименуйте папку в `QD_Update` и поместите её в корневой каталог вашей флешки.
-            > Затем подключите флешку к принтеру, чтобы приступить к офлайн обновлению.
-
-            ---
-
-            ## Changelog (English):
-            ${{ steps.firmware_info.outputs.description_en }}
-
-            ### Download Instruction
-
-            > [!IMPORTANT]
-            > Before updating, please follow the instructions on the [official QIDI Q2 wiki](https://wiki.qidi3d.com/en/Q2/firmware-update).
-
-            > [!NOTE]
-            > Download the archive, rename the folder to `QD_Update` after extraction, and place it in the root directory of your USB device.
-            > Then connect the USB device to the printer to start the offline update.
-
-          draft: false
-          prerelease: false
-          files: |
-            ./${{ env.ZIP_FILENAME }}
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Configure Git and Commit changes
+        if: steps.release_check.outputs.skip == 'false'
+        run: |
+          VERSION=${{ env.VERSION }}
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add firmware
+          if [ -z "$(git diff --cached --name-only)" ]; then
+            echo "No changes were staged for commit in 'firmware/' directory. Skipping commit and push."
+            exit 0
+          fi
+          git commit firmware -m "chore(firmware): Update Qidi Q2 firmware to $VERSION"
+          git push
 
       - name: Generate Direct Asset Link
         id: link_gen
@@ -119,11 +120,10 @@ jobs:
           REPO_NAME=${{ github.repository }}
           TAG_NAME=${{ env.VERSION }}
           ZIP_FILENAME=${{ env.ZIP_FILENAME }}
-
           RELEASE_ASSET_URL="https://github.com/${REPO_NAME}/releases/download/${TAG_NAME}/${ZIP_FILENAME}"
           echo "RELEASE_ASSET_URL=$RELEASE_ASSET_URL" >> $GITHUB_ENV
 
-      - name: Update READMEs and Cleanup
+      - name: Update READMEs
         if: steps.release_check.outputs.skip == 'false'
         run: |
           VERSION=${{ env.VERSION }}
@@ -132,9 +132,6 @@ jobs:
           RELEASE_ASSET_URL=${{ env.RELEASE_ASSET_URL }}
           DESCRIPTION_RU=$(cat firmware_description_ru.txt)
           DESCRIPTION_EN=$(cat firmware_description_en.txt)
-
-          rm -f ${{ env.ZIP_FILENAME }}
-
           ROOT_README_FILE="README.md"
           CHANGELOG_HEADER_RU="## Список изменений (Changelog)"
 
@@ -181,8 +178,7 @@ jobs:
             echo ""
             echo "$DESCRIPTION_RU" | sed 's/^/  - /'
             echo ""
-            cat README_CHANGELOG_TEMP
-            
+            cat README_CHANGELOG_TEMP  
           } > README_TEMP && mv README_TEMP "$ROOT_README_FILE"
 
           ROOT_README_EN_FILE="README.en.md"
@@ -232,10 +228,7 @@ jobs:
             echo "$DESCRIPTION_EN" | sed 's/^/  - /'
             echo ""
             cat README_EN_CHANGELOG_TEMP
-            
           } > README_EN_TEMP && mv README_EN_TEMP "$ROOT_README_EN_FILE"
-
-          rm -f firmware_description_ru.txt firmware_description_en.txt README_HEADER_TEMP README_CHANGELOG_TEMP README_EN_HEADER_TEMP README_EN_CHANGELOG_TEMP
 
       - name: Commit and Push README Changes
         if: steps.release_check.outputs.skip == 'false'
@@ -246,6 +239,50 @@ jobs:
           git add README.md README.en.md
           git commit -m "chore(release): Update Changelog with Release link for ${{ env.VERSION }}"
           git push
+
+      - name: Create Github Release
+        if: steps.release_check.outputs.skip == 'false'
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: ${{ env.VERSION }}
+          name: ${{ env.VERSION }}
+          body: |
+            ## Изменения (Russian):
+            ${{ steps.firmware_info.outputs.description_ru }}
+
+            ### Инструкция по загрузке
+
+            > [!IMPORTANT]
+            > При обновлении следуйте иструциям из [официального wiki QIDI Q2](https://wiki.qidi3d.com/en/Q2/firmware-update).
+
+            > [!NOTE]
+            > Загрузите архив, после извлечения переименуйте папку в `QD_Update` и поместите её в корневой каталог вашей флешки.
+            > Затем подключите флешку к принтеру, чтобы приступить к офлайн обновлению.
+
+            ---
+
+            ## Changelog (English):
+            ${{ steps.firmware_info.outputs.description_en }}
+
+            ### Download Instruction
+
+            > [!IMPORTANT]
+            > Before updating, please follow the instructions on the [official QIDI Q2 wiki](https://wiki.qidi3d.com/en/Q2/firmware-update).
+
+            > [!NOTE]
+            > Download the archive, rename the folder to `QD_Update` after extraction, and place it in the root directory of your USB device.
+            > Then connect the USB device to the printer to start the offline update.
+
+          draft: false
+          prerelease: false
+          files: |
+            ./${{ env.ZIP_FILENAME }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Remove Temporary Files
+        if: steps.release_check.outputs.skip == 'false'
+        run: rm -rf work firmware firmware_description_ru.txt firmware_description_en.txt ZIP_FILENAME README_HEADER_TEMP README_CHANGELOG_TEMP README_EN_HEADER_TEMP README_EN_CHANGELOG_TEMP
 
       - name: Inform about skip
         if: steps.release_check.outputs.skip == 'true'
