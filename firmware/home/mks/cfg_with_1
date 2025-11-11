@@ -1,0 +1,27 @@
+[include box1.cfg]
+# [include box2.cfg]
+# [include box3.cfg]
+# [include box4.cfg]
+
+[box_extras]
+b_button_pin : ^mcu_box1:PB1
+b_endstop_pin : mcu_box1:PA9
+e_endstop_pin : mcu_box1:PA10
+buffer_pin: ^mcu_box1:PB0
+
+[mcu mcu_box1]
+serial : 
+restart_method : command
+
+[gcode_macro UNLOAD_FILAMENT]
+gcode:
+    {% if printer.save_variables.variables.enable_box == 1 %}
+        {% set T = params.T|int %}
+        CUT_FILAMENT T={T}
+        MOVE_TO_TRASH
+        UNLOAD_T{T}
+        G1 E25 F300
+        M104 S0
+        CLEAR_OOZE
+        CLEAR_FLUSH
+    {% endif %}

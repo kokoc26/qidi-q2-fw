@@ -1,0 +1,129 @@
+<config>
+    <!-- api 服务端口 -->
+    <api_port>9010</api_port>
+    <!-- moonraker端口-->
+    <moonraker_port>7125</moonraker_port>
+    <force_printer_status>False</force_printer_status>
+    <!-- 管理web用户 -->
+    <management_web_user>qidi</management_web_user>
+    <!-- 管理web密码 -->
+    <management_web_password>qiditech</management_web_password>
+    
+    <!-- 视频输入设置 -->
+    <video_input>
+        <!-- 视频源选择 False:视频流（摄像头或网络流） True：视频文件 -->
+        <is_video_file>False</is_video_file>
+
+        <!-- 视频文件配置 -->
+        <video_files>
+            <!-- 视频文件夹路径 -->
+            <video_files_dir>video_input</video_files_dir>
+            <!-- 选中的视频文件名称 -->
+            <video_files_name>test.mp4</video_files_name>
+            <!-- 视频文件推理时间隔的帧数 -->
+            <video_files_frame_lost>1</video_files_frame_lost>
+        </video_files>
+        <!-- 是否开启取两次检测间隔中打印头遮挡区域最小的帧进行检测 -->
+        <min_occluded_frame>False</min_occluded_frame>
+    </video_input>
+
+    <!-- 视频输出设置 -->
+    <video_output>
+        <!-- 视频输出保存的文件夹 -->
+        <video_output_dir>../../../../home/qidi/video</video_output_dir>
+
+        <!-- 原始视频配置 -->
+        <video_output_raw>
+            <!-- 是否保存原始视频 -->
+            <is_save_raw_video>True</is_save_raw_video>
+            <!-- 间隔多少毫秒保持一帧图片 -->
+            <save_raw_video_interval>30000</save_raw_video_interval>
+            <!-- 保存每层打印最优的帧(打印头离摄像头最远) 与min_occluded_frame一起使用才能发挥最好效果 -->
+            <is_save_layer_best_view>True</is_save_layer_best_view>
+        </video_output_raw>
+
+        <!-- 检测后视频配置 -->
+        <video_output_detect>
+            <!-- 是否保存检测后视频 -->
+            <is_save_detect_video>False</is_save_detect_video>
+            <!-- 间隔多少毫秒保持一帧图片 -->
+            <save_detect_video_interval>5000</save_detect_video_interval>
+            <!-- 检测到炒面的画面保持为图片 -->
+            <save_detect_video_pic>False</save_detect_video_pic>
+            <!-- 发生炒面的画面保存成视频 -->
+            <save_detect_pic_to_video>True</save_detect_pic_to_video>
+        </video_output_detect>
+    </video_output>
+
+    <!-- 检测设置 -->
+    <detect_setting>
+        <!-- 是否进行推理-->
+        <is_detect_flag>False</is_detect_flag>
+        <!-- 是否PEI检测 -->
+        <is_pei_check>False</is_pei_check>
+        <!-- 是否开启异物检测 -->
+        <is_foreign_check>False</is_foreign_check>
+        <!-- 是否开启打印模型脱离、移动检测 -->
+        <is_md_check>False</is_md_check>
+        <!-- cpu超过特定温度后不检测 -->
+        <cpu_temperature>80</cpu_temperature>
+        <!-- 从打印的第几层开始检测 -->
+        <start_layer>2</start_layer>
+        <!-- 类别显示配置，True 显示，False 不显示，按顺序对应类别 -->
+        <class_vis>[true, true, true]</class_vis>
+
+        <!-- 推理参数设置 -->
+        <detect_config>
+            <!-- 置信度阈值 -->
+            <conf_thres>0.48</conf_thres>
+            <!-- IOU阈值 -->
+            <iou_thres>0.2</iou_thres>
+            <!-- 内部线程数 -->
+            <intra_num>1</intra_num>
+            <!-- 外部线程数 -->
+            <inter_num>1</inter_num>
+        </detect_config>
+
+        <!-- 检测后动作配置 -->
+        <detect_action>
+            <!-- 触发告警设置 -->
+            <alarm>
+                <is_open_alarm>False</is_open_alarm>
+                <!-- 检测到5次炒面后触发告警 0:关闭该项 -->
+                <count>5</count>
+                <!-- 炒面分数大于10触发告警 0:关闭该项 -->
+                <conf>10</conf>
+            </alarm>
+
+            <!-- 发生炒面帧数动作 -->
+            <find_count>
+                <!-- 检测到n次炒面后触发告警 0:关闭该项 -->
+                <count>15</count>
+                <!-- 是否暂停打印 -->
+                <is_pause_print>False</is_pause_print>
+                <!-- 是否取消打印 -->
+                <is_cancel_print>False</is_cancel_print>
+            </find_count>
+
+            <!-- 炒面分数动作 -->
+            <conf_count>
+                <!-- 出现炒面分数累计 0:不启用 -->
+                <conf>15</conf>
+                <!-- 是否暂停打印 -->
+                <is_pause_print>False</is_pause_print>
+                <!-- 是否取消打印 -->
+                <is_cancel_print>False</is_cancel_print>
+            </conf_count>
+
+            <!-- 模型脱离移动动作 -->
+            <md_count>
+                <!-- 出现移动次数累计 0:不启用 -->
+                <count>6</count>
+                <!-- 是否暂停打印 -->
+                <is_pause_print>False</is_pause_print>
+                <!-- 是否取消打印 -->
+                <is_cancel_print>False</is_cancel_print>
+            </md_count>
+        </detect_action>
+    </detect_setting>
+</config>

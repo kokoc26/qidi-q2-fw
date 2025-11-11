@@ -1,0 +1,25 @@
+.settings-button {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.settings-button:hover {
+    background-color: #45a049;
+}
+
+.setting-section {
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.slider-container {
+    margin: 10px 0;
+}

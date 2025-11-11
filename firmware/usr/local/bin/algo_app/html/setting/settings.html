@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>检测设置</title>
+    <link rel="stylesheet" href="/static/styles.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+            color: #333;
+        }
+        
+        .container {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+            padding: 30px;
+            max-width: 900px;
+            margin: 0 auto;
+            width: 100%;
+        }
+        
+        h1 {
+            text-align: center;
+            color: #444;
+            margin-bottom: 30px;
+            font-size: 24px;
+            font-weight: 600;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .setting-section {
+            background: #f8f9fa;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 25px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        }
+        
+        .setting-section h2 {
+            color: #444;
+            margin-bottom: 15px;
+            font-size: 18px;
+            font-weight: 600;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #e9ecef;
+        }
+        
+        .action-setting {
+            background: white;
+            border-radius: 6px;
+            padding: 15px;
+            margin-bottom: 15px;
+            border: 1px solid #eee;
+        }
+        
+        .action-setting h3 {
+            color: #555;
+            margin-bottom: 15px;
+            font-size: 16px;
+            font-weight: 500;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 15px;
+            color: #555;
+            font-size: 14px;
+            cursor: pointer;
+        }
+        
+        /* 美化复选框 */
+        input[type="checkbox"] {
+            width: 18px;
+            height: 18px;
+            margin-right: 8px;
+            accent-color: #667eea;
+            cursor: pointer;
+        }
+        
+        .slider-container {
+            margin-bottom: 20px;
+            padding: 5px 0;
+        }
+        
+        .slider-container label {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 8px;
+        }
+        
+        .slider-container span {
+            color: #667eea;
+            font-weight: 500;
+        }
+        
+        /* 美化滑块 */
+        input[type="range"] {
+            width: 100%;
+            height: 6px;
+            -webkit-appearance: none;
+            background: #e9ecef;
+            border-radius: 3px;
+            outline: none;
+        }
+        
+        input[type="range"]::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            cursor: pointer;
+            transition: transform 0.1s ease;
+        }
+        
+        input[type="range"]::-webkit-slider-thumb:hover {
+            transform: scale(1.1);
+        }
+        
+        .input-container {
+            margin-bottom: 15px;
+        }
+        
+        input[type="number"] {
+            padding: 8px 12px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            font-size: 14px;
+            width: 120px;
+            transition: all 0.3s ease;
+        }
+        
+        input[type="number"]:focus {
+            outline: none;
+            border-color: #667eea;
+            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+        }
+        
+        button {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 6px;
+            font-size: 14px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        
+        button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+        }
+        
+        button:active {
+            transform: translateY(0);
+        }
+        
+        #refresh-video-list {
+            margin-bottom: 15px;
+            background: #6c757d;
+        }
+        
+        #video-list {
+            list-style: none;
+            max-height: 200px;
+            overflow-y: auto;
+            background: white;
+            border-radius: 6px;
+            border: 1px solid #eee;
+        }
+        
+        #video-list li {
+            padding: 10px 15px;
+            border-bottom: 1px solid #eee;
+            font-size: 14px;
+            color: #555;
+        }
+        
+        #video-list li:last-child {
+            border-bottom: none;
+        }
+        
+        #video-list li:hover {
+            background: #f8f9fa;
+        }
+        
+        .button-container {
+            display: flex;
+            justify-content: flex-end;
+            gap: 15px;
+            margin-top: 30px;
+        }
+        
+        .return-button {
+            background: #6c757d;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 6px;
+            font-size: 14px;
+            font-weight: 500;
+            cursor: pointer;
+            text-decoration: none;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        
+        .return-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(108, 117, 125, 0.3);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>检测设置</h1>
+        
+        <!-- 新增打印前检测设置区域 -->
+        <div class="setting-section">
+            <h2>打印前检测设置</h2>
+            <label>
+                <input type="checkbox" id="is-pei-check"> 是否开启 PEI 检测
+            </label>
+            <label>
+                <input type="checkbox" id="is-foreign-check"> 是否开启异物检测
+            </label>
+        </div>
+
+        <!-- 打印过程检测 -->
+        <div class="setting-section">
+            <h2>打印过程检测</h2>
+            <label>
+                <input type="checkbox" id="is-detect-flag"> 是否启用炒面检测
+            </label>
+            <label>
+                <input type="checkbox" id="min-occluded-frame"> 是否开启最小遮挡帧用于检测
+            </label>
+            <label>
+                <input type="checkbox" id="is-md-check"> 是否开启模型移动检测
+            </label>
+            <div id="inference-settings" style="display: none;">
+                <div class="slider-container">
+                    <label>从第几层打印开始检测: <span id="start-layer-value">0</span></label>
+                    <input type="range" id="start-layer" min="0" max="10" step="1" value="0">
+                </div>
+                <div class="slider-container">
+                    <label>置信度阈值: <span id="conf-thres-value">0.5</span></label>
+                    <input type="range" id="conf-thres" min="0.1" max="1.0" step="0.01" value="0.5">
+                </div>
+                <div class="slider-container">
+                    <label>IOU: <span id="iou-thres-value">0.5</span></label>
+                    <input type="range" id="iou-thres" min="0.1" max="1.0" step="0.05" value="0.5">
+                </div>
+                
+                <div class="slider-container">
+                    <label>CPU核心数: <span id="intra-num-value">4</span></label>
+                    <input type="range" id="intra-num" min="1" max="4" step="1" value="1">
+                </div>
+            </div>
+        </div>
+
+        <!-- 告警设置 -->
+        <div class="setting-section">
+            <h2>告警设置</h2>
+            <label>
+                <input type="checkbox" id="detect-action-alarm-open"> 是否开启炒面告警
+            </label>
+            
+            <div id="alarm-settings" style="display: none;">
+                <div class="slider-container">
+                    <label>连续检测炒面次数: <span id="detect-action-alarm-count-value">10</span></label>
+                    <input type="range" id="detect-action-alarm-count" min="1" max="200" step="1" value="10">
+                </div>
+                
+                <div class="slider-container">
+                    <label>连续检测炒面分数: <span id="detect-action-alarm-conf-value">50</span></label>
+                    <input type="range" id="detect-action-alarm-conf" min="1" max="500" step="1" value="50">
+                </div>
+            </div>
+        </div>
+
+        <!-- 检测动作设置 -->
+        <div class="setting-section">
+            <h2>检测动作设置</h2>
+            
+            <div class="action-setting">
+                <h3>检测次数动作</h3>
+                <div class="slider-container">
+                    <label>检测炒面次数大于: <span id="detect-action-find-count-count-value">20</span></label>
+                    <input type="range" id="detect-action-find-count-count" min="1" max="200" step="1" value="20">
+                </div>
+                <label>
+                    <input type="checkbox" id="detect-action-find-count-pause"> 暂停打印
+                </label>
+                <label>
+                    <input type="checkbox" id="detect-action-find-count-cancel"> 取消打印
+                </label>
+            </div>
+            
+            <div class="action-setting">
+                <h3>检测分数动作</h3>
+                <div class="slider-container">
+                    <label>连续检测炒面分数大于: <span id="detect-action-conf-count-conf-value">100</span></label>
+                    <input type="range" id="detect-action-conf-count-conf" min="1" max="500" step="1" value="100">
+                </div>
+                <label>
+                    <input type="checkbox" id="detect-action-conf-count-pause"> 暂停打印
+                </label>
+                <label>
+                    <input type="checkbox" id="detect-action-conf-count-cancel"> 取消打印
+                </label>
+            </div>
+
+            <div class="action-setting">
+                <h3>模型脱离移动动作</h3>
+                <div class="slider-container">
+                    <label>检测移动次数大于: <span id="detect-action-md-count-count-value">5</span></label>
+                    <input type="range" id="detect-action-md-count-count" min="1" max="200" step="1" value="5">
+                </div>
+                <label>
+                    <input type="checkbox" id="detect-action-md-count-pause"> 暂停打印
+                </label>
+                <label>
+                    <input type="checkbox" id="detect-action-md-count-cancel"> 取消打印
+                </label>
+            </div>
+        </div>
+
+        <!-- 视频输出设置 -->
+        <div class="setting-section">
+            <h2>视频输出设置(重启后生效)</h2>
+            
+            <!-- 原始视频配置 -->
+            <div class="action-setting">
+                <h3>原始视频配置</h3>
+                <label>
+                    <input type="checkbox" id="is-save-raw-video"> 是否保存原始视频
+                </label>
+                <div class="input-container">
+                    <label>间隔多少毫秒保存一帧图片: <input type="number" id="save-raw-video-interval" min="1" value="1000"></label>
+                </div>
+                <label>
+                    <input type="checkbox" id="is-save-layer-best-view"> 是否保存每层最佳视角
+                </label>
+            </div>
+            
+            <!-- 检测后视频配置 -->
+            <div class="action-setting">
+                <h3>检测后视频配置</h3>
+                <label>
+                    <input type="checkbox" id="is-save-detect-video"> 是否保存检测后视频
+                </label>
+                <label>
+                    <input type="checkbox" id="save-detect-pic-to-video"> 发生炒面的画面保存成视频
+                </label>
+                <div class="input-container">
+                    <label>间隔多少毫秒保存一帧图片: <input type="number" id="save-detect-video-interval" min="1" value="1000"></label>
+                </div>
+            </div>
+        </div>
+
+        <!-- 新增视频管理区域 -->
+        <div class="setting-section">
+            <h2>视频文件管理(请定期清除不需要的视频防止内部空间不足)</h2>
+            <button id="refresh-video-list">刷新视频列表</button>
+            <ul id="video-list"></ul>
+        </div>
+
+        <div class="button-container">
+            <button id="save-settings">保存设置</button>
+            <a href="/" class="return-button">返回主页</a>
+        </div>
+    </div>
+
+    <script src="/static/setting/settings.js"></script>
+</body>
+</html>

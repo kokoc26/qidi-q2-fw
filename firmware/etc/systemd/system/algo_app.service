@@ -1,0 +1,30 @@
+[Unit]
+Description=Start algo_app
+After=network.target moonraker.service
+
+[Install]
+WantedBy=multi-user.target
+
+[Service]
+ExecStart=/usr/local/bin/algo_app/main
+WorkingDirectory=/usr/local/bin/algo_app
+Restart=always
+RestartSec=15
+MemoryHigh=200M
+MemoryMax=250M
+User=root
+Group=root
+Environment=PYTHONPATH=/usr/local/bin/algo_app
+Environment=LD_LIBRARY_PATH=/usr/local/bin/algo_app/_internal/lib
+
+Nice=19
+CPUSchedulingPolicy=other
+#CPUQuota=90%
+CPUAffinity=3
+
+# 确保工作目录存在并有正确的权限
+ExecStartPre=/bin/mkdir -p /usr/local/bin/algo_app/video_output
+ExecStartPre=/bin/mkdir -p /var/log/algo_app
+ExecStartPre=/bin/chown -R root:root /usr/local/bin/algo_app
+ExecStartPre=/bin/chmod -R 775 /usr/local/bin/algo_app
+
