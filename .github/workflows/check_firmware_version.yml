@@ -101,17 +101,12 @@ jobs:
 
       - name: Configure Git and Commit changes
         if: steps.release_check.outputs.skip == 'false'
-        run: |
-          VERSION=${{ env.VERSION }}
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add firmware
-          if [ -z "$(git diff --cached --name-only)" ]; then
-            echo "No changes were staged for commit in 'firmware/' directory. Skipping commit and push."
-            exit 0
-          fi
-          git commit firmware -m "chore(firmware): Update Qidi Q2 firmware to $VERSION"
-          git push
+        uses: iarekylew00t/verified-bot-commit@v2
+        with:
+          if-no-commit: "No changes were staged for commit in 'firmware/' directory. Skipping commit and push."
+          message: "chore(firmware): Update Qidi Q2 firmware to ${{ env.VERSION }}"
+          files: |
+            firmware/**
 
       - name: Generate Direct Asset Link
         id: link_gen
@@ -270,15 +265,14 @@ jobs:
             cat README_EN_CHANGELOG_TEMP
           } > README_EN_TEMP && mv README_EN_TEMP "$ROOT_README_EN_FILE"
 
-      - name: Commit and Push README Changes
+      - name: Configure Git and Commit changes
         if: steps.release_check.outputs.skip == 'false'
-        run: |
-          git config --global user.name "github-actions[bot]"
-          git config --global user.email "github-actions[bot]@users.noreply.github.com"
-
-          git add README.md README.en.md
-          git commit -m "chore(release): Update Changelog with Release link for ${{ env.VERSION }}"
-          git push
+        uses: iarekylew00t/verified-bot-commit@v2
+        with:
+          message: "chore(release): Update Changelog with Release link for ${{ env.VERSION }}"
+          files: |
+            README.md
+            README.en.md
 
       - name: Remove Temporary Files
         if: steps.release_check.outputs.skip == 'false'
