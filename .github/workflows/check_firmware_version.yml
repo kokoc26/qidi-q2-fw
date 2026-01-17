@@ -123,6 +123,46 @@ jobs:
           RELEASE_ASSET_URL="https://github.com/${REPO_NAME}/releases/download/${TAG_NAME}/${ZIP_FILENAME}"
           echo "RELEASE_ASSET_URL=$RELEASE_ASSET_URL" >> $GITHUB_ENV
 
+      - name: Create Github Release
+        if: steps.release_check.outputs.skip == 'false'
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: ${{ env.VERSION }}
+          name: ${{ env.VERSION }}
+          body: |
+            ## Изменения (Russian):
+            ${{ steps.firmware_info.outputs.description_ru }}
+
+            ### Инструкция по загрузке
+
+            > [!IMPORTANT]
+            > При обновлении следуйте иструциям из [официального wiki QIDI Q2](https://wiki.qidi3d.com/en/Q2/firmware-update).
+
+            > [!NOTE]
+            > Загрузите архив, после извлечения переименуйте папку в `QD_Update` и поместите её в корневой каталог вашей флешки.
+            > Затем подключите флешку к принтеру, чтобы приступить к офлайн обновлению.
+
+            ---
+
+            ## Changelog (English):
+            ${{ steps.firmware_info.outputs.description_en }}
+
+            ### Download Instruction
+
+            > [!IMPORTANT]
+            > Before updating, please follow the instructions on the [official QIDI Q2 wiki](https://wiki.qidi3d.com/en/Q2/firmware-update).
+
+            > [!NOTE]
+            > Download the archive, rename the folder to `QD_Update` after extraction, and place it in the root directory of your USB device.
+            > Then connect the USB device to the printer to start the offline update.
+
+          draft: false
+          prerelease: false
+          files: |
+            ./${{ env.ZIP_FILENAME }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
       - name: Update READMEs
         if: steps.release_check.outputs.skip == 'false'
         run: |
@@ -239,46 +279,6 @@ jobs:
           git add README.md README.en.md
           git commit -m "chore(release): Update Changelog with Release link for ${{ env.VERSION }}"
           git push
-
-      - name: Create Github Release
-        if: steps.release_check.outputs.skip == 'false'
-        uses: softprops/action-gh-release@v2
-        with:
-          tag_name: ${{ env.VERSION }}
-          name: ${{ env.VERSION }}
-          body: |
-            ## Изменения (Russian):
-            ${{ steps.firmware_info.outputs.description_ru }}
-
-            ### Инструкция по загрузке
-
-            > [!IMPORTANT]
-            > При обновлении следуйте иструциям из [официального wiki QIDI Q2](https://wiki.qidi3d.com/en/Q2/firmware-update).
-
-            > [!NOTE]
-            > Загрузите архив, после извлечения переименуйте папку в `QD_Update` и поместите её в корневой каталог вашей флешки.
-            > Затем подключите флешку к принтеру, чтобы приступить к офлайн обновлению.
-
-            ---
-
-            ## Changelog (English):
-            ${{ steps.firmware_info.outputs.description_en }}
-
-            ### Download Instruction
-
-            > [!IMPORTANT]
-            > Before updating, please follow the instructions on the [official QIDI Q2 wiki](https://wiki.qidi3d.com/en/Q2/firmware-update).
-
-            > [!NOTE]
-            > Download the archive, rename the folder to `QD_Update` after extraction, and place it in the root directory of your USB device.
-            > Then connect the USB device to the printer to start the offline update.
-
-          draft: false
-          prerelease: false
-          files: |
-            ./${{ env.ZIP_FILENAME }}
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Remove Temporary Files
         if: steps.release_check.outputs.skip == 'false'
