@@ -17,7 +17,19 @@
 ---
 
 
+
 ## Changelog
+
+### V1.1.1 - 2026/1/17
+
+#### Firmware Link:
+
+- [Download archive (133M)](https://github.com/kokoc26/qidi-q2-fw/releases/download/V1.1.1/Q2_V1.1.1.zip)
+
+#### Changes:
+
+  - Add the function adaptation for Polar Cooler.
+
 
 ### V1.1.0 - 2025/11/10
 
