@@ -101,13 +101,11 @@ jobs:
 
       - name: Configure Git and Commit changes
         if: steps.release_check.outputs.skip == 'false'
-        uses: iarekylew00t/verified-bot-commit@v2
+        uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          if-no-commit: "No changes were staged for commit in 'firmware/' directory. Skipping commit and push."
-          message: "chore(firmware): Update Qidi Q2 firmware to ${{ env.VERSION }}"
-          files: |
-            firmware/**
-
+          commit_message: "chore(firmware): Update Qidi Q2 firmware to ${{ env.VERSION }}"
+          file_pattern: 'firmware/**'
+        
       - name: Generate Direct Asset Link
         id: link_gen
         if: steps.release_check.outputs.skip == 'false'
