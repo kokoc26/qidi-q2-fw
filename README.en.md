@@ -18,7 +18,20 @@
 
 
 
+
 ## Changelog
+
+### V01.01.02.01 - 2026/6/2
+
+#### Firmware Link:
+
+- [Download archive (228M)](https://github.com/kokoc26/qidi-q2-fw/releases/download/V01.01.02.01/Q2_V01.01.02.01.zip)
+
+#### Changes:
+
+  - 1. Updated to a brand new UI.
+  - 2. Adapted for QIDI Maker, support for QIDI Link will be discontinued.
+
 
 ### V1.1.1 - 2026/1/17
 
