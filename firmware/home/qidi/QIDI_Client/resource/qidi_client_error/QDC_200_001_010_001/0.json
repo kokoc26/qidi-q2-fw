@@ -1,0 +1,59 @@
+{
+    "message": "外挂耗材耗尽。",
+    "message_translation": {
+        "zh_CN": "外挂耗材耗尽。",
+        "en_US": "External material exhausted.",
+        "ja_JP": "外部材料がなくなりました。",
+        "ru_RU": "Внешний материал исчерпан.",
+        "fr_FR": "Matériel externe épuisé.",
+        "de_DE": "Externes Material erschöpft.",
+        "it_IT": "Materiale esterno esaurito.",
+        "es_ES": "Material externo agotado.",
+        "ko_KR": "외부 재료가 소진되었습니다.",
+        "pt_PT": "Material externo esgotado."
+    },
+    "error_code": "QDC_200_001_010_001",
+    "error_qr_code_path": "/QDC/200_001_010_001_max4",
+    "prossess_msg_translation": {
+        "zh_CN": "外挂料盘耗材用尽。请装入新的耗材。",
+        "en_US": "External spool material exhausted. Please load new material.",
+        "ja_JP": "外部スプール材料がなくなりました。新しい材料を装入してください。",
+        "ru_RU": "Материал внешней катушки исчерпан. Пожалуйста, загрузите новый материал.",
+        "fr_FR": "Matériau de la bobine externe épuisé. Veuillez charger un nouveau matériau.",
+        "de_DE": "Material der externen Spule erschöpft. Bitte neues Material laden.",
+        "it_IT": "Materiale della bobina esterna esaurito. Si prega di caricare nuovo materiale.",
+        "es_ES": "Material de la bobina externa agotado. Por favor, cargue nuevo material.",
+        "ko_KR": "외부 스풀 재료가 소진되었습니다. 새로운 재료를 장착하십시오.",
+        "pt_PT": "Material da bobina externa esgotado. Por favor, carregue novo material."
+    },
+    "error_type": 2,
+    "weight": 10,
+    "popup_stlye": {
+        "main_pic": "NO_PIC",
+        "is_model": false,
+        "left_text": {
+            "zh_CN": "继续（问题已解决）",
+            "en_US": "Continue (Fixed)",
+            "ja_JP": "続行（解決）",
+            "ru_RU": "Продолжить (Исправлено)",
+            "fr_FR": "Continuer (Réglé)",
+            "de_DE": "Fortfahren (Behoben)",
+            "it_IT": "Continua (Corretto)",
+            "es_ES": "Continuar (Corregido)",
+            "ko_KR": "계속 (수정됨)",
+            "pt_PT": "Continuar (Corrigido)"
+        },
+        "right_text": {
+            "zh_CN": "耗材页",
+            "en_US": "Filament Page",
+            "ja_JP": "フィラメントページ",
+            "ru_RU": "Страница филамента",
+            "fr_FR": "Page filament",
+            "de_DE": "Filamentseite",
+            "it_IT": "Pagina filamento",
+            "es_ES": "Página filamento",
+            "ko_KR": "필라멘트 페이지",
+            "pt_PT": "Página do filamento"
+        }
+    }
+}

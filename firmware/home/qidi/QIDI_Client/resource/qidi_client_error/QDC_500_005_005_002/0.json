@@ -1,0 +1,59 @@
+{
+    "message": "AI炒面检测",
+    "message_translation": {
+        "zh_CN": "检测到炒面缺陷。",
+        "en_US": "Defect detected in stir-fried noodles.",
+        "ja_JP": "焼きそばに欠陥を検出しました。",
+        "ru_RU": "Обнаружен дефект в жареной лапше.",
+        "fr_FR": "Défaut détecté dans les nouilles sautées.",
+        "de_DE": "Fehler in gebratenen Nudeln erkannt.",
+        "it_IT": "Difetto rilevato nei noodles saltati.",
+        "es_ES": "Defecto detectado en los fritos salteados.",
+        "ko_KR": "볶음면에서 결함이 감지되었습니다.",
+        "pt_PT": "Defeito detectado em noodles salteados."
+    },
+    "error_code": "QDC_500_005_005_002",
+    "error_qr_code_path": "/QDC/500_005_005_002_max4",
+    "prossess_msg_translation": {
+        "zh_CN": "警告\n检测到炒面缺陷。\n请检查打印件情况后做相应处理。",
+        "en_US": "Warning\nDefect detected in stir-fried noodles.\nPlease inspect the print and take appropriate action.",
+        "ja_JP": "警告\n焼きそばに欠陥を検出しました。\n印刷状態を確認の上、適切な対応を行ってください。",
+        "ru_RU": "Предупреждение\nОбнаружен дефект в жареной лапше.\nПожалуйста, проверьте состояние отпечатка и примите соответствующие меры.",
+        "fr_FR": "Avertissement\nDéfaut détecté dans les nouilles sautées.\nVeuillez inspecter l'impression et prendre les mesures appropriées.",
+        "de_DE": "Warnung\nFehler in gebratenen Nudeln erkannt.\nBitte überprüfen Sie den Druck und ergreifen Sie geeignete Maßnahmen.",
+        "it_IT": "Avviso\nDifetto rilevato nei noodles saltati.\nSi prega di ispezionare la stampa e intraprendere l'azione appropriata.",
+        "es_ES": "Advertencia\nDefecto detectado en los fritos salteados.\nPor favor, inspeccione la impresión y tome las medidas correspondientes.",
+        "ko_KR": "경고\n볶음면에서 결함이 감지되었습니다.\n프린트 상태를 확인 후 적절한 조치를 취해 주세요.",
+        "pt_PT": "Aviso\nDefeito detectado em noodles salteados.\nPor favor, inspecione a impressão e tome a ação apropriada."
+    },
+    "error_type": 1,
+    "weight": 5,
+    "popup_stlye": {
+        "main_pic": "NO_PIC",
+        "is_model": true,
+        "left_text": {
+            "zh_CN": "停止打印",
+            "en_US": "Stop Printing",
+            "ja_JP": "印刷を停止",
+            "ru_RU": "Остановить печать",
+            "fr_FR": "Arrêter l'impression",
+            "de_DE": "Druck stoppen",
+            "it_IT": "Interrompi stampa",
+            "es_ES": "Detener impresión",
+            "ko_KR": "인쇄 중지",
+            "pt_PT": "Parar impressão"
+        },
+        "right_text": {
+            "zh_CN": "继续打印",
+            "en_US": "Continue Printing",
+            "ja_JP": "印刷を続行",
+            "ru_RU": "Продолжить печать",
+            "fr_FR": "Continuer l'impression",
+            "de_DE": "Druck fortsetzen",
+            "it_IT": "Continua stampa",
+            "es_ES": "Continuar impresión",
+            "ko_KR": "인쇄 계속",
+            "pt_PT": "Continuar impressão"
+        }
+    }
+}

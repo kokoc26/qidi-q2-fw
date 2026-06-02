@@ -1,0 +1,27 @@
+{
+  "message": "Timer too close",
+  "message_translation": {
+    "zh_CN": "定时器间隔过近",
+    "en_US": "Timer interval too close",
+    "ja_JP": "タイマー間隔が近すぎます",
+    "ru_RU": "Интервал таймера слишком мал",
+    "fr_FR": "Intervalle du minuteur trop rapproché",
+    "de_DE": "Timerintervall zu eng",
+    "it_IT": "Intervallo del timer troppo ravvicinato",
+    "es_ES": "Intervalo del temporizador demasiado corto",
+    "ko_KR": "타이머 간격이 너무 가깝습니다",
+    "pt_PT": "Intervalo do temporizador demasiado curto"
+  },
+  "prossess_msg_translation": {
+    "zh_CN": "点击“重启固件”可立即恢复。建议检查并简化G代码，或降低打印速度。",
+    "en_US": "Click \"Restart Firmware\" to resume immediately. It is recommended to check and simplify the G-code, or reduce the print speed.",
+    "ja_JP": "「ファームウェアを再起動」をクリックすると直ちに再開されます。Gコードを確認して簡素化するか、印刷速度を低下させることをお勧めします。",
+    "ru_RU": "Нажмите «Перезагрузить прошивку» для немедленного возобновления. Рекомендуется проверить и упростить G-код или снизить скорость печати.",
+    "fr_FR": "Cliquez sur « Redémarrer le micrologiciel » pour reprendre immédiatement. Il est recommandé de vérifier et de simplifier le G-code, ou de réduire la vitesse d'impression.",
+    "de_DE": "Klicken Sie auf „Firmware neu starten“, um sofort fortzufahren. Es wird empfohlen, den G-Code zu überprüfen und zu vereinfachen oder die Druckgeschwindigkeit zu verringern.",
+    "it_IT": "Fare clic su \"Riavvia firmware\" per riprendere immediatamente. Si consiglia di verificare e semplificare il G-code o di ridurre la velocità di stampa.",
+    "es_ES": "Haga clic en \"Reiniciar firmware\" para reanudar inmediatamente. Se recomienda verificar y simplificar el código G, o reducir la velocidad de impresión.",
+    "ko_KR": "\"펌웨어 재시작\"을 클릭하면 즉시 재개됩니다. G 코드를 확인하고 단순화하거나 인쇄 속도를 줄이는 것이 좋습니다.",
+    "pt_PT": "Clique em \"Reiniciar firmware\" para retomar imediatamente. Recomenda-se verificar e simplificar o código G, ou reduzir a velocidade de impressão."
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "message": "Can not update MCU",
+  "message_translation": {
+    "zh_CN": "无法更新MCU固件",
+    "en_US": "Cannot update MCU firmware",
+    "ja_JP": "MCUファームウェアを更新できません",
+    "ru_RU": "Не удалось обновить прошивку MCU",
+    "fr_FR": "Impossible de mettre à jour le micrologiciel du MCU",
+    "de_DE": "MCU-Firmware kann nicht aktualisiert werden",
+    "it_IT": "Impossibile aggiornare il firmware della MCU",
+    "es_ES": "No se puede actualizar el firmware de la MCU",
+    "ko_KR": "MCU 펌웨어를 업데이트할 수 없습니다",
+    "pt_PT": "Não é possível atualizar o firmware da MCU"
+  },
+  "prossess_msg_translation": {
+    "zh_CN": "Klipper启动失败，请点击‘重启固件’",
+    "en_US": "Klipper failed to start. Please click 'Restart Firmware'",
+    "ja_JP": "Klipperの起動に失敗しました。『ファームウェアを再起動』をクリックしてください",
+    "ru_RU": "Не удалось запустить Klipper. Пожалуйста, нажмите 'Перезагрузить прошивку'",
+    "fr_FR": "Échec du démarrage de Klipper. Veuillez cliquer sur 'Redémarrer le micrologiciel'",
+    "de_DE": "Starten von Klipper fehlgeschlagen. Bitte klicken Sie auf 'Firmware neu starten'",
+    "it_IT": "Avvio di Klipper fallito. Fare clic su 'Riavvia firmware'",
+    "es_ES": "Error al iniciar Klipper. Haga clic en 'Reiniciar firmware'",
+    "ko_KR": "Klipper 시작 실패. '펌웨어 재시작'을 클릭하십시오",
+    "pt_PT": "Falha ao iniciar o Klipper. Clique em 'Reiniciar firmware'"
+  }
+}

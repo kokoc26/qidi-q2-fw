@@ -1,0 +1,27 @@
+{
+  "message": "Code:QDE_004_021",
+  "message_translation": {
+    "zh_CN": "无法识别耗材",
+    "en_US": "Unable to recognize loaded filament.",
+    "ja_JP": "ロードされたフィラメントを認識できません",
+    "ru_RU": "Не удалось распознать загруженный филамент",
+    "fr_FR": "Impossible de reconnaître le filament chargé",
+    "de_DE": "Geladenes Filament kann nicht erkannt werden",
+    "it_IT": "Impossibile riconoscere il filamento caricato",
+    "es_ES": "No se puede reconocer el filamento cargado",
+    "ko_KR": "로드된 필라멘트를 인식할 수 없습니다",
+    "pt_PT": "Não é possível reconhecer o filamento carregado"
+  },
+  "prossess_msg_translation": {
+    "zh_CN": "无法识别到加载的耗材，请检查耗材是否正确安装，并将耗材退出HUB",
+    "en_US": "Unable to recognize loaded filament. Please check if the filament is installed correctly and unload it from HUB.",
+    "ja_JP": "ロードされたフィラメントを認識できません。フィラメントが正しく取り付けられているか確認し、HUBからアンロードしてください。",
+    "ru_RU": "Не удалось распознать загруженный филамент. Проверьте, правильно ли установлен филамент, и выгрузите его из HUB.",
+    "fr_FR": "Impossible de reconnaître le filament chargé. Veuillez vérifier si le filament est correctement installé et le décharger du HUB.",
+    "de_DE": "Geladenes Filament kann nicht erkannt werden. Bitte überprüfen Sie, ob das Filament korrekt installiert ist, und entladen Sie es aus dem HUB.",
+    "it_IT": "Impossibile riconoscere il filamento caricato. Si prega di verificare se il filamento è installato correttamente e scaricarlo dall'HUB.",
+    "es_ES": "No se puede reconocer el filamento cargado. Por favor, compruebe si el filamento está instalado correctamente y descárguelo del HUB.",
+    "ko_KR": "로드된 필라멘트를 인식할 수 없습니다. 필라멘트가 올바르게 설치되었는지 확인하고 HUB에서 언로드하십시오.",
+    "pt_PT": "Não é possível reconhecer o filamento carregado. Por favor, verifique se o filamento está instalado corretamente e descarregue-o do HUB."
+  }
+}

@@ -1,0 +1,31 @@
+{
+    "message": "U盘存储空间不足。",
+    "message_translation": {
+        "zh_CN": "U盘存储空间不足。",
+        "en_US": "Insufficient USB drive storage space.",
+        "ja_JP": "USBドライブのストレージ容量が不足しています。",
+        "ru_RU": "Недостаточно места на USB-накопителе.",
+        "fr_FR": "Espace de stockage insuffisant sur le lecteur USB.",
+        "de_DE": "Unzureichender Speicherplatz auf dem USB-Laufwerk.",
+        "it_IT": "Spazio di archiviazione insufficiente sull'unità USB.",
+        "es_ES": "Espacio de almacenamiento insuficiente en la unidad USB.",
+        "ko_KR": "USB 드라이브 저장 공간이 부족합니다.",
+        "pt_PT": "Espaço de armazenamento insuficiente no drive USB."
+    },
+    "error_code": "QDC_400_004_005_001",
+    "error_qr_code_path": "/QDC/400_004_005_001_max4",
+    "prossess_msg_translation": {
+        "zh_CN": "请及时清理U盘空间，保证U盘剩余空间大于1GB。",
+        "en_US": "Please clean up the USB drive space in time to ensure the remaining space is greater than 1GB.",
+        "ja_JP": "USBドライブの空き容量が1GB以上になるよう、速やかに整理してください。",
+        "ru_RU": "Пожалуйста, своевременно очистите пространство на USB-накопителе, чтобы обеспечить свободное пространство более 1 ГБ.",
+        "fr_FR": "Veuillez nettoyer l'espace du lecteur USB à temps pour garantir un espace libre supérieur à 1 Go.",
+        "de_DE": "Bitte räumen Sie den Speicherplatz des USB-Laufwerks rechtzeitig auf, um sicherzustellen, dass der verbleibende Speicherplatz größer als 1 GB ist.",
+        "it_IT": "Si prega di liberare spazio sull'unità USB tempestivamente per garantire che lo spazio rimanente sia superiore a 1 GB.",
+        "es_ES": "Por favor, limpie el espacio de la unidad USB a tiempo para garantizar que el espacio restante sea mayor a 1 GB.",
+        "ko_KR": "USB 드라이브 공간을 1GB 이상으로 유지하도록 정리해 주세요.",
+        "pt_PT": "Por favor, limpe o espaço do drive USB a tempo para garantir que o espaço restante seja maior que 1GB."
+    },
+    "error_type": 1,
+    "weight": 5
+}

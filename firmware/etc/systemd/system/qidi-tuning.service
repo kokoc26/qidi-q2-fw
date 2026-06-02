@@ -1,0 +1,13 @@
+[Unit]
+Description=Qidi-Tuning
+After=moonraker.service
+StartLimitIntervalSec=0
+
+[Service]
+Type=simple
+Restart=always
+RestartSec=3
+ExecStart=bash /home/qidi/QIDI_Client/bin/tuning.sh start
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,27 @@
+{
+  "message": "Code:QDE_004_019",
+  "message_translation": {
+    "zh_CN": "RFID读取失败",
+    "en_US": "RFID read failed.",
+    "ja_JP": "RFIDの読み取りに失敗しました",
+    "ru_RU": "Ошибка чтения RFID",
+    "fr_FR": "Échec de la lecture RFID",
+    "de_DE": "RFID-Lesefehler",
+    "it_IT": "Lettura RFID fallita",
+    "es_ES": "Error de lectura RFID",
+    "ko_KR": "RFID 읽기 실패",
+    "pt_PT": "Falha na leitura RFID"
+  },
+  "prossess_msg_translation": {
+    "zh_CN": "RFID读取失败，请检查PTFE管是否已经正确安装。",
+    "en_US": "RFID read failed. Please check if the PTFE tube is installed correctly.",
+    "ja_JP": "RFIDの読み取りに失敗しました。PTFEチューブが正しく取り付けられているか確認してください。",
+    "ru_RU": "Ошибка чтения RFID. Пожалуйста, проверьте, правильно ли установлена PTFE трубка.",
+    "fr_FR": "Échec de la lecture RFID. Veuillez vérifier si le tube PTFE est correctement installé.",
+    "de_DE": "RFID-Lesefehler. Bitte überprüfen Sie, ob das PTFE-Rohr korrekt installiert ist.",
+    "it_IT": "Lettura RFID fallita. Si prega di verificare se il tubo in PTFE è installato correttamente.",
+    "es_ES": "Error de lectura RFID. Por favor, compruebe si el tubo de PTFE está instalado correctamente.",
+    "ko_KR": "RFID 읽기 실패. PTFE 튜브가 올바르게 설치되었는지 확인하십시오.",
+    "pt_PT": "Falha na leitura RFID. Por favor, verifique se o tubo de PTFE está instalado corretamente."
+  }
+}

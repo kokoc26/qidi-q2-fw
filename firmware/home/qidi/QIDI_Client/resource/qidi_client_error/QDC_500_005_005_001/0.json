@@ -1,0 +1,59 @@
+{
+    "message": "AI异物检测",
+    "message_translation": {
+        "zh_CN": "检测到平台异物。",
+        "en_US": "Foreign object detected on platform.",
+        "ja_JP": "プラットフォーム上に異物を検出しました。",
+        "ru_RU": "Обнаружен посторонний предмет на платформе.",
+        "fr_FR": "Objet étranger détecté sur la plateforme.",
+        "de_DE": "Fremdkörper auf der Plattform erkannt.",
+        "it_IT": "Rilevato oggetto estraneo sulla piattaforma.",
+        "es_ES": "Objeto extraño detectado en la plataforma.",
+        "ko_KR": "플랫폼에서 이물질이 감지되었습니다.",
+        "pt_PT": "Objeto estranho detetado na plataforma."
+    },
+    "error_code": "QDC_500_005_005_001",
+    "error_qr_code_path": "/QDC/500_005_005_001_max4",
+    "prossess_msg_translation": {
+        "zh_CN": "警告\n检测到平台异物。\n请手动清理。",
+        "en_US": "Warning\nForeign object detected on platform.\nPlease clean manually.",
+        "ja_JP": "警告\nプラットフォーム上に異物を検出しました。\n手動で清掃してください。",
+        "ru_RU": "Предупреждение\nОбнаружен посторонний предмет на платформе.\nПожалуйста, очистите вручную.",
+        "fr_FR": "Avertissement\nObjet étranger détecté sur la plateforme.\nVeuillez nettoyer manuellement.",
+        "de_DE": "Warnung\nFremdkörper auf der Plattform erkannt.\nBitte manuell reinigen.",
+        "it_IT": "Avviso\nRilevato oggetto estraneo sulla piattaforma.\nSi prega di pulire manualmente.",
+        "es_ES": "Advertencia\nObjeto extraño detectado en la plataforma.\nPor favor, limpie manualmente.",
+        "ko_KR": "경고\n플랫폼에서 이물질이 감지되었습니다.\n수동으로 청소해 주세요.",
+        "pt_PT": "Aviso\nObjeto estranho detetado na plataforma.\nPor favor, limpe manualmente."
+    },
+    "error_type": 1,
+    "weight": 5,
+    "popup_stlye": {
+        "main_pic": "NO_PIC",
+        "is_model": true,
+        "left_text": {
+            "zh_CN": "停止打印",
+            "en_US": "Stop Printing",
+            "ja_JP": "印刷を停止",
+            "ru_RU": "Остановить печать",
+            "fr_FR": "Arrêter l'impression",
+            "de_DE": "Druck stoppen",
+            "it_IT": "Interrompi stampa",
+            "es_ES": "Detener impresión",
+            "ko_KR": "인쇄 중지",
+            "pt_PT": "Parar impressão"
+        },
+        "right_text": {
+            "zh_CN": "继续打印",
+            "en_US": "Continue Printing",
+            "ja_JP": "印刷を続行",
+            "ru_RU": "Продолжить печать",
+            "fr_FR": "Continuer l'impression",
+            "de_DE": "Druck fortsetzen",
+            "it_IT": "Continua stampa",
+            "es_ES": "Continuar impresión",
+            "ko_KR": "인쇄 계속",
+            "pt_PT": "Continuar impressão"
+        }
+    }
+}

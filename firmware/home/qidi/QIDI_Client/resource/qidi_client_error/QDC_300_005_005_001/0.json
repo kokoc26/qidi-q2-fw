@@ -1,0 +1,59 @@
+{
+    "message": "Box版本更新",
+    "message_translation": {
+        "zh_CN": "有新版本Box固件",
+        "en_US": "New Box firmware available",
+        "ja_JP": "新しいBoxファームウェアがあります",
+        "ru_RU": "Доступно новое ПО Box",
+        "fr_FR": "Nouveau firmware Box disponible",
+        "de_DE": "Neue Box-Firmware verfügbar",
+        "it_IT": "Nuovo firmware Box disponibile",
+        "es_ES": "Nuevo firmware de Box disponible",
+        "ko_KR": "새 Box 펌웨어 사용 가능",
+        "pt_PT": "Novo firmware Box disponível"
+    },
+    "error_code": "QDC_300_005_005_001",
+    "error_qr_code_path": "/QDC/300_005_005_001_max4",
+    "prossess_msg_translation": {
+        "zh_CN": "检测到新版本Box固件，请前往固件页面更新",
+        "en_US": "New Box firmware detected. Please go to the firmware page to update.",
+        "ja_JP": "新しいBoxファームウェアが検出されました。更新ページへ移動してください。",
+        "ru_RU": "Обнаружено новое ПО Box. Перейдите на страницу прошивки для обновления.",
+        "fr_FR": "Nouveau firmware Box détecté. Veuillez aller à la page du firmware pour mettre à jour.",
+        "de_DE": "Neue Box-Firmware erkannt. Bitte zur Firmware-Seite gehen und aktualisieren.",
+        "it_IT": "Rilevato nuovo firmware Box. Vai alla pagina del firmware per aggiornare.",
+        "es_ES": "Nuevo firmware de Box detectado. Vaya a la página de firmware para actualizar.",
+        "ko_KR": "새 Box 펌웨어가 감지되었습니다. 업데이트를 위해 펌웨어 페이지로 이동하십시오.",
+        "pt_PT": "Novo firmware Box detetado. Vá à página do firmware para atualizar."
+    },
+    "error_type": 1,
+    "weight": 5,
+    "popup_stlye": {
+        "main_pic": "NO_PIC",
+        "is_model": false,
+        "left_text": {
+            "zh_CN": "取消",
+            "en_US": "Cancel",
+            "ja_JP": "キャンセル",
+            "ru_RU": "Отмена",
+            "fr_FR": "Annuler",
+            "de_DE": "Abbrechen",
+            "it_IT": "Annulla",
+            "es_ES": "Cancelar",
+            "ko_KR": "취소",
+            "pt_PT": "Cancelar"
+        },
+        "right_text": {
+            "zh_CN": "前往更新",
+            "en_US": "Update",
+            "ja_JP": "更新へ",
+            "ru_RU": "Обновить",
+            "fr_FR": "Mettre à jour",
+            "de_DE": "Aktualisieren",
+            "it_IT": "Aggiorna",
+            "es_ES": "Actualizar",
+            "ko_KR": "업데이트",
+            "pt_PT": "Atualizar"
+        }
+    }
+}

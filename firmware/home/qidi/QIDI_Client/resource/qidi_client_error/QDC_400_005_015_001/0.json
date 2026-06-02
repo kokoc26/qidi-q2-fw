@@ -1,0 +1,60 @@
+{
+    "message": "打印机服务启动失败",
+    "message_translation": {
+        "zh_CN": "打印机服务启动失败",
+        "en_US": "Printer service failed to start",
+        "ja_JP": "プリンターサービスの起動に失敗しました",
+        "ru_RU": "Не удалось запустить службу печати",
+        "fr_FR": "Échec du démarrage du service d'impression",
+        "de_DE": "Druckerdienst konnte nicht gestartet werden",
+        "it_IT": "Impossibile avviare il servizio stampante",
+        "es_ES": "Error al iniciar el servicio de impresora",
+        "ko_KR": "프린터 서비스를 시작하지 못했습니다",
+        "pt_PT": "Falha ao iniciar o serviço de impressora"
+    },
+    "error_code": "QDC_400_005_015_001",
+    "error_qr_code_path": "/QDC/400_005_015_001_max4",
+    "prossess_msg_translation": {
+        "zh_CN": "警告\n打印机服务启动失败\n请重新安装或者联系客服",
+        "en_US": "Warning\nPrinter service failed to start\nPlease reinstall or contact customer support",
+        "ja_JP": "警告\nプリンターサービスの起動に失敗しました\n再インストールするか、カスタマーサポートにご連絡ください",
+        "ru_RU": "Внимание\nНе удалось запустить службу печати\nПереустановите или обратитесь в службу поддержки",
+        "fr_FR": "Attention\nÉchec du démarrage du service d'impression\nVeuillez réinstaller ou contacter le service client",
+        "de_DE": "Warnung\nDruckerdienst konnte nicht gestartet werden\nBitte neu installieren oder den Kundendienst kontaktieren",
+        "it_IT": "Attenzione\nImpossibile avviare il servizio stampante\nReinstallare o contattare l'assistenza clienti",
+        "es_ES": "Advertencia\nError al iniciar el servicio de impresora\nVuelva a instalar o póngase en contacto con el servicio de atención al cliente",
+        "ko_KR": "경고\n프린터 서비스를 시작하지 못했습니다\n다시 설치하거나 고객 지원팀에 문의하십시오",
+        "pt_PT": "Aviso\nFalha ao iniciar o serviço de impressora\nReinstale ou contacte o apoio ao cliente"
+    },
+    "error_type": 3,
+    "weight": 15,
+    "popup_stlye": {
+        "main_pic": "NO_PIC",
+        "is_model": true,
+        "left_text": {
+            "zh_CN": "助手",
+            "en_US": "Assistant",
+            "ja_JP": "アシスタント",
+            "ru_RU": "Ассистент",
+            "fr_FR": "Assistant",
+            "de_DE": "Assistent",
+            "it_IT": "Assistente",
+            "es_ES": "Asistente",
+            "ko_KR": "어시스턴트",
+            "pt_PT": "Assistente"
+        },
+        "right_text": {
+            "zh_CN": "",
+            "en_US": "",
+            "ja_JP": "",
+            "ru_RU": "",
+            "fr_FR": "",
+            "de_DE": "",
+            "it_IT": "",
+            "es_ES": "",
+            "ko_KR": "",
+            "pt_PT": ""
+
+        }
+    }
+}

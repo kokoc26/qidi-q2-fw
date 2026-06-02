@@ -1,0 +1,59 @@
+{
+    "message": "耗材退出",
+    "message_translation": {
+        "zh_CN": "请把耗材退出",
+        "en_US": "Please retract the filament",
+        "ja_JP": "フィラメントを引き出してください",
+        "ru_RU": "Пожалуйста, извлеките филамент",
+        "fr_FR": "Veuillez rétracter le filament",
+        "de_DE": "Bitte Filament zurückziehen",
+        "it_IT": "Si prega di ritrarre il filamento",
+        "es_ES": "Por favor, retraiga el filamento",
+        "ko_KR": "필라멘트를 빼 주세요",
+        "pt_PT": "Por favor, retraia o filamento"
+    },
+    "error_code": "QDC_200_001_005_003",
+    "error_qr_code_path": "/QDC/200_001_005_003_max4",
+    "prossess_msg_translation": {
+        "zh_CN": "请把耗材完全退出。",
+        "en_US": "Please fully retract the filament.",
+        "ja_JP": "フィラメントを完全に引き出してください。",
+        "ru_RU": "Пожалуйста, полностью извлеките филамент.",
+        "fr_FR": "Veuillez rétracter complètement le filament.",
+        "de_DE": "Bitte ziehen Sie das Filament vollständig zurück.",
+        "it_IT": "Si prega di ritrarre completamente il filamento.",
+        "es_ES": "Por favor, retraiga completamente el filamento.",
+        "ko_KR": "필라멘트를 완전히 빼 주세요.",
+        "pt_PT": "Por favor, retraia completamente o filamento."
+    },
+    "error_type": 1,
+    "weight": 5,
+    "popup_stlye": {
+        "main_pic": "NO_PIC",
+        "is_model": false,
+        "left_text": {
+            "zh_CN": "已完成，继续",
+            "en_US": "Continue",
+            "ja_JP": "続行",
+            "ru_RU": "Продолжить",
+            "fr_FR": "Continuer",
+            "de_DE": "Fortfahren",
+            "it_IT": "Continua",
+            "es_ES": "Continuar",
+            "ko_KR": "계속",
+            "pt_PT": "Continuar"
+        },
+        "right_text": {
+            "zh_CN": "",
+            "en_US": "",
+            "ja_JP": "",
+            "ru_RU": "",
+            "fr_FR": "",
+            "de_DE": "",
+            "it_IT": "",
+            "es_ES": "",
+            "ko_KR": "",
+            "pt_PT": ""
+        }
+    }
+}

@@ -1,0 +1,59 @@
+{
+    "message": "耗材挤出",
+    "message_translation": {
+        "zh_CN": "检查耗材挤出",
+        "en_US": "Check Filament Extrusion",
+        "ja_JP": "フィラメント押出しを確認",
+        "ru_RU": "Проверьте выдавливание филамента",
+        "fr_FR": "Vérifiez l'extrusion du filament",
+        "de_DE": "Filamentextrusion prüfen",
+        "it_IT": "Verifica l'estrusione del filamento",
+        "es_ES": "Compruebe la extrusión del filamento",
+        "ko_KR": "필라멘트 압출 확인",
+        "pt_PT": "Verifique a extrusão do filamento"
+    },
+    "error_code": "QDC_200_001_005_002",
+    "error_qr_code_path": "/QDC/200_001_005_002_max4",
+    "prossess_msg_translation": {
+        "zh_CN": "请观察喷嘴，若耗材已被挤出，点击“继续”；若未被挤出，请往前轻推耗材后点击“重试”。",
+        "en_US": "Observe the nozzle. If filament is extruding, click 'Continue'. If not, gently push the filament forward and then click 'Retry'.",
+        "ja_JP": "ノズルを確認してください。フィラメントが押し出されている場合は「続行」を、出ていない場合はフィラメントを軽く前方に押してから「再試行」をクリックしてください。",
+        "ru_RU": "Наблюдайте за соплом. Если филамент экструдируется, нажмите «Продолжить». Если нет — слегка подтолкните филамент вперёд, затем нажмите «Повторить».",
+        "fr_FR": "Observez la buse. Si le filament est en cours d'extrusion, cliquez sur « Continuer ». Sinon, poussez légèrement le filament vers l'avant puis cliquez sur « Réessayer ».",
+        "de_DE": "Beobachten Sie die Düse. Wenn Filament extrudiert wird, klicken Sie auf „Fortfahren“. Falls nicht, schieben Sie das Filament vorsichtig nach vorne und klicken Sie dann auf „Wiederholen“.",
+        "it_IT": "Osservare l'ugello. Se il filamento viene estruso, fare clic su \"Continua\". In caso contrario, spingere leggermente in avanti il filamento e quindi fare clic su \"Riprova\".",
+        "es_ES": "Observe la boquilla. Si el filamento se está extrusionando, haga clic en \"Continuar\". De lo contrario, empuje ligeramente el filamento hacia adelante y luego haga clic en \"Reintentar\".",
+        "ko_KR": "노즐을 관찰하세요. 필라멘트가 압출되고 있으면 ‘계속’을 클릭하세요. 그렇지 않다면 필라멘트를 앞으로 가볍게 밀어 준 다음 ‘다시 시도’를 클릭하세요.",
+        "pt_PT": "Observe o bico. Se o filamento estiver a ser extrudido, clique em \"Continuar\". Caso contrário, empurre ligeiramente o filamento para a frente e depois clique em \"Repetir\"."
+    },
+    "error_type": 1,
+    "weight": 5,
+    "popup_stlye": {
+        "main_pic": "NO_PIC",
+        "is_model": false,
+        "left_text": {
+            "zh_CN": "耗材已挤出，继续",
+            "en_US": "Continue",
+            "ja_JP": "続行",
+            "ru_RU": "Продолжить",
+            "fr_FR": "Continuer",
+            "de_DE": "Fortfahren",
+            "it_IT": "Continua",
+            "es_ES": "Continuar",
+            "ko_KR": "계속",
+            "pt_PT": "Continuar"
+        },
+        "right_text": {
+            "zh_CN": "耗材未挤出，重试",
+            "en_US": "Retry",
+            "ja_JP": "再試行",
+            "ru_RU": "Повторить",
+            "fr_FR": "Réessayer",
+            "de_DE": "Wiederholen",
+            "it_IT": "Riprova",
+            "es_ES": "Reintentar",
+            "ko_KR": "다시 시도",
+            "pt_PT": "Repetir"
+        }
+    }
+}

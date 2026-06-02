@@ -1,0 +1,37 @@
+{
+    "message": "klipper_common_warning",
+    "message_translation": {},
+    "error_code": "QDC_100_005_000_001",
+    "error_qr_code_path": "/QDC/100_005_000_001_max4",
+    "prossess_msg_translation": {},
+    "error_type": 0,
+    "weight": 0,
+    "popup_stlye": {
+        "main_pic": "NO_PIC",
+        "is_model": false,
+        "left_text": {
+            "zh_CN": "确定",
+            "en_US": "OK",
+            "ja_JP": "確認",
+            "ru_RU": "ОК",
+            "fr_FR": "OK",
+            "de_DE": "OK",
+            "it_IT": "OK",
+            "es_ES": "Aceptar",
+            "ko_KR": "확인",
+            "pt_PT": "OK"
+        },
+        "right_text": {
+            "zh_CN": "",
+            "en_US": "",
+            "ja_JP": "",
+            "ru_RU": "",
+            "fr_FR": "",
+            "de_DE": "",
+            "it_IT": "",
+            "es_ES": "",
+            "ko_KR": "",
+            "pt_PT": ""
+        }
+    }
+}

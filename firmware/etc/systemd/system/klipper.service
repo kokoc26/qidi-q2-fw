@@ -1,0 +1,18 @@
+[Unit]
+Description=Klipper 3D Printer Firmware SV1
+Documentation=https://www.klipper3d.org/
+After=network-online.target
+Wants=udev.target
+
+[Install]
+WantedBy=multi-user.target
+
+[Service]
+Type=simple
+User=qidi
+RemainAfterExit=yes
+WorkingDirectory=/home/qidi/klipper
+EnvironmentFile=/home/qidi/printer_data/systemd/klipper.env
+ExecStart=/home/qidi/klippy-env/bin/python $KLIPPER_ARGS
+Restart=always
+RestartSec=10

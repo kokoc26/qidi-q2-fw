@@ -1,0 +1,19 @@
+[Unit]
+Description=API Server for Klipper SV1
+Documentation=https://moonraker.readthedocs.io/
+Requires=network-online.target
+After=network-online.target
+
+[Install]
+WantedBy=multi-user.target
+
+[Service]
+Type=simple
+User=qidi
+SupplementaryGroups=moonraker-admin
+RemainAfterExit=yes
+WorkingDirectory=/home/qidi/moonraker
+EnvironmentFile=/home/qidi/printer_data/systemd/moonraker.env
+ExecStart=/home/qidi/moonraker-env/bin/python $MOONRAKER_ARGS
+Restart=always
+RestartSec=10

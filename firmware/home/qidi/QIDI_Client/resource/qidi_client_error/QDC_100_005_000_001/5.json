@@ -1,0 +1,27 @@
+{
+  "message": "Code:QDE_004_007",
+  "message_translation": {
+    "zh_CN": "挤出机没有加载耗材",
+    "en_US": "The extruder is not loaded with filament.",
+    "ja_JP": "エクストルーダーにフィラメントがロードされていません",
+    "ru_RU": "Экструдер не загружен филаментом",
+    "fr_FR": "L'extrudeuse n'est pas chargée de filament",
+    "de_DE": "Der Extruder ist nicht mit Filament beladen",
+    "it_IT": "L'estrusore non è caricato con filamento",
+    "es_ES": "El extrusor no está cargado con filamento",
+    "ko_KR": "익스트루더에 필라멘트가 로드되지 않았습니다",
+    "pt_PT": "A extrusora não está carregada com filamento"
+  },
+  "prossess_msg_translation": {
+    "zh_CN": "挤出机没有加载耗材，请检查耗材是否已经正确安装。",
+    "en_US": "The extruder is not loaded with filament. Please check if the filament is installed correctly.",
+    "ja_JP": "エクストルーダーにフィラメントがロードされていません。フィラメントが正しく取り付けられているか確認してください。",
+    "ru_RU": "Экструдер не загружен филаментом. Пожалуйста, проверьте, правильно ли установлен филамент.",
+    "fr_FR": "L'extrudeuse n'est pas chargée de filament. Veuillez vérifier si le filament est correctement installé.",
+    "de_DE": "Der Extruder ist nicht mit Filament beladen. Bitte überprüfen Sie, ob das Filament korrekt installiert ist.",
+    "it_IT": "L'estrusore non è caricato con filamento. Si prega di verificare se il filamento è installato correttamente.",
+    "es_ES": "El extrusor no está cargado con filamento. Por favor, compruebe si el filamento está instalado correctamente.",
+    "ko_KR": "익스트루더에 필라멘트가 로드되지 않았습니다. 필라멘트가 올바르게 설치되었는지 확인하십시오.",
+    "pt_PT": "A extrusora não está carregada com filamento. Por favor, verifique se o filamento está instalado corretamente."
+  }
+}

@@ -1,0 +1,108 @@
+Metadata-Version: 2.1
+Name: circle-fit
+Version: 0.2.1
+Summary: A Circle Fitting Library for Python
+Project-URL: Homepage, https://github.com/AlliedToasters/circle-fit
+Project-URL: Bug Tracker, https://github.com/AlliedToasters/circle-fit/issues
+Author-email: Michael Klear <michael.r.klear@gmail.com>, Magne Eik Lauritzen <mag.lauritzen@gmail.com>
+License: Copyright (c) 2022 Michael Klear
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy
+        of this software and associated documentation files (the "Software"), to deal
+        in the Software without restriction, including without limitation the rights
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in all
+        copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+        SOFTWARE.
+License-File: LICENSE
+Keywords: circle fitting,data science
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.7
+Requires-Dist: numpy>=1.21.0
+Requires-Dist: scipy
+Description-Content-Type: text/markdown
+
+![LICENCE](https://img.shields.io/github/license/AlliedToasters/circle-fit)
+[![Flake8](https://github.com/AlliedToasters/circle-fit/actions/workflows/flake8.yml/badge.svg)](https://github.com/AlliedToasters/circle-fit/actions/workflows/flake8.yml)
+[![PyTest](https://github.com/AlliedToasters/circle-fit/actions/workflows/PyTest.yml/badge.svg)](https://github.com/AlliedToasters/circle-fit/actions/workflows/PyTest.yml)
+![Version](https://img.shields.io/pypi/v/circle-fit)
+![Python](https://img.shields.io/pypi/pyversions/circle-fit)
+# Circle-Fit
+## A Circle Fitting Library for Python
+Given a collection of points in 2D space, a common problem is finding the parameters of a circle that best approximate 
+these points. This library implements a collection of different circle fitting algorithms:
+
+```
+- hyperLSQ()      : Least squares circle fit with "hyperaccuracy" by Kenichi Kanatani, Prasanna Rangarajan
+- standardLSQ()   : Least squares circle fit, standard version.
+- riemannSWFLa()  : Riemann circle fit, SWFL version A
+- lm()            : Levenberg-Marquardt in the full (a,b,R) parameter space
+- prattSVD()      : Algebraic circle fit by V. Pratt
+- taubinSVD()     : Algebraic circle fit by G. Taubin
+- hyperSVD()      : Algebraic circle fit with "hyperaccuracy"
+- kmh()           : Consistent circle fit by A. Kukush, I. Markovsky, S. Van Huffel
+```
+
+Most of these algorithms are based on the original MATLAB implementations by Nikolai Chernov: 
+https://people.cas.uab.edu/~mosya/cl/MATLABcircle.html
+
+Each algorithm may work better in specific cases. If you are in doubt about which to use, `taubinSVD()`
+is a good starting point.
+
+## Installation
+`circle-fit` is available from PyPi. Run the following in a command line terminal:
+`pip install circle-fit`
+
+## Example
+Fit a circle to four `(x,y)` points.
+```
+from circle_fit import taubinSVD
+point_coordinates = [[1, 0], [-1, 0], [0, 1], [0, -1]]
+xc, yc, r, sigma = taubinSVD(point_coordinates)
+```
+
+## Data format
+Your data must have at least two points in 2-D space. The algorithms in `circle-fit` expects either 
+a 2D List or numpy ndarray of shape `(n, 2)`, where n is the number of points in your dataset.
+
+All the algorithms available in this library return four values:
+```
+- xc    : x-coordinate of solution center (float)
+- yc    : y-coordinate of solution center (float)
+- r     : Radius of solution (float)
+- sigma : Residual error of solution (float)
+```
+
+### View the fit
+The function `plot_data_circle(coords, xc, yc, r)` can be used to open a plot window which shows you data points with
+a circle fit overlaid on top. Example use:
+```
+xc, yc, r, sigma = taubinSVD(point_coordinates)
+plot_data_circle(point_coordinates, xc, yc, r)
+```
+
+### Contributors and Maintainers
+This library is a community collaboration, all work is voluntary.
+
+#### To Contribute
+Please open a pull request with the changes you would like to contribute ([example](https://github.com/AlliedToasters/circle-fit/pull/10))
+
+#### Contact
+As we are volunteers, please be patient when requesting support. You can either open an issue if you think you've found a bug with the code, or contact one of us directly if you have a user issue:
+
+ - michael.r.klear@gmail.com
+ - mag.lauritzen@gmail.com
+

@@ -1,0 +1,59 @@
+{
+    "message": "自动续料失败",
+    "message_translation": {
+        "zh_CN": "自动续料失败",
+        "en_US": "Auto-refill failed.",
+        "ja_JP": "自動補充に失敗しました。",
+        "ru_RU": "Сбой автозаправки.",
+        "fr_FR": "Échec du remplissage automatique.",
+        "de_DE": "Automatisches Nachfüllen fehlgeschlagen.",
+        "it_IT": "Ricarica automatica fallita.",
+        "es_ES": "Recarga automática fallida.",
+        "ko_KR": "자동 보충 실패.",
+        "pt_PT": "Falha no reabastecimento automático."
+    },
+    "error_code": "QDC_300_001_010_002",
+    "error_qr_code_path": "/QDC/300_001_010_002_max4",
+    "prossess_msg_translation": {
+        "zh_CN": "自动续料失败。请把耗材放入同一个BOX槽位后继续。",
+        "en_US": "Auto-refill failed. Please load filament into the same BOX slot and continue.",
+        "ja_JP": "自動補充に失敗しました。同じBOXスロットにフィラメントを補充して続行してください。",
+        "ru_RU": "Сбой автозаправки. Пожалуйста, вставьте пластик в тот же слот BOX и продолжите.",
+        "fr_FR": "Échec du remplissage automatique. Veuillez charger le filament dans le même emplacement BOX et continuer.",
+        "de_DE": "Automatisches Nachfüllen fehlgeschlagen. Bitte Filament in denselben BOX-Slot einlegen und fortfahren.",
+        "it_IT": "Ricarica automatica fallita. Inserire il filamento nello stesso slot BOX e continuare.",
+        "es_ES": "Error en la recarga automática. Por favor, cargue el filamento en la misma ranura de la BOX y continúe.",
+        "ko_KR": "자동 보충에 실패했습니다. 같은 BOX 슬롯에 소모품을 넣은 후 계속하세요.",
+        "pt_PT": "Falha no reabastecimento automático. Por favor, coloque o filamento no mesmo slot da BOX e continue."
+    },
+    "error_type": 2,
+    "weight": 10,
+    "popup_stlye": {
+        "main_pic": "NO_PIC",
+        "is_model": false,
+        "left_text": {
+            "zh_CN": "继续（问题已解决）",
+            "en_US": "Continue (Fixed)",
+            "ja_JP": "続行（解決）",
+            "ru_RU": "Продолжить (Исправлено)",
+            "fr_FR": "Continuer (Réglé)",
+            "de_DE": "Fortfahren (Behoben)",
+            "it_IT": "Continua (Corretto)",
+            "es_ES": "Continuar (Corregido)",
+            "ko_KR": "계속 (수정됨)",
+            "pt_PT": "Continuar (Corrigido)"
+        },
+        "right_text": {
+            "zh_CN": "耗材页",
+            "en_US": "Filament Page",
+            "ja_JP": "フィラメントページ",
+            "ru_RU": "Страница филамента",
+            "fr_FR": "Page filament",
+            "de_DE": "Filamentseite",
+            "it_IT": "Pagina filamento",
+            "es_ES": "Página filamento",
+            "ko_KR": "필라멘트 페이지",
+            "pt_PT": "Página do filamento"
+        }
+    }
+}

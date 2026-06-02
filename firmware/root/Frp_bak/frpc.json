@@ -1,0 +1,25 @@
+{
+    "auth": {
+        "method": "token",
+        "token": ""
+    },
+    "log": {
+        "level": "info",
+        "maxDays": 7,
+        "to": "/root/Frp/frpc.log"
+    },
+    "proxies": [
+        {
+            "localPort": 80,
+            "name": "TST",
+            "subdomain": "229jen9989thwgp0p3eq",
+            "transport": {
+                "bandwidthLimit": "300KB",
+                "useEncryption": true
+            },
+            "type": "http"
+        }
+    ],
+    "serverAddr": "TEST",
+    "serverPort": 7080
+}

@@ -1,0 +1,27 @@
+{
+  "message": "Code:QDE_004_022",
+  "message_translation": {
+    "zh_CN": "自动续料失败",
+    "en_US": "Auto-loading filament failed.",
+    "ja_JP": "フィラメントの自動ロードに失敗しました",
+    "ru_RU": "Автозагрузка филамента не удалась",
+    "fr_FR": "Le chargement automatique du filament a échoué",
+    "de_DE": "Automatisches Laden des Filaments fehlgeschlagen",
+    "it_IT": "Caricamento automatico del filamento non riuscito",
+    "es_ES": "Error en la carga automática del filamento",
+    "ko_KR": "필라멘트 자동 로딩 실패",
+    "pt_PT": "Falha no carregamento automático do filamento"
+  },
+  "prossess_msg_translation": {
+    "zh_CN": "自动续料失败，没有可替换耗材槽，请手动加载耗材。",
+    "en_US": "Auto-loading filament failed. No replaceable slot found. Please manually load the filament.",
+    "ja_JP": "自動ロードに失敗しました。交換可能なスロットが見つかりません。手動でフィラメントをロードしてください。",
+    "ru_RU": "Автозагрузка филамента не удалась. Заменяемый слот не найден. Пожалуйста, загрузите филамент вручную.",
+    "fr_FR": "Le chargement automatique du filament a échoué. Aucun emplacement remplaçable trouvé. Veuillez charger le filament manuellement.",
+    "de_DE": "Automatisches Laden des Filaments fehlgeschlagen. Kein austauschbarer Steckplatz gefunden. Bitte laden Sie das Filament manuell.",
+    "it_IT": "Caricamento automatico del filamento non riuscito. Nessuno slot sostituibile trovato. Si prega di caricare il filamento manualmente.",
+    "es_ES": "Error en la carga automática del filamento. No se encontró ninguna ranura reemplazable. Por favor, cargue el filamento manualmente.",
+    "ko_KR": "자동 로딩 실패. 교체 가능한 슬롯이 없습니다. 수동으로 필라멘트를 로드하십시오.",
+    "pt_PT": "Falha no carregamento automático do filamento. Nenhuma ranhura substituível encontrada. Por favor, carregue o filamento manualmente."
+  }
+}

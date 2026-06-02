@@ -1,0 +1,27 @@
+{
+  "message": "Code:QDE_004_020",
+  "message_translation": {
+    "zh_CN": "RFID读取失败",
+    "en_US": "RFID read failed.",
+    "ja_JP": "RFIDの読み取りに失敗しました",
+    "ru_RU": "Ошибка чтения RFID",
+    "fr_FR": "Échec de la lecture RFID",
+    "de_DE": "RFID-Lesefehler",
+    "it_IT": "Lettura RFID fallita",
+    "es_ES": "Error de lectura RFID",
+    "ko_KR": "RFID 읽기 실패",
+    "pt_PT": "Falha na leitura RFID"
+  },
+  "prossess_msg_translation": {
+    "zh_CN": "RFID读取失败，请重新加载耗材。",
+    "en_US": "RFID read failed. Please reload the filament.",
+    "ja_JP": "RFIDの読み取りに失敗しました。フィラメントを再ロードしてください。",
+    "ru_RU": "Ошибка чтения RFID. Пожалуйста, перезагрузите филамент.",
+    "fr_FR": "Échec de la lecture RFID. Veuillez recharger le filament.",
+    "de_DE": "RFID-Lesefehler. Bitte laden Sie das Filament neu.",
+    "it_IT": "Lettura RFID fallita. Si prega di ricaricare il filamento.",
+    "es_ES": "Error de lectura RFID. Por favor, recargue el filamento.",
+    "ko_KR": "RFID 읽기 실패. 필라멘트를 다시 로드하십시오.",
+    "pt_PT": "Falha na leitura RFID. Por favor, recarregue o filamento."
+  }
+}

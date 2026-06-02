@@ -1,0 +1,27 @@
+{
+  "message": "Code:QDE_004_004",
+  "message_translation": {
+    "zh_CN": "请先退料",
+    "en_US": "Please unload extruder first.",
+    "ja_JP": "まずフィラメントをアンロードしてください",
+    "ru_RU": "Сначала выгрузите филамент",
+    "fr_FR": "Veuillez d'abord décharger le filament",
+    "de_DE": "Bitte entladen Sie zuerst das Filament",
+    "it_IT": "Si prega di scaricare prima il filamento",
+    "es_ES": "Por favor, descargue el filamento primero",
+    "ko_KR": "먼저 필라멘트를 언로드하십시오",
+    "pt_PT": "Por favor, descarregue o filamento primeiro"
+  },
+  "prossess_msg_translation": {
+    "zh_CN": "请先把耗材退出挤出机",
+    "en_US": "Please unload extruder first.",
+    "ja_JP": "まず、エクストルーダーからフィラメントをアンロードしてください",
+    "ru_RU": "Пожалуйста, сначала выгрузите филамент из экструдера",
+    "fr_FR": "Veuillez d'abord décharger le filament de l'extrudeuse",
+    "de_DE": "Bitte entladen Sie zuerst das Filament aus dem Extruder",
+    "it_IT": "Si prega di scaricare prima il filamento dall'estrusore",
+    "es_ES": "Por favor, descargue primero el filamento del extrusor",
+    "ko_KR": "먼저 익스트루더에서 필라멘트를 언로드하십시오",
+    "pt_PT": "Por favor, descarregue primeiro o filamento da extrusora"
+  }
+}

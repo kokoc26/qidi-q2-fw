@@ -1,0 +1,27 @@
+{
+  "message": "Can not update MCU",
+  "message_translation": {
+    "zh_CN": "无法更新MCU固件",
+    "en_US": "Cannot update MCU firmware",
+    "ja_JP": "MCUファームウェアを更新できません",
+    "ru_RU": "Не удалось обновить прошивку MCU",
+    "fr_FR": "Impossible de mettre à jour le micrologiciel du MCU",
+    "de_DE": "MCU-Firmware kann nicht aktualisiert werden",
+    "it_IT": "Impossibile aggiornare il firmware della MCU",
+    "es_ES": "No se puede actualizar el firmware de la MCU",
+    "ko_KR": "MCU 펌웨어를 업데이트할 수 없습니다",
+    "pt_PT": "Não é possível atualizar o firmware da MCU"
+  },
+  "prossess_msg_translation": {
+    "zh_CN": "更新失败。请确保MCU连接正常，然后点击“重启固件”或重试更新操作。",
+    "en_US": "Update failed. Please ensure the MCU is properly connected, then click \"Restart Firmware\" or retry the update.",
+    "ja_JP": "更新に失敗しました。MCUが正しく接続されていることを確認してから、「ファームウェアを再起動」するか、更新を再試行してください。",
+    "ru_RU": "Обновление не удалось. Убедитесь, что MCU подключен правильно, затем нажмите «Перезагрузить прошивку» или повторите попытку обновления.",
+    "fr_FR": "Échec de la mise à jour. Assurez-vous que le MCU est correctement connecté, puis cliquez sur « Redémarrer le micrologiciel » ou réessayez la mise à jour.",
+    "de_DE": "Update fehlgeschlagen. Bitte stellen Sie sicher, dass die MCU korrekt verbunden ist, und klicken Sie dann auf „Firmware neu starten“ oder versuchen Sie das Update erneut.",
+    "it_IT": "Aggiornamento non riuscito. Assicurarsi che la MCU sia connessa correttamente, quindi fare clic su \"Riavvia firmware\" o riprovare l'aggiornamento.",
+    "es_ES": "Error en la actualización. Asegúrese de que la MCU esté conectada correctamente y, a continuación, haga clic en \"Reiniciar firmware\" o reintente la actualización.",
+    "ko_KR": "업데이트 실패. MCU가 올바르게 연결되어 있는지 확인한 후 \"펌웨어 재시작\"을 클릭하거나 업데이트를 다시 시도하십시오.",
+    "pt_PT": "Falha na atualização. Certifique-se de que a MCU está devidamente ligada e, em seguida, clique em \"Reiniciar firmware\" ou tente novamente a atualização."
+  }
+}

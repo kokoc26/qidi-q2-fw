@@ -1,0 +1,31 @@
+{
+    "message": "mqtt连接异常。",
+    "message_translation": {
+        "zh_CN": "MQTT连接异常",
+        "en_US": "MQTT connection error",
+        "ja_JP": "MQTT接続エラー",
+        "ru_RU": "Ошибка подключения MQTT",
+        "fr_FR": "Erreur de connexion MQTT",
+        "de_DE": "MQTT-Verbindungsfehler",
+        "it_IT": "Errore di connessione MQTT",
+        "es_ES": "Error de conexión MQTT",
+        "ko_KR": "MQTT 연결 오류",
+        "pt_PT": "Erro de conexão MQTT"
+    },
+    "error_code": "QDC_400_004_010_001",
+    "error_qr_code_path": "/QDC/400_004_010_001_max4",
+    "prossess_msg_translation": {
+        "zh_CN": "MQTT连接异常，请扫描二维码查看解决方案",
+        "en_US": "MQTT connection error, please scan the QR code for troubleshooting",
+        "ja_JP": "MQTT接続エラーが発生しました。QRコードをスキャンして解決方法をご確認ください",
+        "ru_RU": "Ошибка подключения MQTT, отсканируйте QR-код для устранения неполадок",
+        "fr_FR": "Erreur de connexion MQTT, veuillez scanner le code QR pour le dépannage",
+        "de_DE": "MQTT-Verbindungsfehler, bitte scannen Sie den QR-Code zur Fehlerbehebung",
+        "it_IT": "Errore di connessione MQTT, scansiona il codice QR per la risoluzione dei problemi",
+        "es_ES": "Error de conexión MQTT, escanee el código QR para solucionar problemas",
+        "ko_KR": "MQTT 연결 오류, 문제 해결을 위해 QR 코드를 스캔하세요",
+        "pt_PT": "Erro de conexão MQTT, escaneie o código QR para solução de problemas"
+    },
+    "error_type": 2,
+    "weight": 10
+}

@@ -1,0 +1,27 @@
+{
+  "message": "Lost communication with MCU",
+  "message_translation": {
+    "zh_CN": "与MCU的通信已丢失",
+    "en_US": "Communication with MCU lost",
+    "ja_JP": "MCUとの通信が切断されました",
+    "ru_RU": "Связь с MCU потеряна",
+    "fr_FR": "Communication avec le MCU perdue",
+    "de_DE": "Kommunikation mit MCU verloren",
+    "it_IT": "Comunicazione con MCU persa",
+    "es_ES": "Comunicación con MCU perdida",
+    "ko_KR": "MCU와의 통신이 끊어졌습니다",
+    "pt_PT": "Comunicação com a MCU perdida"
+  },
+  "prossess_msg_translation": {
+    "zh_CN": "请点击“重启固件”，然后重新尝试打印。",
+    "en_US": "Please click \"Restart Firmware\" and then retry printing.",
+    "ja_JP": "「ファームウェアを再起動」をクリックし、印刷を再試行してください。",
+    "ru_RU": "Пожалуйста, нажмите «Перезагрузить прошивку» и затем повторите попытку печати.",
+    "fr_FR": "Veuillez cliquer sur « Redémarrer le micrologiciel », puis réessayer l'impression.",
+    "de_DE": "Bitte klicken Sie auf „Firmware neu starten“ und versuchen Sie dann erneut zu drucken.",
+    "it_IT": "Fare clic su \"Riavvia firmware\" e quindi riprovare a stampare.",
+    "es_ES": "Haga clic en \"Reiniciar firmware\" y luego vuelva a intentar imprimir.",
+    "ko_KR": "\"펌웨어 재시작\"을 클릭한 후 인쇄를 다시 시도하십시오.",
+    "pt_PT": "Clique em \"Reiniciar firmware\" e depois tente imprimir novamente."
+  }
+}

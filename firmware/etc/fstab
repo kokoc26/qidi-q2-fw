@@ -1,0 +1,12 @@
+# UNCONFIGURED FSTAB FOR BASE SYSTEM
+proc	/proc	proc	defaults	0 0
+devtmpfs	/dev	devtmpfs	defaults	0 0
+devpts	/dev/pts	devpts	mode=0620,ptmxmode=0000,gid=5	0 0
+tmpfs	/dev/shm	tmpfs	nosuid,nodev,noexec	0 0
+sysfs	/sys	sysfs	nosuid,nodev,noexec	0 0
+configfs	/sys/kernel/config	configfs	defaults	0 0
+debugfs	/sys/kernel/debug	debugfs	defaults	0 0
+pstore	/sys/fs/pstore	pstore	nosuid,nodev,noexec	0 0
+#PARTLABEL=oem	/oem	ext2	defaults	0 2
+#PARTLABEL=userdata	/userdata	ext2	defaults	0 2
+# /swapfile none swap sw 0 0

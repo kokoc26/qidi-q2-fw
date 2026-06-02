@@ -1,0 +1,27 @@
+{
+  "message": "Code:QDE_004_006",
+  "message_translation": {
+    "zh_CN": "进料失败",
+    "en_US": "Extruder loading failure.",
+    "ja_JP": "エクストルーダーのロードに失敗しました",
+    "ru_RU": "Неудача загрузки экструдера",
+    "fr_FR": "Échec du chargement de l'extrudeuse",
+    "de_DE": "Extruderbeladungsfehler",
+    "it_IT": "Guasto nel caricamento dell'estrusore",
+    "es_ES": "Fallo de carga del extrusor",
+    "ko_KR": "익스트루더 로딩 실패",
+    "pt_PT": "Falha no carregamento da extrusora"
+  },
+  "prossess_msg_translation": {
+    "zh_CN": "耗材进入挤出机传感器失败，请检查是否有堵塞，如果有请清理后再尝试进料。",
+    "en_US": "The filament failed to enter the extruder. Please check if there is a blockage. If so, please clean it and try feeding again.",
+    "ja_JP": "フィラメントがエクストルーダーセンサーに入りませんでした。詰まりがないか確認してください。もしあれば、清掃してから再給紙を試してください。",
+    "ru_RU": "Филамент не достиг датчика экструдера. Проверьте, нет ли засора. Если есть, прочистите и попробуйте подать снова.",
+    "fr_FR": "Le filament n'est pas entré dans le capteur de l'extrudeuse. Veuillez vérifier s'il y a un blocage. Si c'est le cas, nettoyez-le et réessayez l'alimentation.",
+    "de_DE": "Das Filament konnte nicht in den Extrudersensor gelangen. Bitte prüfen Sie, ob eine Verstopfung vorliegt. Wenn ja, reinigen Sie sie und versuchen Sie erneut, das Filament einzuziehen.",
+    "it_IT": "Il filamento non è entrato nel sensore dell'estrusore. Controllare se c'è un'ostruzione. In tal caso, pulirla e riprovare l'alimentazione.",
+    "es_ES": "El filamento no entró en el sensor del extrusor. Compruebe si hay una obstrucción. Si es así, límpiela e intente alimentar de nuevo.",
+    "ko_KR": "필라멘트가 익스트루더 센서에 들어가지 못했습니다. 막힘이 있는지 확인하십시오. 있다면 청소한 후 다시 공급을 시도하십시오.",
+    "pt_PT": "O filamento não entrou no sensor da extrusora. Verifique se há uma obstrução. Se houver, limpe-a e tente alimentar novamente."
+  }
+}

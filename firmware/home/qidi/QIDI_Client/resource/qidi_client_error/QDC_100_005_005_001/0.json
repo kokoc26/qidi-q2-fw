@@ -1,0 +1,59 @@
+{
+    "message": "固件版本更新",
+    "message_translation": {
+        "zh_CN": "有新版本固件",
+        "en_US": "New firmware version available",
+        "ja_JP": "新しいファームウェアバージョンがあります",
+        "ru_RU": "Доступна новая версия прошивки",
+        "fr_FR": "Nouvelle version du firmware disponible",
+        "de_DE": "Neue Firmware-Version verfügbar",
+        "it_IT": "Nuova versione del firmware disponibile",
+        "es_ES": "Nueva versión de firmware disponible",
+        "ko_KR": "새로운 펌웨어 버전이 있습니다",
+        "pt_PT": "Nova versão de firmware disponível"
+    },
+    "error_code": "QDC_100_005_005_001",
+    "error_qr_code_path": "/home",
+    "prossess_msg_translation": {
+        "zh_CN": "检测到新版本固件，请前往固件页面更新",
+        "en_US": "A new firmware version has been detected. Please go to the firmware page to update.",
+        "ja_JP": "新しいファームウェアバージョンを検出しました。ファームウェアページに移動して更新してください。",
+        "ru_RU": "Обнаружена новая версия прошивки. Перейдите на страницу прошивки для обновления.",
+        "fr_FR": "Une nouvelle version du firmware a été détectée. Veuillez vous rendre sur la page du firmware pour mettre à jour.",
+        "de_DE": "Eine neue Firmware-Version wurde erkannt. Bitte gehen Sie zur Firmware-Seite, um ein Update durchzuführen.",
+        "it_IT": "È stata rilevata una nuova versione del firmware. Si prega di andare alla pagina del firmware per aggiornare.",
+        "es_ES": "Se ha detectado una nueva versión de firmware. Por favor, vaya a la página de firmware para actualizar.",
+        "ko_KR": "새로운 펌웨어 버전이 감지되었습니다. 펌웨어 페이지로 이동하여 업데이트하십시오.",
+        "pt_PT": "Foi detetada uma nova versão do firmware. Por favor, vá à página do firmware para atualizar."
+    },
+    "error_type": 1,
+    "weight": 5,
+    "popup_stlye": {
+        "main_pic": "NO_PIC",
+        "is_model": false,
+        "left_text": {
+            "zh_CN": "取消",
+            "en_US": "Cancel",
+            "ja_JP": "キャンセル",
+            "ru_RU": "Отмена",
+            "fr_FR": "Annuler",
+            "de_DE": "Abbrechen",
+            "it_IT": "Annulla",
+            "es_ES": "Cancelar",
+            "ko_KR": "취소",
+            "pt_PT": "Cancelar"
+        },
+        "right_text": {
+            "zh_CN": "前往更新",
+            "en_US": "Update",
+            "ja_JP": "更新へ",
+            "ru_RU": "Обновить",
+            "fr_FR": "Mettre à jour",
+            "de_DE": "Aktualisieren",
+            "it_IT": "Aggiorna",
+            "es_ES": "Actualizar",
+            "ko_KR": "업데이트",
+            "pt_PT": "Atualizar"
+        }
+    }
+}

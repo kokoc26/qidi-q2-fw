@@ -1,0 +1,59 @@
+{
+    "message": "耗材插入",
+    "message_translation": {
+        "zh_CN": "请把耗材插入",
+        "en_US": "Please insert the filament",
+        "ja_JP": "フィラメントを挿入してください",
+        "ru_RU": "Пожалуйста, вставьте филамент",
+        "fr_FR": "Veuillez insérer le filament",
+        "de_DE": "Bitte Filament einführen",
+        "it_IT": "Inserire il filamento, per favore",
+        "es_ES": "Por favor, inserte el filamento",
+        "ko_KR": "필라멘트를 삽입해 주세요",
+        "pt_PT": "Por favor, insira o filamento"
+    },
+    "error_code": "QDC_200_001_005_001",
+    "error_qr_code_path": "/QDC/200_001_005_001_max4",
+    "prossess_msg_translation": {
+        "zh_CN": "请把耗材插入进料口，直到推不动为止。",
+        "en_US": "Please insert the filament into the feeding port until it cannot be pushed any further.",
+        "ja_JP": "フィラメントを給入口に、これ以上進まなくなるまで挿入してください。",
+        "ru_RU": "Пожалуйста, вставьте филамент в подающий порт до упора.",
+        "fr_FR": "Veuillez insérer le filament dans le port d'alimentation jusqu'à ce qu'il ne puisse plus avancer.",
+        "de_DE": "Bitte führen Sie das Filament in den Einführungsport ein, bis es nicht weiter geschoben werden kann.",
+        "it_IT": "Inserire il filamento nel porto di alimentazione fino a quando non si riesce più a spingere.",
+        "es_ES": "Por favor, inserte el filamento en el puerto de alimentación hasta que no pueda avanzar más.",
+        "ko_KR": "필라멘트를 공급 포트에 더 이상 밀리지 않을 때까지 삽입해 주세요.",
+        "pt_PT": "Por favor, insira o filamento na porta de alimentação até que não possa ser empurrado mais."
+    },
+    "error_type": 1,
+    "weight": 5,
+    "popup_stlye": {
+        "main_pic": "NO_PIC",
+        "is_model": false,
+        "left_text": {
+            "zh_CN": "已完成，继续",
+            "en_US": "Continue",
+            "ja_JP": "続行",
+            "ru_RU": "Продолжить",
+            "fr_FR": "Continuer",
+            "de_DE": "Fortfahren",
+            "it_IT": "Continua",
+            "es_ES": "Continuar",
+            "ko_KR": "계속",
+            "pt_PT": "Continuar"
+        },
+        "right_text": {
+            "zh_CN": "",
+            "en_US": "",
+            "ja_JP": "",
+            "ru_RU": "",
+            "fr_FR": "",
+            "de_DE": "",
+            "it_IT": "",
+            "es_ES": "",
+            "ko_KR": "",
+            "pt_PT": ""
+        }
+    }
+}

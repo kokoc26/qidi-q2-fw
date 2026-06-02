@@ -1,0 +1,27 @@
+{
+  "message": "Code:QDE_004_023",
+  "message_translation": {
+    "zh_CN": "自动续料失败",
+    "en_US": "Auto-loading filament failed.",
+    "ja_JP": "フィラメントの自動ロードに失敗しました",
+    "ru_RU": "Автозагрузка филамента не удалась",
+    "fr_FR": "Le chargement automatique du filament a échoué",
+    "de_DE": "Automatisches Laden des Filaments fehlgeschlagen",
+    "it_IT": "Caricamento automatico del filamento non riuscito",
+    "es_ES": "Error en la carga automática del filamento",
+    "ko_KR": "필라멘트 자동 로딩 실패",
+    "pt_PT": "Falha no carregamento automático do filamento"
+  },
+  "prossess_msg_translation": {
+    "zh_CN": "自动续料失败，请检查耗材是否堵塞，如果是请手动清理。",
+    "en_US": "Auto-loading filament failed. Please check if the filament is blocked and clear it manually.",
+    "ja_JP": "自動ロードに失敗しました。フィラメントが詰まっていないか確認し、詰まっている場合は手動で清掃してください。",
+    "ru_RU": "Автозагрузка филамента не удалась. Проверьте, не заблокирован ли филамент, и при необходимости очистите его вручную.",
+    "fr_FR": "Le chargement automatique du filament a échoué. Veuillez vérifier si le filament est bloqué et le débloquer manuellement.",
+    "de_DE": "Automatisches Laden des Filaments fehlgeschlagen. Bitte prüfen Sie, ob das Filament blockiert ist, und beseitigen Sie die Blockierung manuell.",
+    "it_IT": "Caricamento automatico del filamento non riuscito. Controllare se il filamento è bloccato e, in tal caso, sbloccarlo manualmente.",
+    "es_ES": "Error en la carga automática del filamento. Compruebe si el filamento está bloqueado y desbloquéelo manualmente.",
+    "ko_KR": "자동 로딩 실패. 필라멘트가 막혀 있는지 확인하고, 막혀 있다면 수동으로 청소하십시오.",
+    "pt_PT": "Falha no carregamento automático do filamento. Verifique se o filamento está bloqueado e desbloqueie-o manualmente."
+  }
+}

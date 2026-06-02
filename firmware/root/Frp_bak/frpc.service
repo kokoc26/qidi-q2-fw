@@ -1,0 +1,14 @@
+[Unit]
+Description=QIDILink Client Service
+After=network.target
+StartLimitIntervalSec=0
+
+[Service]
+Type=simple
+ExecStart=/root/Frp/frpc -c /root/Frp/frpc.json
+Restart=on-failure
+RestartSec=30
+StartLimitBurst=0
+
+[Install]
+WantedBy=multi-user.target
