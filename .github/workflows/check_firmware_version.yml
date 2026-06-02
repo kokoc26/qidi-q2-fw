@@ -99,20 +99,29 @@ jobs:
           echo "Extracting data.tar..."
           tar -xf work/soc/data.tar -C firmware/
 
-      - name: Remove oversized binary files
+      - name: Clean up firmware directory before commit
         if: steps.release_check.outputs.skip == 'false'
         run: |
-          echo "Searching and removing binary files larger than 50MB..."
-          find firmware/ -type f -size +50M -print -delete
+          echo "Remove bin more 50MB..."
+          find firmware/ -type f -size +50M -delete
+          
+          echo "Remove Python cache (__pycache__)..."
+          find firmware/ -type d -name "__pycache__" -exec rm -rf {} +
           
       - name: Configure Git and Commit changes
         if: steps.release_check.outputs.skip == 'false'
-        uses: iarekylew00t/verified-bot-commit@v2
-        with:
-          if-no-commit: "No changes were staged for commit in 'firmware/' directory. Skipping commit and push."
-          message: "chore(firmware): Update Qidi Q2 firmware to ${{ env.VERSION }}"
-          files: |
-            firmware/**
+        run: |
+          git config --local user.email "github-actions[bot]@://github.com"
+          git config --local user.name "github-actions[bot]"
+          
+          git add firmware/
+          
+          if [ -n "$(git status --porcelain firmware/)" ]; then
+            git commit -m "chore(firmware): Update Qidi Q2 firmware to ${{ env.VERSION }}"
+            git push origin master
+          else
+            echo "No changes were staged for commit in 'firmware/' directory. Skipping commit and push."
+          fi
         
       - name: Generate Direct Asset Link
         id: link_gen
