@@ -24,7 +24,7 @@
 ### V01.01.02.01 - 2026/6/2
 
 > [!WARNING]  
-> Use at your own risk. QIDI rolled back this update and removed it from the server the day after its release.
+> Use at your own risk. Some users have encountered problems.
 
 #### Firmware Link:
 
