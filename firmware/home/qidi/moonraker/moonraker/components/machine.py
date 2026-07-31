@@ -363,10 +363,11 @@ class Machine:
             Note=open('/dev_info.txt',mode='w')   
             Note.write(dev_name)   
             Note.close()
-        with open('/dev_info.txt', 'r') as f:         
-            content = f.read() 
-            f.close()
-        self.system_info["machine_name"] =  content          
+        # with open('/dev_info.txt', 'r') as f:         
+        #     content = f.read() 
+        #     f.close()
+        # self.system_info["machine_name"] =  content          
+        self.system_info["machine_name"] = 'QIDI'          
         return {"system_info": sys_info}
 
     async def _set_sudo_password(

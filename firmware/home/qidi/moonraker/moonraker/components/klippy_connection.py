@@ -571,6 +571,13 @@ class KlippyConnection:
         self, eventtime: float, status: Dict[str, Dict[str, Any]]
     ) -> None:
         for field, item in status.items():
+            if field == 'exclude_object' and isinstance(item, dict):
+                objects = item.get('objects')
+                if isinstance(objects, list):
+                    # 【核心优化】：原地遍历列表并删除键，避免创建新字典和新列表
+                    for obj in objects:
+                        if isinstance(obj, dict) and 'polygon' in obj:
+                            del obj['polygon']
             self.subscription_cache.setdefault(field, {}).update(item)
         if 'webhooks' in status:
             wh: Dict[str, str] = status['webhooks']
@@ -662,11 +669,20 @@ class KlippyConnection:
             args['response_template'] = {'method': "process_status_update"}
 
             result = await self._request_standard(web_request, 20.0)
-
+            all_status: Dict[str, Dict[str, Any]] = result['status']
+            # 【精准优化】：在处理 status 之前，直接清理 exclude_object 的 polygon
+            if 'exclude_object' in all_status:
+                eo_data = all_status['exclude_object']
+                if isinstance(eo_data, dict):
+                    objects = eo_data.get('objects')
+                    if isinstance(objects, list):
+                        for item in objects:
+                            # 仅针对每一项的 polygon 属性进行删除，不做额外遍历
+                            if isinstance(item, dict) and 'polygon' in item:
+                                del item['polygon']
             # prune the status response
             pruned_status: Dict[str, Dict[str, Any]] = {}
             status_diff: Dict[str, Dict[str, Any]] = {}
-            all_status: Dict[str, Dict[str, Any]] = result['status']
             for obj, fields in all_status.items():
                 # Diff the current cache, then update the cache
                 if obj in self.subscription_cache:
