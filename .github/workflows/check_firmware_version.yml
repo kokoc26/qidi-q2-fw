@@ -17,22 +17,88 @@ jobs:
           fetch-depth: 0
 
       - name: Install necessary tools
-        run: sudo apt-get install -y jq p7zip-full tar
+        run: sudo apt-get install -y jq p7zip-full tar translate-shell
 
       - name: Fetch Firmware Info and Parse JSON
         id: firmware_info
+        env:
+          QIDI_DEVICE_ID: ${{ secrets.QIDI_DEVICE_ID }}
         run: |
-          API_URL="https://api.qidi3dprinter.com/code/x_q_2_version_info"
-          FIRMWARE_JSON=$(curl -s "$API_URL")
-          VERSION=$(echo "$FIRMWARE_JSON" | jq -r '.firmware.version')
-          SIZE=$(echo "$FIRMWARE_JSON" | jq -r '.firmware.size')
-          DATE=$(echo "$FIRMWARE_JSON" | jq -r '.firmware.date')
-          DESCRIPTION_RU=$(echo "$FIRMWARE_JSON" | jq -r '.firmware.description.ru_RU')
-          DESCRIPTION_EN=$(echo "$FIRMWARE_JSON" | jq -r '.firmware.description.en_US')
+          set -euo pipefail
 
-          echo "VERSION=$VERSION" >> $GITHUB_ENV
+          if [[ -z "${QIDI_DEVICE_ID:-}" ]]; then
+            echo "Repository secret QIDI_DEVICE_ID is required." >&2
+            exit 1
+          fi
+
+          DEVICE_ID=$(printf '%s' "$QIDI_DEVICE_ID" | tr -d '[:space:]' | tr '[:lower:]' '[:upper:]')
+          if [[ ! "$DEVICE_ID" =~ ^[0-9A-F]+$ ]]; then
+            echo "QIDI_DEVICE_ID must be the hexadecimal CPU serial from /proc/cpuinfo." >&2
+            exit 1
+          fi
+          
+          CURRENT_VERSION="01.01.01.01"
+          TIMESTAMP=$(date +%s%3N)
+          NONCE=$(openssl rand -hex 16)
+          SIGNATURE=$(printf '%s' 'qidi3d null' |
+            openssl dgst -sha256 -hmac 'qid3d-from-2025-CAFE-BABE' |
+            sed 's/^.* //')
+
+          RESPONSE=$(curl --fail-with-body --silent --show-error --get \
+            'https://api.qidimaker.com/backend/v1/fireware/upgrade-info' \
+            --data-urlencode 'hardware=QD_Q2' \
+            --data-urlencode "currentVersion=$CURRENT_VERSION" \
+            --data-urlencode "deviceId=$DEVICE_ID" \
+            -H 'Accept: */*' \
+            -H 'Accept-Language: en_US' \
+            -H 'Content-Type: application/json' \
+            -H "X-DeviceId: $DEVICE_ID" \
+            -H 'X-DeviceType: Q2' \
+            -H "X-Nonce: $NONCE" \
+            -H 'X-Platform: 3DPrinter' \
+            -H 'X-Region: NA' \
+            -H "X-Signature: $SIGNATURE" \
+            -H "X-Timestamp: $TIMESTAMP" \
+            -H 'X-Timezone: +03:00' \
+            -H "X-Version: $CURRENT_VERSION")
+
+          if ! jq -e '.code == 200 and .data.version and .data.url' <<<"$RESPONSE" >/dev/null; then
+            jq . <<<"$RESPONSE" >&2
+            exit 1
+          fi
+
+          VERSION=$(jq -r '.data.version | ltrimstr("V")' <<<"$RESPONSE")
+          SIZE=$(jq -r '.data.apkSize' <<<"$RESPONSE")
+          DOWNLOAD_URL=$(jq -r '.data.url' <<<"$RESPONSE")
+          DESCRIPTION_URL=$(jq -r '.data.description' <<<"$RESPONSE")
+          RAW_DATE=$(echo "$DOWNLOAD_URL" | grep -oE '[0-9]{8}')
+          DATE=$(echo "$RAW_DATE" | sed -E 's/([0-9]{4})([0-9]{2})([0-9]{2})/\1\/\2\/\3/')
+          
+          curl -s "$DESCRIPTION_URL" > wiki_raw.html
+          DESCRIPTION_EN=$(awk -v ver="$VERSION" '
+            BEGIN { found = 0; IGNORECASE = 1 }
+            gsub(/^[Vv]/, "", ver);
+            (/<h[1-6]/ || /id=/) && $0 ~ ver && !found { found = 1; next }
+            found && (/<h2/ || (/<h3/ && $0 ~ /V[0-9]/) || $0 ~ /id="v[0-9]/) { exit }
+            found {
+              gsub(/<[^>]*>/, "", $0);
+              gsub(/¶/, "", $0);
+              if ($0 ~ /^[ \t]*[Ff]ixes[ \t]*$/ || $0 ~ /[Dd]ate:/ || $0 ~ /[Ss]ize:/ || $0 ~ /[Oo]ptimization/) next;
+              clean_line = $0;
+              gsub(/^[ \t\r\n]+|[ \t\r\n]+$/, "", clean_line);
+              if (length(clean_line) > 0) {
+                gsub(/^[-•*][ \t]*/, "", clean_line);
+                print clean_line
+              }
+            }
+          ' wiki_raw.html)
+
+          DESCRIPTION_RU=$(echo "$DESCRIPTION_EN" | trans -b :ru)
+
+          echo "VERSION=V$VERSION" >> $GITHUB_ENV
           echo "SIZE=$SIZE" >> $GITHUB_ENV
           echo "DATE=$DATE" >> $GITHUB_ENV
+          echo "DOWNLOAD_URL=$DOWNLOAD_URL" >> $GITHUB_ENV
           echo "description_ru<<EOF_RU" >> $GITHUB_OUTPUT
           echo "$DESCRIPTION_RU" | tr '\r' '\n' | sed 's/^/  - /' >> $GITHUB_OUTPUT
           echo "EOF_RU" >> $GITHUB_OUTPUT
@@ -66,7 +132,7 @@ jobs:
         run: |
           VERSION=${{ env.VERSION }}
           ZIP_FILENAME="Q2_${VERSION}.zip"
-          DOWNLOAD_URL="https://download_aws.qidi3dprinter.com/QD_Q2/${ZIP_FILENAME}"
+          DOWNLOAD_URL=${{ env.DOWNLOAD_URL }}
           echo "Downloading firmware $ZIP_FILENAME..."
           curl -L -o "$ZIP_FILENAME" "$DOWNLOAD_URL"
           echo "ZIP_FILENAME=$ZIP_FILENAME" >> $GITHUB_ENV
@@ -111,7 +177,7 @@ jobs:
       - name: Configure Git and Commit changes
         if: steps.release_check.outputs.skip == 'false'
         run: |
-          git config --local user.email "github-actions[bot]@://github.com"
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
           
           git add firmware/
@@ -176,9 +242,9 @@ jobs:
       - name: Update READMEs
         if: steps.release_check.outputs.skip == 'false'
         run: |
-          VERSION=${{ env.VERSION }}
-          SIZE=${{ env.SIZE }}
-          DATE=${{ env.DATE }}
+          VERSION="${{ env.VERSION }}"
+          SIZE="${{ env.SIZE }}"
+          DATE="${{ env.DATE }}"
           RELEASE_ASSET_URL=${{ env.RELEASE_ASSET_URL }}
           DESCRIPTION_RU=$(cat firmware_description_ru.txt)
           DESCRIPTION_EN=$(cat firmware_description_en.txt)
@@ -211,7 +277,7 @@ jobs:
           awk -v AWK_VAR="$CHANGELOG_HEADER_RU" '$0 == AWK_VAR {exit} {print}' "$ROOT_README_FILE" > README_HEADER_TEMP
           awk -v AWK_VAR="$CHANGELOG_HEADER_RU" '$0 == AWK_VAR {found=1; next} {if (found) print}' "$ROOT_README_FILE" > README_CHANGELOG_TEMP
 
-          DOWNLOAD_LINK_UNIVERSAL_RU="[Скачать архив ($SIZE)](${RELEASE_ASSET_URL})"
+          DOWNLOAD_LINK_UNIVERSAL_RU="[Скачать архив](${RELEASE_ASSET_URL})"
 
           {
             cat README_HEADER_TEMP
@@ -260,7 +326,7 @@ jobs:
           awk -v AWK_VAR="$CHANGELOG_HEADER_EN" '$0 == AWK_VAR {exit} {print}' "$ROOT_README_EN_FILE" > README_EN_HEADER_TEMP
           awk -v AWK_VAR="$CHANGELOG_HEADER_EN" '$0 == AWK_VAR {found=1; next} {if (found) print}' "$ROOT_README_EN_FILE" > README_EN_CHANGELOG_TEMP
 
-          DOWNLOAD_LINK_UNIVERSAL_EN="[Download archive ($SIZE)](${RELEASE_ASSET_URL})"
+          DOWNLOAD_LINK_UNIVERSAL_EN="[Download archive](${RELEASE_ASSET_URL})"
 
           {
             cat README_EN_HEADER_TEMP
