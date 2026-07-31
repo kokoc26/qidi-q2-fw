@@ -25,7 +25,7 @@
 
 #### Firmware Link:
 
-- [Download archive (227M)](https://github.com/kokoc26/qidi-q2-fw/releases/download/V1.1.1/Q2_V1.1.1.zip)
+- [Download archive (227M)](https://github.com/kokoc26/qidi-q2-fw/releases/download/V01.01.02.02/QD_Q2_01.01.02.02_20260611_Release_NA.zip)
 
 #### Changes:
 
