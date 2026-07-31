@@ -21,6 +21,24 @@
 
 ## Changelog
 
+### V01.01.02.02 - 2026/6/11
+
+#### Firmware Link:
+
+- [Download archive (227M)](https://github.com/kokoc26/qidi-q2-fw/releases/download/V1.1.1/Q2_V1.1.1.zip)
+
+#### Changes:
+
+  - Rare command error during filament load/unload
+  - Occasional Korean character display glitch
+  - Klipper pop‑up check after factory reset
+  - Uncommon Q2 auto‑unbind issue under specific firmware conditions
+  - Potential issue with certain G‑code files failing to print
+  - UI movement control before homing (edge cases)
+  - Residual hotend temperature display after filament unload
+  - Minor display error in English filament loading steps
+
+
 ### V01.01.02.01 - 2026/6/2
 
 > [!WARNING]  
