@@ -19,7 +19,19 @@
 
 
 
+
 ## Changelog
+
+### V01.01.02.03 - 2026/06/17
+
+#### Firmware Link:
+
+- [Download archive](https://github.com/kokoc26/qidi-q2-fw/releases/download/V01.01.02.03/Q2_V01.01.02.03.zip)
+
+#### Changes:
+
+  - Rare issue where nozzle heating could occasionally turn off during printing
+
 
 ### V01.01.02.02 - 2026/6/11
 
