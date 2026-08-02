@@ -11,8 +11,17 @@
 > Before updating, please follow the instructions on the [official QIDI Q2 wiki](https://wiki.qidi3d.com/en/Q2/firmware-update).
 
 > [!NOTE]
-> Download the archive, rename the folder to `QD_Update` after extraction, and place it in the root directory of your USB device.
-> Then connect the USB device to the printer to start the offline update.
+> **For versions after V01.01.02.01**
+> - Download the archive; after extracting it, rename the folder to `QD_Update` and place it in the root directory of your USB flash drive.
+> - Then connect the USB flash drive to the printer to begin the offline update.
+
+> [!NOTE]
+> **For versions after V01.01.02.01**
+> - Download the archive.
+> - In the root directory of your USB flash drive, create a folder named QD_Update.
+> - Place the downloaded archive in the folder you created.
+> - Rename the archive to QD_Q2_XX.XX.XX.XX (where XX.XX.XX.XX corresponds to the firmware number). For example, QD_Q2_01.01.02.03
+> - Then connect the USB flash drive to the printer to begin the offline update.
 
 ---
 
