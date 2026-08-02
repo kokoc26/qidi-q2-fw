@@ -96,6 +96,7 @@ jobs:
           DESCRIPTION_RU=$(echo "$DESCRIPTION_EN" | trans -b :ru)
 
           echo "VERSION=V$VERSION" >> $GITHUB_ENV
+          echo "VERSION_NUM=$VERSION" >> $GITHUB_ENV
           echo "SIZE=$SIZE" >> $GITHUB_ENV
           echo "DATE=$DATE" >> $GITHUB_ENV
           echo "DOWNLOAD_URL=$DOWNLOAD_URL" >> $GITHUB_ENV
@@ -131,7 +132,8 @@ jobs:
         if: steps.release_check.outputs.skip == 'false'
         run: |
           VERSION=${{ env.VERSION }}
-          ZIP_FILENAME="Q2_${VERSION}.zip"
+          VERSION_NUM=${{ env.VERSION_NUM }}
+          ZIP_FILENAME="QD_Q2_${VERSION_NUM}.zip"
           DOWNLOAD_URL=${{ env.DOWNLOAD_URL }}
           echo "Downloading firmware $ZIP_FILENAME..."
           curl -L -o "$ZIP_FILENAME" "$DOWNLOAD_URL"
@@ -188,7 +190,7 @@ jobs:
           else
             echo "No changes were staged for commit in 'firmware/' directory. Skipping commit and push."
           fi
-        
+      
       - name: Generate Direct Asset Link
         id: link_gen
         if: steps.release_check.outputs.skip == 'false'
@@ -215,8 +217,11 @@ jobs:
             > При обновлении следуйте иструциям из [официального wiki QIDI Q2](https://wiki.qidi3d.com/en/Q2/firmware-update).
 
             > [!NOTE]
-            > Загрузите архив, после извлечения переименуйте папку в `QD_Update` и поместите её в корневой каталог вашей флешки.
-            > Затем подключите флешку к принтеру, чтобы приступить к офлайн обновлению.
+            > - Загрузите архив.
+            > - В корневом каталоге вашей флешки создайте папку `QD_Update`.
+            > - Поместите скачанный архив в созданную папку.
+            > - Переименуйте архив в `QD_Q2_${{ env.VERSION_NUM }}`
+            > - Затем подключите флешку к принтеру, чтобы приступить к офлайн обновлению.
 
             ---
 
@@ -229,8 +234,11 @@ jobs:
             > Before updating, please follow the instructions on the [official QIDI Q2 wiki](https://wiki.qidi3d.com/en/Q2/firmware-update).
 
             > [!NOTE]
-            > Download the archive, rename the folder to `QD_Update` after extraction, and place it in the root directory of your USB device.
-            > Then connect the USB device to the printer to start the offline update.
+            > - Download the archive.
+            > - In the root directory of your USB flash drive, create a folder named `QD_Update`.
+            > - Place the downloaded archive in the folder you created.
+            > - Rename the archive to `QD_Q2_${{ env.VERSION_NUM }}`
+            > - Then connect the USB flash drive to the printer to begin the offline update.
 
           draft: false
           prerelease: false
