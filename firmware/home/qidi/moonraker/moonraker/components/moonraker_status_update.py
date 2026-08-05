@@ -83,14 +83,32 @@ class MoonrakerStatusUpdate:
                     requested_status[obj_name] = self.state[obj_name]
                 else: # 过滤字段
                     requested_status[obj_name] = {
-                        f: self.state[obj_name].get(f) 
+                        f: self.state[obj_name].get(f)
                         for f in fields if f in self.state[obj_name]
                     }
             else:
                 requested_status[obj_name] = {}
 
+        # 4. 同步声音状态到 Klipper（等 Klippy 就绪后通过 Unix socket 发 gcode）
+        db_state = self.state.get("database", {})
+        sound_val = db_state.get("general.sound")
+        if sound_val is not None:
+            self._schedule_beep_sync(sound_val, transport_id)
+
         logging.info(f"[MoonrakerStatusUpdate] Client {transport_id} subscribed to: {list(params.keys())}")
         return {"status": requested_status}
+
+    def _schedule_beep_sync(self, sound_val: str, transport_id: int) -> None:
+        async def _sync():
+            try:
+                kconn = self.server.lookup_component("klippy_connection")
+                await kconn.wait_started(timeout=30.)
+                klippy = self.server.lookup_component("klippy_apis")
+                value = "1" if str(sound_val) == "1" else "0"
+                await klippy.run_gcode(f"SAVE_VARIABLE VARIABLE=beep VALUE={value}")
+            except Exception:
+                logging.exception(f"Failed to sync beep")
+        self.event_loop.create_task(_sync())
 
     async def _handle_status_update(self, eventtime: float) -> float:
         new_state: Dict[str, Any] = {}

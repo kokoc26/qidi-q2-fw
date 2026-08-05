@@ -24,7 +24,7 @@ class QueueHandler(logging.Handler):
 class QueueListener(logging.handlers.TimedRotatingFileHandler):
     def __init__(self, filename):
         logging.handlers.TimedRotatingFileHandler.__init__(
-            self, filename, when='midnight', backupCount=5)
+            self, filename, when='midnight', backupCount=7)
         self.bg_queue = queue.Queue()
         self.bg_thread = threading.Thread(target=self._bg_thread)
         self.bg_thread.start()

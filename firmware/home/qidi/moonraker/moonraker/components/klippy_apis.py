@@ -317,11 +317,40 @@ class KlippyAPI(APITransport):
         uid: str = "native",
         need_extract: bool = False,
     ):
+        # 1. 尽早初始化可能用到的基础变量，防止后续的作用域异常
         upload_dir = '/home/qidi/printer_data/.cache'
-        logging.info(f"[CloudPrint] 收到下载打印请求: filename={filename}, uid={uid}")
+        dest_path = os.path.join(upload_dir, filename) if filename else os.path.join(upload_dir, "unknown.gcode")
+        tmp_path = dest_path + ".tmp"
+        
+        # 基础 payload 初始化
+        payload = {
+            'jobState': 'downloading',
+            'url': url,
+            'timestamp': int(time.time()),
+            'filename': filename,
+            'plateIndex': plateindex,
+            'progress': '0',
+            'uid': uid
+        }
 
-        # 1. 清空目录内部（不删除目录本身）
+        # 2. 防重入校验：如果正在运行，直接走错误上报并退出
+        if getattr(self, '_is_printing_task_running', False):
+            logging.warning(f"[CloudPrint] 任务 {uid} 被拒绝：已有任务正在运行")
+            payload.update({
+                "jobState": "error",
+                "failCause": "Another print task is already running",
+                "timestamp": int(time.time())
+            })
+            self.server.send_event("cloud:slice_download_print", payload)
+            return
+
+        # 3. 正式加锁
+        self._is_printing_task_running = True
+
         try:
+            logging.info(f"[CloudPrint] 收到下载打印请求: filename={filename}, uid={uid}")
+
+            # 4. 清空目录内部（不删除目录本身）
             if os.path.exists(upload_dir):
                 for item in os.listdir(upload_dir):
                     item_path = os.path.join(upload_dir, item)
@@ -330,30 +359,25 @@ class KlippyAPI(APITransport):
                             os.unlink(item_path)
                         elif os.path.isdir(item_path):
                             shutil.rmtree(item_path)
-                    except Exception as e:
-                        logging.warning(f"[CloudPrint] 清理缓存项 {item} 失败: {e}")
+                    except Exception as clean_err:
+                        logging.warning(f"[CloudPrint] 清理缓存项 {item} 失败: {clean_err}")
             else:
                 os.makedirs(upload_dir, mode=0o755, exist_ok=True)
             logging.info(f"[CloudPrint] 缓存目录 {upload_dir} 已就绪")
-        except Exception as e:
-            logging.error(f"[CloudPrint] 操作目录 {upload_dir} 严重失败: {e}")
-            return
 
-        dest_path = os.path.join(upload_dir, filename)
-        tmp_path = dest_path + ".tmp"
-        
-        payload = {
-            'jobState': 'downloading',
-            'url': url,
-            'timestamp': int(time.time()),
-            'filename': filename,
-            'plateIndex': plateindex,
-            'progress': 'downloading_0%',
-            'uid': uid
-        }
+            # 5. 校验文件名和扩展名
+            def is_valid_ext(name):
+                clean_name = name.split('?')[0]
+                ext = os.path.splitext(clean_name)[-1].lower()
+                return ext in ['.3mf', '.gcode']
 
-        try:
-            # 2. 开始下载流程
+            target_filename = filename
+            if not is_valid_ext(target_filename):
+                target_filename = url.split("/")[-1].split("?")[0]
+            if not is_valid_ext(target_filename):
+                raise Exception("filename is not legal")
+
+            # 6. 开始下载流程
             self.server.send_event("cloud:slice_download_print", payload)
             last_reported_progress = -1
 
@@ -366,25 +390,23 @@ class KlippyAPI(APITransport):
                     downloaded_size = 0
                     logging.info(f"[CloudPrint] 开始下载文件, 总大小: {total_size} bytes")
 
-                    # 定义磁盘写入任务
                     def save_chunk(chunk_data):
                         with open(tmp_path, 'ab') as f:
                             f.write(chunk_data)
 
                     async for chunk in response.content.iter_chunked(64 * 1024):
-                        # 在线程池中执行磁盘 IO，绝对不阻塞 Moonraker 主线程
                         await self.eventloop.run_in_thread(save_chunk, chunk)
                         downloaded_size += len(chunk)
                         
                         if total_size > 0:
                             progress = int((downloaded_size / total_size) * 100)
                             if progress % 5 == 0 and progress != last_reported_progress: 
-                                payload["progress"] = f"downloading_{progress}%"
+                                payload["progress"] = f'{progress}'
                                 payload["timestamp"] = int(time.time())
                                 self.server.send_event("cloud:slice_download_print", payload)
                                 last_reported_progress = progress
 
-            # 3. 下载校验与更名
+            # 7. 下载校验与更名
             if not os.path.exists(tmp_path):
                 raise Exception("临时文件不存在，下载可能未成功")
 
@@ -395,12 +417,12 @@ class KlippyAPI(APITransport):
             logging.info(f"[CloudPrint] 下载完成并保存至: {dest_path}")
             
             payload.update({
-                "progress": "downloading_100%",
+                "progress": '100',
                 "timestamp": int(time.time())
             })
             self.server.send_event("cloud:slice_download_print", payload)
 
-            # 4. 触发打印
+            # 8. 触发打印
             logging.info(f"[CloudPrint] 准备触发打印任务: {filename}")
             await self.start_print(
                 filename, 
@@ -421,14 +443,18 @@ class KlippyAPI(APITransport):
         except Exception as e:
             logging.error(f"[CloudPrint] 任务 {uid} 执行异常: {str(e)}", exc_info=True)
             payload.update({
-                "jobState": "failed",
+                "jobState": "error",
                 "failCause": str(e),
                 "timestamp": int(time.time())
             })
             self.server.send_event("cloud:slice_download_print", payload)
-            # 清理残留的临时文件
+            
             if os.path.exists(tmp_path):
                 os.remove(tmp_path)
+                
+        finally:
+            # 9. 确保无论成功、失败还是重入被拒，最终都能释放锁
+            self._is_printing_task_running = False
 
     async def list_endpoints(self,
                              default: Union[Sentinel, _T] = Sentinel.MISSING

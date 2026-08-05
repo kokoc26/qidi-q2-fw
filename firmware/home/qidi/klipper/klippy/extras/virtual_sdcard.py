@@ -451,7 +451,8 @@ class VirtualSD:
                     (f'Metadata/plate_{plateindex}.gcode', shadow_path),
                     ('Metadata/model_settings.config', os.path.join(self.cache_tmp_dir, 'model_settings.config')),
                     ('Metadata/slice_info.config', os.path.join(self.cache_tmp_dir, 'slice_info.config')),
-                    (f'Metadata/pick_{plateindex}.png', os.path.join(self.cache_tmp_dir, f'pick_{plateindex}.png'))
+                    (f'Metadata/pick_{plateindex}.png', os.path.join(self.cache_tmp_dir, f'pick_{plateindex}.png')),
+                    (f'Metadata/plate_{plateindex}.png', os.path.join(self.cache_tmp_dir, f'plate_{plateindex}.png'))
                 ]
 
                 start_time = time.perf_counter()

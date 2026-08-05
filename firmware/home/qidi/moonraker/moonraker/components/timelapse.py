@@ -762,7 +762,8 @@ class Timelapse:
                 msg = f"Rendering Video successful: {outfile}.mp4"
                 result.update({
                     'filename': f"{outfile}.mp4",
-                    'printfile': gcodefilename
+                    'printfile': gcodefilename,
+                    'uid': getattr(self, '_last_job_uid', 'native')
                 })
                 # result.pop("framecount")
                 result.pop("settings")
@@ -834,7 +835,8 @@ class Timelapse:
         logging.info(msg)
         result.update({
             'status': status,
-            'msg': msg
+            'msg': msg,
+            'uid': getattr(self, '_last_job_uid', 'native')
         })
         self.notify_event(result)
 
@@ -896,6 +898,7 @@ class Timelapse:
         # 获取文件名 (History 已经帮我们格式化好了)
         raw_path = job_data.get('filename', 'unknown_job')
         job_name = raw_path.split('/')[-1]
+        uid = job_data.get('uid', 'native')
         
         # 获取任务最终状态 (completed, cancelled, error, etc.)
         status = job_data.get('status')
@@ -926,6 +929,7 @@ class Timelapse:
                 await self._emergency_snapshot()
 
             # 2. 执行最终合并与清理逻辑
+            self._last_job_uid = uid
             await self._finalize_timelapse(job_name)
 
     async def _emergency_snapshot(self):

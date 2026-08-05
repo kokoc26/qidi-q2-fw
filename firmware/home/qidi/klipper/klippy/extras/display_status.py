@@ -25,7 +25,11 @@ class DisplayStatus:
             idle_timeout = self.printer.lookup_object('idle_timeout')
             idle_timeout_info = idle_timeout.get_status(eventtime)
             if idle_timeout_info['state'] != "Printing":
-                self.progress = progress = None
+                # pause: retain M73 progress instead of falling back to virtual_sdcard
+                print_stats = self.printer.lookup_object('print_stats', None)
+                if print_stats is None or \
+                        print_stats.get_status(eventtime)['state'] != "paused":
+                    self.progress = progress = None
         if progress is None:
             progress = 0.
             sdcard = self.printer.lookup_object('virtual_sdcard', None)

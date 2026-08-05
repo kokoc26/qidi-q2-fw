@@ -706,6 +706,7 @@ class PrinterJob:
         self.total_duration: float = 0.
         self.auxiliary_data: List[Dict[str, Any]] = []
         self.user: str = "No User"
+        self.uid: str ="native"
         self.update_from_ps(data)
 
     def finish(self,

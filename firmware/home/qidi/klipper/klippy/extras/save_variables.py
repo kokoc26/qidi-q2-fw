@@ -35,14 +35,14 @@ class SaveVariables:
         }
         
         for i in range(16):
-            self.default_values[f'filament_slot{i}'] = 0
-            self.default_values[f'color_slot{i}'] = 0
+            self.default_values[f'filament_slot{i}'] = 1
+            self.default_values[f'color_slot{i}'] = 1
             self.default_values[f'vendor_slot{i}'] = 0
             self.default_values[f'slot{i}'] = 0
             self.default_values[f'value_t{i}'] = ""
         
-        self.default_values['filament_slot16'] = 0
-        self.default_values['color_slot16'] = 0
+        self.default_values['filament_slot16'] = 1
+        self.default_values['color_slot16'] = 1
         self.default_values['vendor_slot16'] = 0
         
         for key, value in self.default_values.items():

@@ -1,0 +1,27 @@
+{
+  "message": "No trigger on probe after full movement",
+  "message_translation": {
+    "zh_CN": "Z轴归零失败",
+    "en_US": "Z-axis homing failed",
+    "ja_JP": "Z軸の原点復帰に失敗しました",
+    "ru_RU": "Ошибка парковки оси Z",
+    "fr_FR": "Échec du référencement de l'axe Z",
+    "de_DE": "Z-Achsen-Referenzfahrt fehlgeschlagen",
+    "it_IT": "Home dell'asse Z non riuscito",
+    "es_ES": "Error al hacer el homing del eje Z",
+    "ko_KR": "Z축 원점 복귀 실패",
+    "pt_PT": "Falha na referência do eixo Z"
+  },
+  "prossess_msg_translation": {
+    "zh_CN": "Z轴归零失败，建议按以下顺序排查：\n检查PEI打印板是否放置平整、无异物卡滞；\n手动执行“重新归零”操作，或尝试直接开始打印（可能跳过检测）；\n若问题依旧，请联系官方客服获取技术支持。",
+    "en_US": "Z-axis homing failed. Please follow these steps:\nCheck whether the PEI build plate is properly seated and free of any obstructions.\nManually perform the \"Home Z\" operation, or try starting a print directly (this may bypass the detection).\nIf the issue persists, please contact official customer support for technical assistance.",
+    "ja_JP": "Z軸の原点復帰に失敗しました。以下の手順で確認してください。\nPEIビルドプレートが正しく設置され、異物がないことを確認してください。\n手動で「Z軸原点復帰」を実行するか、直接印刷を開始してください（検出をスキップできる場合があります）。\n問題が解決しない場合は、公式カスタマーサポートまでお問い合わせください。",
+    "ru_RU": "Не удалось выполнить парковку по оси Z. Выполните следующие действия:\nУбедитесь, что PEI-пластина установлена правильно и ничто не препятствует её работе.\nВручную выполните команду «Повторное позиционирование Z» или попробуйте сразу начать печать (это может пропустить проверку).\nЕсли проблема сохраняется, обратитесь в официальную службу технической поддержки.",
+    "fr_FR": "Le référencement de l'axe Z a échoué. Veuillez suivre les étapes ci-dessous :\nVérifiez que la plaque d'impression PEI est correctement installée et qu'aucun corps étranger ne la bloque.\nEffectuez manuellement l'opération « Refaire le référencement Z » ou essayez de lancer directement une impression (cela peut contourner la détection).\nSi le problème persiste, veuillez contacter le service client officiel.",
+    "de_DE": "Die Referenzfahrt der Z-Achse ist fehlgeschlagen. Gehen Sie bitte wie folgt vor:\nPrüfen Sie, ob die PEI-Druckplatte korrekt eingesetzt ist und keine Fremdkörper vorhanden sind.\nFühren Sie die Funktion „Z-Achse erneut referenzieren“ manuell aus oder starten Sie direkt einen Druck (dadurch kann die Erkennung möglicherweise übersprungen werden).\nFalls das Problem weiterhin besteht, wenden Sie sich bitte an den offiziellen Kundendienst.",
+    "it_IT": "Home dell'asse Z non riuscito. Seguire questi passaggi:\nVerificare che la piastra PEI sia installata correttamente e che non vi siano ostruzioni.\nEseguire manualmente l'operazione \"Home Z\" oppure provare ad avviare direttamente una stampa (potrebbe saltare il rilevamento).\nSe il problema persiste, contattare il servizio di assistenza ufficiale.",
+    "es_ES": "Error al hacer el homing del eje Z. Siga estos pasos:\nCompruebe que la placa PEI esté correctamente colocada y libre de obstrucciones.\nEjecute manualmente la operación \"Hacer homing del eje Z\" o intente iniciar una impresión directamente (esto puede omitir la detección).\nSi el problema persiste, póngase en contacto con el servicio de atención al cliente oficial.",
+    "ko_KR": "Z축 원점 복귀에 실패했습니다. 다음 순서대로 확인하십시오.\nPEI 빌드 플레이트가 올바르게 장착되어 있고 이물질이 없는지 확인하십시오.\n수동으로 \"Z축 원점 복귀\"를 실행하거나 직접 출력을 시작해 보십시오(감지가 건너뛰어질 수 있습니다).\n문제가 계속되면 공식 고객 지원 센터에 문의하십시오.",
+    "pt_PT": "Falha na referência do eixo Z. Siga os passos abaixo:\nVerifique se a placa de impressão PEI está corretamente instalada e sem obstruções.\nExecute manualmente a operação \"Referenciar eixo Z\" ou tente iniciar uma impressão diretamente (isto pode ignorar a deteção).\nSe o problema persistir, contacte o serviço oficial de apoio ao cliente."
+  }
+}

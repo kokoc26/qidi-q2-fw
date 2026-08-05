@@ -1,0 +1,27 @@
+{
+  "message": "Move out of range",
+  "message_translation": {
+    "zh_CN": "运动指令已超出可运动范围",
+    "en_US": "Movement command is out of range",
+    "ja_JP": "移動指令が可動範囲を超えています",
+    "ru_RU": "Команда перемещения выходит за пределы допустимого диапазона",
+    "fr_FR": "La commande de déplacement dépasse la plage de mouvement autorisée",
+    "de_DE": "Der Bewegungsbefehl liegt außerhalb des zulässigen Bewegungsbereichs",
+    "it_IT": "Il comando di movimento è fuori dall'intervallo consentito",
+    "es_ES": "El comando de movimiento está fuera del rango permitido",
+    "ko_KR": "이동 명령이 허용된 이동 범위를 초과했습니다",
+    "pt_PT": "O comando de movimento excede o intervalo permitido"
+  },
+  "prossess_msg_translation": {
+    "zh_CN": "运动指令已超出可运动范围，请勿继续尝试。",
+    "en_US": "The movement command is out of the allowable range. Please do not continue attempting this operation.",
+    "ja_JP": "移動指令が可動範囲を超えています。この操作を続けないでください。",
+    "ru_RU": "Команда перемещения выходит за пределы допустимого диапазона. Пожалуйста, не пытайтесь продолжать выполнение этой операции.",
+    "fr_FR": "La commande de déplacement dépasse la plage de mouvement autorisée. Veuillez ne pas continuer à essayer cette opération.",
+    "de_DE": "Der Bewegungsbefehl liegt außerhalb des zulässigen Bewegungsbereichs. Bitte versuchen Sie diesen Vorgang nicht weiter auszuführen.",
+    "it_IT": "Il comando di movimento è fuori dall'intervallo consentito. Non continuare a tentare questa operazione.",
+    "es_ES": "El comando de movimiento está fuera del rango permitido. No continúe intentando realizar esta operación.",
+    "ko_KR": "이동 명령이 허용된 이동 범위를 초과했습니다. 이 작업을 계속 시도하지 마십시오.",
+    "pt_PT": "O comando de movimento excede o intervalo permitido. Não continue a tentar esta operação."
+  }
+}

@@ -119,6 +119,7 @@ DEFAULT_CONFIGA_ITEM = {
     "general.language": "en_US",
     "general.lan_mode": "0",
     "general.startup_guide": "1",
+    "general.expert_mode": "0",
     "general.wlan": "1",
     "general.self_check_state": "0",
     "user.nickname": "",
@@ -1208,6 +1209,22 @@ class MoonrakerDatabase:
                 
                 if local_str == "user.password":
                     self.server.send_event("account:user_account_password")
+
+                if local_str == "general.lan_mode":
+                    try:
+                        from ..common import WebRequest
+                        mqtt = self.server.lookup_component("mqtt")
+                        if value == "1":
+                            if mqtt.is_connected():
+                                await mqtt.close()
+                            await mqtt._stop_frp_if_needed()
+                            logging.info("LAN mode enabled: MQTT disconnected, FRP stopped")
+                        else:
+                            await mqtt._handle_connect_request(WebRequest("", {}))
+                            await mqtt._start_frp_if_needed()
+                            logging.info("LAN mode disabled: MQTT reconnected, FRP started")
+                    except Exception as e:
+                        logging.exception(f"LAN mode MQTT/FRP control error: {e}")
             
             target_keys = ['general.chamber_light', 'general.screen_state']
             if local_str in target_keys:

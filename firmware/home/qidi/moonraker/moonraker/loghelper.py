@@ -93,7 +93,7 @@ class LogManager:
         if log_file:
             try:
                 self.file_hdlr = MoonrakerLoggingHandler(
-                    app_args, when='midnight', backupCount=2)
+                    app_args, when='midnight', backupCount=7)
                 formatter = logging.Formatter(
                     '%(asctime)s [%(filename)s:%(funcName)s()] - %(message)s')
                 self.file_hdlr.setFormatter(formatter)
