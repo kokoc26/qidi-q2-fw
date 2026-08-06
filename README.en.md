@@ -5,6 +5,12 @@
 
 [Русская версия](./README.md) 🇷🇺
 
+## Official updates download page
+> [!IMPORTANT]
+> ### Please use the official source for updates at
+> ### [https://www.qidimaker.com/en/downloads/firmware/Q2](https://www.qidimaker.com/en/downloads/firmware/Q2)
+
+
 ## Download Instruction
 
 > [!IMPORTANT]
@@ -40,7 +46,17 @@
 
 #### Changes:
 
-  - 
+  #### New
+     - Update info display page
+     - Loading animation for pause/cancel actions
+  #### Optimized
+     - Tray image in model preview interface
+     - Auto-refill flow
+  #### Fixed
+     - Canceling print not stop purging when atuo-refill
+     - Error pop-up during print end process
+     - Abnormal display of AI function status
+     - English display issue in chamber temperature settings page 
 
 
 ### V01.01.02.03 - 2026/06/17
