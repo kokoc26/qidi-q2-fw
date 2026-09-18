@@ -37,14 +37,24 @@ jobs:
             exit 1
           fi
           
-          CURRENT_VERSION="01.01.02.01"
+          LATEST_TAG=$(curl -s -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" \
+            https://api.github.com/repos/${{ github.repository }}/releases/latest | jq -r '.tag_name // empty')
+          
+          if [ -z "$LATEST_TAG" ]; then
+            CURRENT_VERSION="01.01.02.01"
+            echo "No releases exist or API failed. Using fallback: $CURRENT_VERSION"
+          else
+            CURRENT_VERSION="${LATEST_TAG#V}"
+            echo "Found latest release: $LATEST_TAG. Using version: $CURRENT_VERSION"
+          fi
+
           TIMESTAMP=$(date +%s%3N)
           NONCE=$(openssl rand -hex 16)
           SIGNATURE=$(printf '%s' 'qidi3d null' |
             openssl dgst -sha256 -hmac 'qid3d-from-2025-CAFE-BABE' |
             sed 's/^.* //')
 
-          RESPONSE=$(curl --fail-with-body --silent --show-error --get \
+          RESPONSE=$(curl --silent --show-error --get \
             'https://api.qidimaker.com/backend/v1/fireware/upgrade-info' \
             --data-urlencode 'hardware=QD_Q2' \
             --data-urlencode "currentVersion=$CURRENT_VERSION" \
@@ -62,52 +72,74 @@ jobs:
             -H 'X-Timezone: +03:00' \
             -H "X-Version: $CURRENT_VERSION")
 
-          if ! jq -e '.code == 200 and .data.version and .data.url' <<<"$RESPONSE" >/dev/null; then
+          if ! jq -e '.code == 200' <<<"$RESPONSE" >/dev/null; then
+            echo "API Error:" >&2
             jq . <<<"$RESPONSE" >&2
             exit 1
           fi
 
-          VERSION=$(jq -r '.data.version | ltrimstr("V")' <<<"$RESPONSE")
-          SIZE=$(jq -r '.data.apkSize' <<<"$RESPONSE")
-          DOWNLOAD_URL=$(jq -r '.data.url' <<<"$RESPONSE")
-          DESCRIPTION_URL=$(jq -r '.data.description' <<<"$RESPONSE")
-          RAW_DATE=$(echo "$DOWNLOAD_URL" | grep -oE '[0-9]{8}')
-          DATE=$(echo "$RAW_DATE" | sed -E 's/([0-9]{4})([0-9]{2})([0-9]{2})/\1\/\2\/\3/')
-          
-          curl -s "$DESCRIPTION_URL" > wiki_raw.html
-          DESCRIPTION_EN=$(awk -v ver="$VERSION" '
-            BEGIN { found = 0; IGNORECASE = 1 }
-            gsub(/^[Vv]/, "", ver);
-            (/<h[1-6]/ || /id=/) && $0 ~ ver && !found { found = 1; next }
-            found && (/<h2/ || (/<h3/ && $0 ~ /V[0-9]/) || $0 ~ /id="v[0-9]/) { exit }
-            found {
-              gsub(/<[^>]*>/, "", $0);
-              gsub(/¶/, "", $0);
-              if ($0 ~ /^[ \t]*[Ff]ixes[ \t]*$/ || $0 ~ /[Dd]ate:/ || $0 ~ /[Ss]ize:/ || $0 ~ /[Oo]ptimization/) next;
-              clean_line = $0;
-              gsub(/^[ \t\r\n]+|[ \t\r\n]+$/, "", clean_line);
-              if (length(clean_line) > 0) {
-                gsub(/^[-•*][ \t]*/, "", clean_line);
-                print clean_line
+          NEED_UPDATE=$(jq -r '.data.needUpdate' <<<"$RESPONSE")
+
+          if [[ "$NEED_UPDATE" != "true" ]]; then
+            echo "No new firmware available. The current version is up to date."
+
+            if [[ -n "${LATEST_TAG:-}" ]]; then
+              echo "VERSION=$LATEST_TAG" >> $GITHUB_ENV
+            else
+              echo "VERSION=V$CURRENT_VERSION" >> $GITHUB_ENV
+            fi
+            
+          else
+            echo "New firmware update found! Parsing details..."
+            
+            if ! jq -e '.data.version and .data.url' <<<"$RESPONSE" >/dev/null; then
+              echo "Error: Update indicated, but version or url is missing in JSON." >&2
+              jq . <<<"$RESPONSE" >&2
+              exit 1
+            fi
+
+            VERSION=$(jq -r '.data.version | ltrimstr("V")' <<<"$RESPONSE")
+            SIZE=$(jq -r '.data.apkSize' <<<"$RESPONSE")
+            DOWNLOAD_URL=$(jq -r '.data.url' <<<"$RESPONSE")
+            DESCRIPTION_URL=$(jq -r '.data.description' <<<"$RESPONSE")
+            RAW_DATE=$(echo "$DOWNLOAD_URL" | grep -oE '[0-9]{8}')
+            DATE=$(echo "$RAW_DATE" | sed -E 's/([0-9]{4})([0-9]{2})([0-9]{2})/\1\/\2\/\3/')
+            
+            curl -s "$DESCRIPTION_URL" > wiki_raw.html
+            DESCRIPTION_EN=$(awk -v ver="$VERSION" '
+              BEGIN { found = 0; IGNORECASE = 1 }
+              gsub(/^[Vv]/, "", ver);
+              (/<h[1-6]/ || /id=/) && $0 ~ ver && !found { found = 1; next }
+              found && (/<h2/ || (/<h3/ && $0 ~ /V[0-9]/) || $0 ~ /id="v[0-9]/) { exit }
+              found {
+                gsub(/<[^>]*>/, "", $0);
+                gsub(/¶/, "", $0);
+                if ($0 ~ /^[ \t]*[Ff]ixes[ \t]*$/ || $0 ~ /[Dd]ate:/ || $0 ~ /[Ss]ize:/ || $0 ~ /[Oo]ptimization/) next;
+                clean_line = $0;
+                gsub(/^[ \t\r\n]+|[ \t\r\n]+$/, "", clean_line);
+                if (length(clean_line) > 0) {
+                  gsub(/^[-•*][ \t]*/, "", clean_line);
+                  print clean_line
+                }
               }
-            }
-          ' wiki_raw.html)
+            ' wiki_raw.html)
 
-          DESCRIPTION_RU=$(echo "$DESCRIPTION_EN" | trans -b :ru)
+            DESCRIPTION_RU=$(echo "$DESCRIPTION_EN" | trans -b :ru)
 
-          echo "VERSION=V$VERSION" >> $GITHUB_ENV
-          echo "VERSION_NUM=$VERSION" >> $GITHUB_ENV
-          echo "SIZE=$SIZE" >> $GITHUB_ENV
-          echo "DATE=$DATE" >> $GITHUB_ENV
-          echo "DOWNLOAD_URL=$DOWNLOAD_URL" >> $GITHUB_ENV
-          echo "description_ru<<EOF_RU" >> $GITHUB_OUTPUT
-          echo "$DESCRIPTION_RU" | tr '\r' '\n' | sed 's/^/  - /' >> $GITHUB_OUTPUT
-          echo "EOF_RU" >> $GITHUB_OUTPUT
-          echo "description_en<<EOF_EN" >> $GITHUB_OUTPUT
-          echo "$DESCRIPTION_EN" | tr '\r' '\n' | sed 's/^/  - /' >> $GITHUB_OUTPUT
-          echo "EOF_EN" >> $GITHUB_OUTPUT
-          echo "$DESCRIPTION_RU" | tr '\r' '\n' > firmware_description_ru.txt
-          echo "$DESCRIPTION_EN" | tr '\r' '\n' > firmware_description_en.txt
+            echo "VERSION=V$VERSION" >> $GITHUB_ENV
+            echo "VERSION_NUM=$VERSION" >> $GITHUB_ENV
+            echo "SIZE=$SIZE" >> $GITHUB_ENV
+            echo "DATE=$DATE" >> $GITHUB_ENV
+            echo "DOWNLOAD_URL=$DOWNLOAD_URL" >> $GITHUB_ENV
+            echo "description_ru<<EOF_RU" >> $GITHUB_OUTPUT
+            echo "$DESCRIPTION_RU" | tr '\r' '\n' | sed 's/^/  - /' >> $GITHUB_OUTPUT
+            echo "EOF_RU" >> $GITHUB_OUTPUT
+            echo "description_en<<EOF_EN" >> $GITHUB_OUTPUT
+            echo "$DESCRIPTION_EN" | tr '\r' '\n' | sed 's/^/  - /' >> $GITHUB_OUTPUT
+            echo "EOF_EN" >> $GITHUB_OUTPUT
+            echo "$DESCRIPTION_RU" | tr '\r' '\n' > firmware_description_ru.txt
+            echo "$DESCRIPTION_EN" | tr '\r' '\n' > firmware_description_en.txt
+          fi
 
       - name: Check if release/tag exists
         id: release_check
