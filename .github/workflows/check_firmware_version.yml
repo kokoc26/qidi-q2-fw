@@ -37,7 +37,7 @@ jobs:
             exit 1
           fi
           
-          CURRENT_VERSION="01.01.01.01"
+          CURRENT_VERSION="01.01.02.01"
           TIMESTAMP=$(date +%s%3N)
           NONCE=$(openssl rand -hex 16)
           SIGNATURE=$(printf '%s' 'qidi3d null' |
