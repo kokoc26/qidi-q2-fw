@@ -1,0 +1,59 @@
+{
+    "message": "闭环电机固件版本更新",
+    "message_translation": {
+        "zh_CN": "闭环电机有新版本固件",
+        "en_US": "New closed-loop motor firmware available",
+        "ja_JP": "閉ループモーターの新しいファームウェアがあります",
+        "ru_RU": "Доступна новая прошивка двигателя с замкнутым контуром",
+        "fr_FR": "Un nouveau firmware du moteur en boucle fermée est disponible",
+        "de_DE": "Neue Firmware für den Closed-Loop-Motor verfügbar",
+        "it_IT": "È disponibile un nuovo firmware del motore ad anello chiuso",
+        "es_ES": "Hay nuevo firmware del motor de bucle cerrado disponible",
+        "ko_KR": "새 폐루프 모터 펌웨어가 있습니다",
+        "pt_PT": "Está disponível novo firmware do motor de circuito fechado"
+    },
+    "error_code": "QDC_100_005_005_002",
+    "error_qr_code_path": "/home",
+    "prossess_msg_translation": {
+        "zh_CN": "检测到闭环电机新版本固件，请前往固件页面更新",
+        "en_US": "New closed-loop motor firmware has been detected. Please go to the firmware page to update.",
+        "ja_JP": "閉ループモーターの新しいファームウェアを検出しました。ファームウェアページで更新してください。",
+        "ru_RU": "Обнаружена новая прошивка двигателя с замкнутым контуром. Перейдите на страницу прошивки для обновления.",
+        "fr_FR": "Un nouveau firmware du moteur en boucle fermée a été détecté. Accédez à la page du firmware pour le mettre à jour.",
+        "de_DE": "Neue Firmware für den Closed-Loop-Motor wurde erkannt. Bitte aktualisieren Sie sie auf der Firmware-Seite.",
+        "it_IT": "È stato rilevato un nuovo firmware del motore ad anello chiuso. Vai alla pagina del firmware per aggiornarlo.",
+        "es_ES": "Se ha detectado nuevo firmware del motor de bucle cerrado. Vaya a la página de firmware para actualizarlo.",
+        "ko_KR": "새 폐루프 모터 펌웨어가 감지되었습니다. 펌웨어 페이지에서 업데이트하십시오.",
+        "pt_PT": "Foi detetado novo firmware do motor de circuito fechado. Aceda à página do firmware para atualizar."
+    },
+    "error_type": 1,
+    "weight": 5,
+    "popup_stlye": {
+        "main_pic": "NO_PIC",
+        "is_model": false,
+        "left_text": {
+            "zh_CN": "取消",
+            "en_US": "Cancel",
+            "ja_JP": "キャンセル",
+            "ru_RU": "Отмена",
+            "fr_FR": "Annuler",
+            "de_DE": "Abbrechen",
+            "it_IT": "Annulla",
+            "es_ES": "Cancelar",
+            "ko_KR": "취소",
+            "pt_PT": "Cancelar"
+        },
+        "right_text": {
+            "zh_CN": "前往更新",
+            "en_US": "Update",
+            "ja_JP": "更新へ",
+            "ru_RU": "Обновить",
+            "fr_FR": "Mettre à jour",
+            "de_DE": "Aktualisieren",
+            "it_IT": "Aggiorna",
+            "es_ES": "Actualizar",
+            "ko_KR": "업데이트",
+            "pt_PT": "Atualizar"
+        }
+    }
+}

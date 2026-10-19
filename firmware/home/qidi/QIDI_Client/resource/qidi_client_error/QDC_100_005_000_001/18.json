@@ -1,0 +1,27 @@
+{
+  "message": "Code:QDE_004_032",
+  "message_translation": {
+    "zh_CN": "所有BOX都离线，先确认BOX通信问题。",
+    "en_US": "All BOX are offline, first confirm the BOX communication problem.",
+    "ja_JP": "すべての BOX がオフラインです。最初に BOX の通信の問題を確認します。",
+    "ru_RU": "Все BOX отключены от сети. Сначала подтвердите проблему связи BOX.",
+    "fr_FR": "Tous les BOX sont hors ligne, confirmez d'abord le problème de communication BOX.",
+    "de_DE": "Alle BOX sind offline. Bestätigen Sie zunächst das BOX-Kommunikationsproblem.",
+    "it_IT": "Tutti i BOX sono offline, verificare prima il problema di comunicazione del BOX.",
+    "es_ES": "Todos los BOX están fuera de línea, primero confirme el problema de comunicación del BOX.",
+    "ko_KR": "모든 BOX가 오프라인입니다. 먼저 BOX 통신 문제를 확인하세요.",
+    "pt_PT": "Todos os BOX estão offline, primeiro confirme o problema de comunicação do BOX."
+  },
+  "prossess_msg_translation": {
+    "zh_CN": "检测到BOX离线，请确认BOX电源是否正确连接。",
+    "en_US": "It is detected that BOX is offline. Please confirm whether the BOX power supply is connected correctly.",
+    "ja_JP": "BOX がオフラインであることが検出されました。 BOX 電源が正しく接続されているかどうかを確認してください。",
+    "ru_RU": "Обнаружено, что BOX находится в автономном режиме. Пожалуйста, подтвердите, правильно ли подключен источник питания BOX.",
+    "fr_FR": "Il est détecté que BOX est hors ligne. Veuillez confirmer si l'alimentation électrique du BOX est correctement connectée.",
+    "de_DE": "Es wurde erkannt, dass BOX offline ist. Bitte überprüfen Sie, ob das BOX-Netzteil korrekt angeschlossen ist.",
+    "it_IT": "viene rilevato che BOX è offline. Si prega di verificare se l'alimentatore BOX è collegato correttamente.",
+    "es_ES": "Se detecta que BOX está fuera de línea. Confirme si la fuente de alimentación BOX está conectada correctamente.",
+    "ko_KR": "BOX가 오프라인 상태인 것으로 감지되었습니다. BOX 전원 공급 장치가 올바르게 연결되어 있는지 확인하십시오.",
+    "pt_PT": "Foi detectado que BOX está offline. Confirme se a fonte de alimentação BOX está conectada corretamente."
+  }
+}

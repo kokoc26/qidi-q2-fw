@@ -1,0 +1,27 @@
+{
+  "message": "Code:QDE_004_044",
+  "message_translation": {
+    "zh_CN": "进料时 超过5秒没有触发五通限位，检查五通。",
+    "en_US": "When filament is loading, the internal hub sensor is not triggered for more than 5 seconds. Check the internal hub.",
+    "ja_JP": "フィラメントのロード中、内部ハブ センサーは 5 秒以上トリガーされません。内部ハブを確認してください。",
+    "ru_RU": "При загрузке нити внутренний датчик ступицы не срабатывает более 5 секунд. Проверьте внутренний концентратор.",
+    "fr_FR": "Lorsque le filament est en cours de chargement, le capteur interne du moyeu ne se déclenche pas pendant plus de 5 secondes. Vérifiez le hub interne.",
+    "de_DE": "Beim Laden von Filament wird der interne Nabensensor nicht länger als 5 Sekunden ausgelöst. Überprüfen Sie den internen Hub.",
+    "it_IT": "Durante il caricamento del filamento, il sensore del mozzo interno non viene attivato per più di 5 secondi. Controllare l'hub interno.",
+    "es_ES": "Cuando se carga el filamento, el sensor interno del cubo no se activa durante más de 5 segundos. Verifique el concentrador interno.",
+    "ko_KR": "필라멘트 로딩 중 내부 허브 센서가 5초 이상 작동하지 않습니다. 내부 허브를 확인하세요.",
+    "pt_PT": "Quando o filamento está sendo carregado, o sensor interno do cubo não é acionado por mais de 5 segundos. Verifique o hub interno."
+  },
+  "prossess_msg_translation": {
+    "zh_CN": "五通触发失败，请检查五通是否发生堵塞。",
+    "en_US": "Internal hub triggering failed, please check whether internal hub blockage occurs.",
+    "ja_JP": "内部ハブのトリガーに失敗しました。内部ハブの詰まりが発生していないか確認してください。",
+    "ru_RU": "Не удалось запустить внутренний концентратор. Проверьте, не происходит ли блокировка внутреннего концентратора.",
+    "fr_FR": "Le déclenchement du hub interne a échoué, veuillez vérifier si un blocage interne du hub se produit.",
+    "de_DE": "Die Auslösung des internen Hubs ist fehlgeschlagen. Bitte prüfen Sie, ob eine Blockierung des internen Hubs vorliegt.",
+    "it_IT": "Attivazione dell'hub interno non riuscita, verificare se si verifica un blocco dell'hub interno.",
+    "es_ES": "Falló la activación del concentrador interno; verifique si se produce un bloqueo del concentrador interno.",
+    "ko_KR": "내부 허브 트리거링에 실패했습니다. 내부 허브 막힘이 발생하는지 확인하세요.",
+    "pt_PT": "Falha no acionamento do hub interno, verifique se ocorre bloqueio do hub interno."
+  }
+}

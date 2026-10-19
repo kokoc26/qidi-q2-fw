@@ -62,6 +62,23 @@ class WebsocketManager:
             "/server/connection/identify", RequestType.POST, self._handle_identify,
             TransportType.WEBSOCKET, auth_required=False
         )
+        self.server.register_endpoint(
+            "/server/client/info", RequestType.GET, self._handle_client_info
+        )
+
+    async def _handle_client_info(self, web_request: WebRequest) -> Dict[str, Any]:
+        """返回所有已连接客户端的信息"""
+        clients_info = []
+        for uid, sc in self.clients.items():
+            if hasattr(sc, 'client_data') and sc.client_data:
+                clients_info.append({
+                    "connection_id": uid,
+                    "client_name": sc.client_data.get("name", ""),
+                    "client_version": sc.client_data.get("version", ""),
+                    "client_type": sc.client_data.get("type", ""),#软件获取本地设备信息，用于显示，agent类型来做唯一标识的客户端
+                    "client_url": sc.client_data.get("url", "")
+                })
+        return {"clients": clients_info}
 
     def register_notification(
         self,

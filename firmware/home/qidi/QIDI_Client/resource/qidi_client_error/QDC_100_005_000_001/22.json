@@ -1,0 +1,27 @@
+{
+  "message": "Code:QDE_004_036",
+  "message_translation": {
+    "zh_CN": "执行进料时五通都没有触发，检测到缓冲器中有耗材。",
+    "en_US": "When executing filament loading, the internal hub is not triggered, and it is detected that there is a filament in the buffer.",
+    "ja_JP": "フィラメントロード実行時、内部ハブはトリガーされず、バッファ内にフィラメントがあることが検出されます。",
+    "ru_RU": "При выполнении загрузки нити внутренний концентратор не срабатывает и обнаруживается наличие нити в буфере.",
+    "fr_FR": "Lors de l'exécution du chargement du filament, le hub interne n'est pas déclenché et il est détecté qu'il y a un filament dans le tampon.",
+    "de_DE": "Beim Ausführen des Filamentladens wird der interne Hub nicht ausgelöst und es wird erkannt, dass sich ein Filament im Puffer befindet.",
+    "it_IT": "Quando si esegue il caricamento del filamento, l'hub interno non viene attivato e viene rilevato che è presente un filamento nel buffer.",
+    "es_ES": "Al ejecutar la carga de filamento, el hub interno no se dispara y se detecta que hay un filamento en el buffer.",
+    "ko_KR": "필라멘트 로딩 실행시 내부 허브가 작동되지 않고, 버퍼에 필라멘트가 있는 것으로 감지됩니다.",
+    "pt_PT": "Ao executar o carregamento do filamento, o hub interno não é acionado e é detectado que há filamento no buffer."
+  },
+  "prossess_msg_translation": {
+    "zh_CN": "检测到QIDI HUB中有耗材，请清理QIDI HUB。",
+    "en_US": "It is detected that there is filament in QIDI HUB, please clean up QIDI HUB.",
+    "ja_JP": "QIDI HUB にフィラメントがあることが検出されました。QIDI HUB をクリーンアップしてください。",
+    "ru_RU": "Обнаружено наличие нити в QIDI HUB. Очистите QIDI HUB.",
+    "fr_FR": "Il est détecté qu'il y a du filament dans QIDI HUB, veuillez nettoyer QIDI HUB.",
+    "de_DE": "Es wurde festgestellt, dass sich Filament in QIDI HUB befindet. Bitte bereinigen Sie QIDI HUB.",
+    "it_IT": "È stato rilevato che è presente un filamento nel QIDI HUB, pulire QIDI HUB.",
+    "es_ES": "Se detecta que hay filamento en QIDI HUB, limpie QIDI HUB.",
+    "ko_KR": "QIDI HUB에 필라멘트가 있는 것으로 감지되었습니다. QIDI HUB를 청소하십시오.",
+    "pt_PT": "Foi detectado que há filamento no QIDI HUB, limpe o QIDI HUB."
+  }
+}

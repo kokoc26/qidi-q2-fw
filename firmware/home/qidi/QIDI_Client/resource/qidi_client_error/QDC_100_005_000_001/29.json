@@ -1,0 +1,27 @@
+{
+  "message": "Code:QDE_004_043",
+  "message_translation": {
+    "zh_CN": "退料时检测到BOX通讯异常，检查接线。",
+    "en_US": "BOX communication abnormality is detected during filament unloading, check the wiring.",
+    "ja_JP": "フィラメントアンロード中に BOX 通信異常を検出しました。配線を確認してください。",
+    "ru_RU": "Во время выгрузки нити обнаружена неисправность связи BOX, проверьте проводку.",
+    "fr_FR": "Une anomalie de communication du BOX est détectée lors du déchargement du filament, vérifier le câblage.",
+    "de_DE": "Beim Entladen des Filaments wurde eine BOX-Kommunikationsstörung festgestellt. Überprüfen Sie die Verkabelung.",
+    "it_IT": "Viene rilevata un'anomalia nella comunicazione del BOX durante lo scarico del filamento, controllare il cablaggio.",
+    "es_ES": "Se detecta anomalía en la comunicación del BOX durante la descarga del filamento, verifique el cableado.",
+    "ko_KR": "필라멘트 언로드 중 BOX 통신 이상이 감지되었습니다. 배선을 확인하십시오.",
+    "pt_PT": "Anormalidade de comunicação BOX é detectada durante a descarga do filamento, verifique a fiação."
+  },
+  "prossess_msg_translation": {
+    "zh_CN": "退料时BOX发生离线，请确认BOX是否正确连接。",
+    "en_US": "BOX goes offline during filament unloading. Please confirm whether BOX is correctly connected.",
+    "ja_JP": "フィラメントのアンロード中に BOX がオフラインになります。 BOX が正しく接続されているか確認してください。",
+    "ru_RU": "BOX отключается во время выгрузки нити. Пожалуйста, подтвердите, правильно ли подключен BOX.",
+    "fr_FR": "BOX se déconnecte pendant le déchargement du filament. Veuillez confirmer si BOX est correctement connecté.",
+    "de_DE": "BOX geht während des Filament-Entladens offline. Bitte bestätigen Sie, ob BOX richtig angeschlossen ist.",
+    "it_IT": "BOX va offline durante lo scaricamento del filamento. Si prega di verificare se BOX è collegato correttamente.",
+    "es_ES": "BOX se desconecta durante la descarga de filamento. Confirme si BOX está conectado correctamente.",
+    "ko_KR": "필라멘트 언로드 중에 BOX가 오프라인 상태가 됩니다. BOX가 올바르게 연결되었는지 확인하세요.",
+    "pt_PT": "BOX fica offline durante o descarregamento do filamento. Confirme se o BOX está conectado corretamente."
+  }
+}

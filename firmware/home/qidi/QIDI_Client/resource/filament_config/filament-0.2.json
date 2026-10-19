@@ -1,0 +1,1278 @@
+{
+  "QIDI PLA Basic": {
+    "type": "PLA",
+    "filament_id": "QFA00",
+    "nozzle_temperature": [
+      190,
+      240
+    ],
+    "box_temperature_range_high": ["0"],
+    "box_temperature_range_low": ["0"],
+    "filament_vendor": "QIDI",
+    "filament_is_support": "0",
+    "chamber_temperatures": "0",
+    "filament_dev_ams_drying_ams_limitations": [
+      "1",
+      "0"
+    ],
+    "filament_dev_ams_drying_temperature": [
+      "45",
+      "45",
+      "45",
+      "45"
+    ],
+    "filament_dev_ams_drying_time": [
+      "12",
+      "12",
+      "12",
+      "12"
+    ],
+    "filament_dev_drying_softening_temperature": [
+      "50"
+    ],
+    "filament_dev_ams_drying_heat_distortion_temperature": [
+      "45"
+    ],
+    "filament_dev_drying_cooling_temperature": [
+      "45"
+    ],
+    "filament_dev_chamber_drying_bed_temperature": [
+      "70"
+    ],
+    "filament_dev_chamber_drying_time": [
+      "12.0"
+    ]
+  },
+  "QIDI PLA Matte Basic": {
+    "type": "PLA",
+    "filament_id": "QFA01",
+    "nozzle_temperature": [
+      190,
+      240
+    ],
+    "filament_vendor": "QIDI",
+    "box_temperature_range_high": ["0"],
+    "box_temperature_range_low": ["0"],
+    "filament_is_support": "0",
+    "chamber_temperatures": "0",
+    "filament_dev_ams_drying_ams_limitations": [
+      "1",
+      "0"
+    ],
+    "filament_dev_ams_drying_temperature": [
+      "45",
+      "45",
+      "45",
+      "45"
+    ],
+    "filament_dev_ams_drying_time": [
+      "12",
+      "12",
+      "12",
+      "12"
+    ],
+    "filament_dev_drying_softening_temperature": [
+      "50"
+    ],
+    "filament_dev_ams_drying_heat_distortion_temperature": [
+      "45"
+    ],
+    "filament_dev_drying_cooling_temperature": [
+      "45"
+    ],
+    "filament_dev_chamber_drying_bed_temperature": [
+      "70"
+    ],
+    "filament_dev_chamber_drying_time": [
+      "12.0"
+    ]
+  },
+  "QIDI PLA Rapido": {
+    "type": "PLA",
+    "filament_id": "QFA02",
+    "nozzle_temperature": [
+      190,
+      240
+    ],
+    "filament_vendor": "QIDI",
+    "box_temperature_range_high": ["0"],
+    "box_temperature_range_low": ["0"],
+    "filament_is_support": "0",
+    "chamber_temperatures": "0",
+    "filament_dev_ams_drying_ams_limitations": [
+      "1",
+      "0"
+    ],
+    "filament_dev_ams_drying_temperature": [
+      "45",
+      "45",
+      "45",
+      "45"
+    ],
+    "filament_dev_ams_drying_time": [
+      "12",
+      "12",
+      "12",
+      "12"
+    ],
+    "filament_dev_drying_softening_temperature": [
+      "50"
+    ],
+    "filament_dev_ams_drying_heat_distortion_temperature": [
+      "45"
+    ],
+    "filament_dev_drying_cooling_temperature": [
+      "45"
+    ],
+    "filament_dev_chamber_drying_bed_temperature": [
+      "70"
+    ],
+    "filament_dev_chamber_drying_time": [
+      "12.0"
+    ]
+  },
+  "QIDI PLA Rapido Matte": {
+    "type": "PLA",
+    "filament_id": "QFA03",
+    "nozzle_temperature": [
+      190,
+      240
+    ],
+    "filament_vendor": "QIDI",
+    "box_temperature_range_high": ["0"],
+    "box_temperature_range_low": ["0"],
+    "filament_is_support": "0",
+    "chamber_temperatures": "0",
+    "filament_dev_ams_drying_ams_limitations": [
+      "1",
+      "0"
+    ],
+    "filament_dev_ams_drying_temperature": [
+      "45",
+      "45",
+      "45",
+      "45"
+    ],
+    "filament_dev_ams_drying_time": [
+      "12",
+      "12",
+      "12",
+      "12"
+    ],
+    "filament_dev_drying_softening_temperature": [
+      "50"
+    ],
+    "filament_dev_ams_drying_heat_distortion_temperature": [
+      "45"
+    ],
+    "filament_dev_drying_cooling_temperature": [
+      "45"
+    ],
+    "filament_dev_chamber_drying_bed_temperature": [
+      "70"
+    ],
+    "filament_dev_chamber_drying_time": [
+      "12.0"
+    ]
+  },
+  "QIDI PLA Rapido Metal": {
+    "type": "PLA",
+    "filament_id": "QFA04",
+    "nozzle_temperature": [
+      190,
+      240
+    ],
+    "filament_vendor": "QIDI",
+    "box_temperature_range_high": ["0"],
+    "box_temperature_range_low": ["0"],
+    "filament_is_support": "0",
+    "chamber_temperatures": "0",
+    "filament_dev_ams_drying_ams_limitations": [
+      "1",
+      "0"
+    ],
+    "filament_dev_ams_drying_temperature": [
+      "45",
+      "45",
+      "45",
+      "45"
+    ],
+    "filament_dev_ams_drying_time": [
+      "12",
+      "12",
+      "12",
+      "12"
+    ],
+    "filament_dev_drying_softening_temperature": [
+      "50"
+    ],
+    "filament_dev_ams_drying_heat_distortion_temperature": [
+      "45"
+    ],
+    "filament_dev_drying_cooling_temperature": [
+      "45"
+    ],
+    "filament_dev_chamber_drying_bed_temperature": [
+      "70"
+    ],
+    "filament_dev_chamber_drying_time": [
+      "12.0"
+    ]
+  },
+  "QIDI ASA": {
+    "type": "ASA",
+    "filament_id": "QFB01",
+    "nozzle_temperature": [
+      240,
+      280
+    ],
+    "filament_vendor": "QIDI",
+    "box_temperature_range_high": ["45"],
+    "box_temperature_range_low": ["0"],
+    "filament_is_support": "0",
+    "chamber_temperatures": "55",
+    "filament_dev_ams_drying_ams_limitations": [
+      "1",
+      "0"
+    ],
+    "filament_dev_ams_drying_temperature": [
+      "45",
+      "45",
+      "45",
+      "45"
+    ],
+    "filament_dev_ams_drying_time": [
+      "12",
+      "12",
+      "12",
+      "12"
+    ],
+    "filament_dev_drying_softening_temperature": [
+      "50"
+    ],
+    "filament_dev_ams_drying_heat_distortion_temperature": [
+      "45"
+    ],
+    "filament_dev_drying_cooling_temperature": [
+      "45"
+    ],
+    "filament_dev_chamber_drying_bed_temperature": [
+      "70"
+    ],
+    "filament_dev_chamber_drying_time": [
+      "12.0"
+    ]
+  },
+  "QIDI ABS Odorless": {
+    "type": "ABS",
+    "filament_id": "QFB53",
+    "nozzle_temperature": [
+      240,
+      280
+    ],
+    "filament_vendor": "QIDI",
+    "box_temperature_range_high": ["45"],
+    "box_temperature_range_low": ["0"],
+    "filament_is_support": "0",
+    "chamber_temperatures": "65",
+    "filament_dev_ams_drying_ams_limitations": [
+      "1",
+      "0"
+    ],
+    "filament_dev_ams_drying_temperature": [
+      "45",
+      "45",
+      "45",
+      "45"
+    ],
+    "filament_dev_ams_drying_time": [
+      "12",
+      "12",
+      "12",
+      "12"
+    ],
+    "filament_dev_drying_softening_temperature": [
+      "50"
+    ],
+    "filament_dev_ams_drying_heat_distortion_temperature": [
+      "45"
+    ],
+    "filament_dev_drying_cooling_temperature": [
+      "45"
+    ],
+    "filament_dev_chamber_drying_bed_temperature": [
+      "70"
+    ],
+    "filament_dev_chamber_drying_time": [
+      "12.0"
+    ]
+  },
+  "QIDI ABS Rapido": {
+    "type": "ABS",
+    "filament_id": "QFB54",
+    "nozzle_temperature": [
+      240,
+      280
+    ],
+    "filament_vendor": "QIDI",
+    "box_temperature_range_high": ["45"],
+    "box_temperature_range_low": ["0"],
+    "filament_is_support": "0",
+    "chamber_temperatures": "55",
+    "filament_dev_ams_drying_ams_limitations": [
+      "1",
+      "0"
+    ],
+    "filament_dev_ams_drying_temperature": [
+      "45",
+      "45",
+      "45",
+      "45"
+    ],
+    "filament_dev_ams_drying_time": [
+      "12",
+      "12",
+      "12",
+      "12"
+    ],
+    "filament_dev_drying_softening_temperature": [
+      "50"
+    ],
+    "filament_dev_ams_drying_heat_distortion_temperature": [
+      "45"
+    ],
+    "filament_dev_drying_cooling_temperature": [
+      "45"
+    ],
+    "filament_dev_chamber_drying_bed_temperature": [
+      "70"
+    ],
+    "filament_dev_chamber_drying_time": [
+      "12.0"
+    ]
+  },
+  "QIDI ABS Rapido Metal": {
+    "type": "ABS",
+    "filament_id": "QFB55",
+    "nozzle_temperature": [
+      240,
+      280
+    ],
+    "filament_vendor": "QIDI",
+    "box_temperature_range_high": ["45"],
+    "box_temperature_range_low": ["0"],
+    "filament_is_support": "0",
+    "chamber_temperatures": "55",
+    "filament_dev_ams_drying_ams_limitations": [
+      "1",
+      "0"
+    ],
+    "filament_dev_ams_drying_temperature": [
+      "45",
+      "45",
+      "45",
+      "45"
+    ],
+    "filament_dev_ams_drying_time": [
+      "12",
+      "12",
+      "12",
+      "12"
+    ],
+    "filament_dev_drying_softening_temperature": [
+      "50"
+    ],
+    "filament_dev_ams_drying_heat_distortion_temperature": [
+      "45"
+    ],
+    "filament_dev_drying_cooling_temperature": [
+      "45"
+    ],
+    "filament_dev_chamber_drying_bed_temperature": [
+      "70"
+    ],
+    "filament_dev_chamber_drying_time": [
+      "12.0"
+    ]
+  },
+  "QIDI PETG Basic": {
+    "type": "PETG",
+    "filament_id": "QFG00",
+    "nozzle_temperature": [
+      240,
+      280
+    ],
+    "filament_vendor": "QIDI",
+    "box_temperature_range_high": ["45"],
+    "box_temperature_range_low": ["0"],
+    "filament_is_support": "0",
+    "chamber_temperatures": "0",
+    "filament_dev_ams_drying_ams_limitations": [
+      "1",
+      "0"
+    ],
+    "filament_dev_ams_drying_temperature": [
+      "45",
+      "45",
+      "45",
+      "45"
+    ],
+    "filament_dev_ams_drying_time": [
+      "12",
+      "12",
+      "12",
+      "12"
+    ],
+    "filament_dev_drying_softening_temperature": [
+      "50"
+    ],
+    "filament_dev_ams_drying_heat_distortion_temperature": [
+      "45"
+    ],
+    "filament_dev_drying_cooling_temperature": [
+      "45"
+    ],
+    "filament_dev_chamber_drying_bed_temperature": [
+      "70"
+    ],
+    "filament_dev_chamber_drying_time": [
+      "12.0"
+    ]
+  },
+  "QIDI PETG Rapido": {
+    "type": "PETG",
+    "filament_id": "QFG02",
+    "nozzle_temperature": [
+      240,
+      275
+    ],
+    "filament_vendor": "QIDI",
+    "box_temperature_range_high": ["45"],
+    "box_temperature_range_low": ["0"],
+    "filament_is_support": "0",
+    "chamber_temperatures": "0",
+    "filament_dev_ams_drying_ams_limitations": [
+      "1",
+      "0"
+    ],
+    "filament_dev_ams_drying_temperature": [
+      "45",
+      "45",
+      "45",
+      "45"
+    ],
+    "filament_dev_ams_drying_time": [
+      "12",
+      "12",
+      "12",
+      "12"
+    ],
+    "filament_dev_drying_softening_temperature": [
+      "50"
+    ],
+    "filament_dev_ams_drying_heat_distortion_temperature": [
+      "45"
+    ],
+    "filament_dev_drying_cooling_temperature": [
+      "45"
+    ],
+    "filament_dev_chamber_drying_bed_temperature": [
+      "70"
+    ],
+    "filament_dev_chamber_drying_time": [
+      "12.0"
+    ]
+  },
+  "QIDI PETG Tough": {
+    "type": "PETG",
+    "filament_id": "QFG03",
+    "nozzle_temperature": [
+      220,
+      270
+    ],
+    "filament_vendor": "QIDI",
+    "box_temperature_range_high": ["45"],
+    "box_temperature_range_low": ["0"],
+    "filament_is_support": "0",
+    "chamber_temperatures": "0",
+    "filament_dev_ams_drying_ams_limitations": [
+      "1",
+      "0"
+    ],
+    "filament_dev_ams_drying_temperature": [
+      "45",
+      "45",
+      "45",
+      "45"
+    ],
+    "filament_dev_ams_drying_time": [
+      "12",
+      "12",
+      "12",
+      "12"
+    ],
+    "filament_dev_drying_softening_temperature": [
+      "50"
+    ],
+    "filament_dev_ams_drying_heat_distortion_temperature": [
+      "45"
+    ],
+    "filament_dev_drying_cooling_temperature": [
+      "45"
+    ],
+    "filament_dev_chamber_drying_bed_temperature": [
+      "70"
+    ],
+    "filament_dev_chamber_drying_time": [
+      "12.0"
+    ]
+  },
+  "QIDI PETG Translucent": {
+    "type": "PETG",
+    "filament_id": "QFG04",
+    "nozzle_temperature": [
+      240,
+      280
+    ],
+    "filament_vendor": "QIDI",
+    "box_temperature_range_high": ["45"],
+    "box_temperature_range_low": ["0"],
+    "filament_is_support": "0",
+    "chamber_temperatures": "0",
+    "filament_dev_ams_drying_ams_limitations": [
+      "1",
+      "0"
+    ],
+    "filament_dev_ams_drying_temperature": [
+      "45",
+      "45",
+      "45",
+      "45"
+    ],
+    "filament_dev_ams_drying_time": [
+      "12",
+      "12",
+      "12",
+      "12"
+    ],
+    "filament_dev_drying_softening_temperature": [
+      "50"
+    ],
+    "filament_dev_ams_drying_heat_distortion_temperature": [
+      "45"
+    ],
+    "filament_dev_drying_cooling_temperature": [
+      "45"
+    ],
+    "filament_dev_chamber_drying_bed_temperature": [
+      "70"
+    ],
+    "filament_dev_chamber_drying_time": [
+      "12.0"
+    ]
+  },
+  "Generic ABS": {
+    "type": "ABS",
+    "filament_id": "QFB91",
+    "nozzle_temperature": [
+      240,
+      280
+    ],
+    "filament_vendor": "Generic",
+    "box_temperature_range_high": ["45"],
+    "box_temperature_range_low": ["0"],
+    "filament_is_support": "0",
+    "chamber_temperatures": "55",
+    "filament_dev_ams_drying_ams_limitations": [
+      "1",
+      "0"
+    ],
+    "filament_dev_ams_drying_temperature": [
+      "45",
+      "45",
+      "45",
+      "45"
+    ],
+    "filament_dev_ams_drying_time": [
+      "12",
+      "12",
+      "12",
+      "12"
+    ],
+    "filament_dev_drying_softening_temperature": [
+      "50"
+    ],
+    "filament_dev_ams_drying_heat_distortion_temperature": [
+      "45"
+    ],
+    "filament_dev_drying_cooling_temperature": [
+      "45"
+    ],
+    "filament_dev_chamber_drying_bed_temperature": [
+      "70"
+    ],
+    "filament_dev_chamber_drying_time": [
+      "12.0"
+    ]
+  },
+  "Generic PC": {
+    "type": "PC",
+    "filament_id": "QFC90",
+    "nozzle_temperature": [
+      260,
+      290
+    ],
+    "filament_vendor": "Generic",
+    "box_temperature_range_high": ["65"],
+    "box_temperature_range_low": ["0"],
+    "filament_is_support": "0",
+    "chamber_temperatures": "60",
+    "filament_dev_ams_drying_ams_limitations": [
+      "1",
+      "0"
+    ],
+    "filament_dev_ams_drying_temperature": [
+      "45",
+      "45",
+      "45",
+      "45"
+    ],
+    "filament_dev_ams_drying_time": [
+      "12",
+      "12",
+      "12",
+      "12"
+    ],
+    "filament_dev_drying_softening_temperature": [
+      "50"
+    ],
+    "filament_dev_ams_drying_heat_distortion_temperature": [
+      "45"
+    ],
+    "filament_dev_drying_cooling_temperature": [
+      "45"
+    ],
+    "filament_dev_chamber_drying_bed_temperature": [
+      "70"
+    ],
+    "filament_dev_chamber_drying_time": [
+      "12.0"
+    ]
+  },
+  "Generic PETG": {
+    "type": "PETG",
+    "filament_id": "QFG90",
+    "nozzle_temperature": [
+      220,
+      270
+    ],
+    "filament_vendor": "Generic",
+    "box_temperature_range_high": ["45"],
+    "box_temperature_range_low": ["0"],
+    "filament_is_support": "0",
+    "chamber_temperatures": "0",
+    "filament_dev_ams_drying_ams_limitations": [
+      "1",
+      "0"
+    ],
+    "filament_dev_ams_drying_temperature": [
+      "45",
+      "45",
+      "45",
+      "45"
+    ],
+    "filament_dev_ams_drying_time": [
+      "12",
+      "12",
+      "12",
+      "12"
+    ],
+    "filament_dev_drying_softening_temperature": [
+      "50"
+    ],
+    "filament_dev_ams_drying_heat_distortion_temperature": [
+      "45"
+    ],
+    "filament_dev_drying_cooling_temperature": [
+      "45"
+    ],
+    "filament_dev_chamber_drying_bed_temperature": [
+      "70"
+    ],
+    "filament_dev_chamber_drying_time": [
+      "12.0"
+    ]
+  },
+  "Generic PLA": {
+    "type": "PLA",
+    "filament_id": "QFA90",
+    "nozzle_temperature": [
+      190,
+      240
+    ],
+    "filament_vendor": "Generic",
+    "box_temperature_range_high": ["0"],
+    "box_temperature_range_low": ["0"],
+    "filament_is_support": "0",
+    "chamber_temperatures": "0",
+    "filament_dev_ams_drying_ams_limitations": [
+      "1",
+      "0"
+    ],
+    "filament_dev_ams_drying_temperature": [
+      "45",
+      "45",
+      "45",
+      "45"
+    ],
+    "filament_dev_ams_drying_time": [
+      "12",
+      "12",
+      "12",
+      "12"
+    ],
+    "filament_dev_drying_softening_temperature": [
+      "50"
+    ],
+    "filament_dev_ams_drying_heat_distortion_temperature": [
+      "45"
+    ],
+    "filament_dev_drying_cooling_temperature": [
+      "45"
+    ],
+    "filament_dev_chamber_drying_bed_temperature": [
+      "70"
+    ],
+    "filament_dev_chamber_drying_time": [
+      "12.0"
+    ]
+  },
+  "Generic PLA+": {
+    "type": "PLA",
+    "filament_id": "QFA91",
+    "nozzle_temperature": [
+      190,
+      240
+    ],
+    "filament_vendor": "Generic",
+    "box_temperature_range_high": ["0"],
+    "box_temperature_range_low": ["0"],
+    "filament_is_support": "0",
+    "chamber_temperatures": "0",
+    "filament_dev_ams_drying_ams_limitations": [
+      "1",
+      "0"
+    ],
+    "filament_dev_ams_drying_temperature": [
+      "45",
+      "45",
+      "45",
+      "45"
+    ],
+    "filament_dev_ams_drying_time": [
+      "12",
+      "12",
+      "12",
+      "12"
+    ],
+    "filament_dev_drying_softening_temperature": [
+      "50"
+    ],
+    "filament_dev_ams_drying_heat_distortion_temperature": [
+      "45"
+    ],
+    "filament_dev_drying_cooling_temperature": [
+      "45"
+    ],
+    "filament_dev_chamber_drying_bed_temperature": [
+      "70"
+    ],
+    "filament_dev_chamber_drying_time": [
+      "12.0"
+    ]
+  },
+  "Bambu ABS": {
+    "type": "ABS",
+    "filament_id": "QFL32",
+    "nozzle_temperature": [
+      240,
+      280
+    ],
+    "filament_vendor": "Bambu",
+    "box_temperature_range_high": ["45"],
+    "box_temperature_range_low": ["0"],
+    "filament_is_support": "0",
+    "chamber_temperatures": "55",
+    "filament_dev_ams_drying_ams_limitations": [
+      "1",
+      "0"
+    ],
+    "filament_dev_ams_drying_temperature": [
+      "45",
+      "45",
+      "45",
+      "45"
+    ],
+    "filament_dev_ams_drying_time": [
+      "12",
+      "12",
+      "12",
+      "12"
+    ],
+    "filament_dev_drying_softening_temperature": [
+      "50"
+    ],
+    "filament_dev_ams_drying_heat_distortion_temperature": [
+      "45"
+    ],
+    "filament_dev_drying_cooling_temperature": [
+      "45"
+    ],
+    "filament_dev_chamber_drying_bed_temperature": [
+      "70"
+    ],
+    "filament_dev_chamber_drying_time": [
+      "12.0"
+    ]
+  },
+  "Bambu PETG": {
+    "type": "PETG",
+    "filament_id": "QFL31",
+    "nozzle_temperature": [
+      220,
+      270
+    ],
+    "filament_vendor": "Bambu",
+    "box_temperature_range_high": ["45"],
+    "box_temperature_range_low": ["0"],
+    "filament_is_support": "0",
+    "chamber_temperatures": "0",
+    "filament_dev_ams_drying_ams_limitations": [
+      "1",
+      "0"
+    ],
+    "filament_dev_ams_drying_temperature": [
+      "45",
+      "45",
+      "45",
+      "45"
+    ],
+    "filament_dev_ams_drying_time": [
+      "12",
+      "12",
+      "12",
+      "12"
+    ],
+    "filament_dev_drying_softening_temperature": [
+      "50"
+    ],
+    "filament_dev_ams_drying_heat_distortion_temperature": [
+      "45"
+    ],
+    "filament_dev_drying_cooling_temperature": [
+      "45"
+    ],
+    "filament_dev_chamber_drying_bed_temperature": [
+      "70"
+    ],
+    "filament_dev_chamber_drying_time": [
+      "12.0"
+    ]
+  },
+  "Bambu PLA": {
+    "type": "PLA",
+    "filament_id": "QFL30",
+    "nozzle_temperature": [
+      190,
+      240
+    ],
+    "filament_vendor": "Bambu",
+    "box_temperature_range_high": ["0"],
+    "box_temperature_range_low": ["0"],
+    "filament_is_support": "0",
+    "chamber_temperatures": "0",
+    "filament_dev_ams_drying_ams_limitations": [
+      "1",
+      "0"
+    ],
+    "filament_dev_ams_drying_temperature": [
+      "45",
+      "45",
+      "45",
+      "45"
+    ],
+    "filament_dev_ams_drying_time": [
+      "12",
+      "12",
+      "12",
+      "12"
+    ],
+    "filament_dev_drying_softening_temperature": [
+      "50"
+    ],
+    "filament_dev_ams_drying_heat_distortion_temperature": [
+      "45"
+    ],
+    "filament_dev_drying_cooling_temperature": [
+      "45"
+    ],
+    "filament_dev_chamber_drying_bed_temperature": [
+      "70"
+    ],
+    "filament_dev_chamber_drying_time": [
+      "12.0"
+    ]
+  },
+  "HATCHBOX ABS": {
+    "type": "ABS",
+    "filament_id": "QFL12",
+    "nozzle_temperature": [
+      240,
+      280
+    ],
+    "filament_vendor": "HATCHBOX",
+    "box_temperature_range_high": ["45"],
+    "box_temperature_range_low": ["0"],
+    "filament_is_support": "0",
+    "chamber_temperatures": "55",
+    "filament_dev_ams_drying_ams_limitations": [
+      "1",
+      "0"
+    ],
+    "filament_dev_ams_drying_temperature": [
+      "45",
+      "45",
+      "45",
+      "45"
+    ],
+    "filament_dev_ams_drying_time": [
+      "12",
+      "12",
+      "12",
+      "12"
+    ],
+    "filament_dev_drying_softening_temperature": [
+      "50"
+    ],
+    "filament_dev_ams_drying_heat_distortion_temperature": [
+      "45"
+    ],
+    "filament_dev_drying_cooling_temperature": [
+      "45"
+    ],
+    "filament_dev_chamber_drying_bed_temperature": [
+      "70"
+    ],
+    "filament_dev_chamber_drying_time": [
+      "12.0"
+    ]
+  },
+  "HATCHBOX PETG": {
+    "type": "PETG",
+    "filament_id": "QFL11",
+    "nozzle_temperature": [
+      220,
+      270
+    ],
+    "filament_vendor": "HATCHBOX",
+    "box_temperature_range_high": ["45"],
+    "box_temperature_range_low": ["0"],
+    "filament_is_support": "0",
+    "chamber_temperatures": "0",
+    "filament_dev_ams_drying_ams_limitations": [
+      "1",
+      "0"
+    ],
+    "filament_dev_ams_drying_temperature": [
+      "45",
+      "45",
+      "45",
+      "45"
+    ],
+    "filament_dev_ams_drying_time": [
+      "12",
+      "12",
+      "12",
+      "12"
+    ],
+    "filament_dev_drying_softening_temperature": [
+      "50"
+    ],
+    "filament_dev_ams_drying_heat_distortion_temperature": [
+      "45"
+    ],
+    "filament_dev_drying_cooling_temperature": [
+      "45"
+    ],
+    "filament_dev_chamber_drying_bed_temperature": [
+      "70"
+    ],
+    "filament_dev_chamber_drying_time": [
+      "12.0"
+    ]
+  },
+  "HATCHBOX PLA": {
+    "type": "PLA",
+    "filament_id": "QFL10",
+    "nozzle_temperature": [
+      190,
+      240
+    ],
+    "filament_vendor": "HATCHBOX",
+    "box_temperature_range_high": ["0"],
+    "box_temperature_range_low": ["0"],
+    "filament_is_support": "0",
+    "chamber_temperatures": "0",
+    "filament_dev_ams_drying_ams_limitations": [
+      "1",
+      "0"
+    ],
+    "filament_dev_ams_drying_temperature": [
+      "45",
+      "45",
+      "45",
+      "45"
+    ],
+    "filament_dev_ams_drying_time": [
+      "12",
+      "12",
+      "12",
+      "12"
+    ],
+    "filament_dev_drying_softening_temperature": [
+      "50"
+    ],
+    "filament_dev_ams_drying_heat_distortion_temperature": [
+      "45"
+    ],
+    "filament_dev_drying_cooling_temperature": [
+      "45"
+    ],
+    "filament_dev_chamber_drying_bed_temperature": [
+      "70"
+    ],
+    "filament_dev_chamber_drying_time": [
+      "12.0"
+    ]
+  },
+  "Overture ABS": {
+    "type": "ABS",
+    "filament_id": "QFL62",
+    "nozzle_temperature": [
+      240,
+      280
+    ],
+    "filament_vendor": "Overture",
+    "box_temperature_range_high": ["45"],
+    "box_temperature_range_low": ["0"],
+    "filament_is_support": "0",
+    "chamber_temperatures": "60",
+    "filament_dev_ams_drying_ams_limitations": [
+      "1",
+      "0"
+    ],
+    "filament_dev_ams_drying_temperature": [
+      "45",
+      "45",
+      "45",
+      "45"
+    ],
+    "filament_dev_ams_drying_time": [
+      "12",
+      "12",
+      "12",
+      "12"
+    ],
+    "filament_dev_drying_softening_temperature": [
+      "50"
+    ],
+    "filament_dev_ams_drying_heat_distortion_temperature": [
+      "45"
+    ],
+    "filament_dev_drying_cooling_temperature": [
+      "45"
+    ],
+    "filament_dev_chamber_drying_bed_temperature": [
+      "70"
+    ],
+    "filament_dev_chamber_drying_time": [
+      "12.0"
+    ]
+  },
+  "Overture PLA": {
+    "type": "PLA",
+    "filament_id": "QFL60",
+    "nozzle_temperature": [
+      190,
+      240
+    ],
+    "filament_vendor": "Overture",
+    "box_temperature_range_high": ["0"],
+    "box_temperature_range_low": ["0"],
+    "filament_is_support": "0",
+    "chamber_temperatures": "0",
+    "filament_dev_ams_drying_ams_limitations": [
+      "1",
+      "0"
+    ],
+    "filament_dev_ams_drying_temperature": [
+      "45",
+      "45",
+      "45",
+      "45"
+    ],
+    "filament_dev_ams_drying_time": [
+      "12",
+      "12",
+      "12",
+      "12"
+    ],
+    "filament_dev_drying_softening_temperature": [
+      "50"
+    ],
+    "filament_dev_ams_drying_heat_distortion_temperature": [
+      "45"
+    ],
+    "filament_dev_drying_cooling_temperature": [
+      "45"
+    ],
+    "filament_dev_chamber_drying_bed_temperature": [
+      "70"
+    ],
+    "filament_dev_chamber_drying_time": [
+      "12.0"
+    ]
+  },
+  "Polymaker ABS": {
+    "type": "ABS",
+    "filament_id": "QFL22",
+    "nozzle_temperature": [
+      240,
+      280
+    ],
+    "filament_vendor": "Polymaker",
+    "box_temperature_range_high": ["45"],
+    "box_temperature_range_low": ["0"],
+    "filament_is_support": "0",
+    "chamber_temperatures": "60",
+    "filament_dev_ams_drying_ams_limitations": [
+      "1",
+      "0"
+    ],
+    "filament_dev_ams_drying_temperature": [
+      "45",
+      "45",
+      "45",
+      "45"
+    ],
+    "filament_dev_ams_drying_time": [
+      "12",
+      "12",
+      "12",
+      "12"
+    ],
+    "filament_dev_drying_softening_temperature": [
+      "50"
+    ],
+    "filament_dev_ams_drying_heat_distortion_temperature": [
+      "45"
+    ],
+    "filament_dev_drying_cooling_temperature": [
+      "45"
+    ],
+    "filament_dev_chamber_drying_bed_temperature": [
+      "70"
+    ],
+    "filament_dev_chamber_drying_time": [
+      "12.0"
+    ]
+  },
+  "Polymaker PLA": {
+    "type": "PLA",
+    "filament_id": "QFL20",
+    "nozzle_temperature": [
+      190,
+      240
+    ],
+    "filament_vendor": "Polymaker",
+    "box_temperature_range_high": ["0"],
+    "box_temperature_range_low": ["0"],
+    "filament_is_support": "0",
+    "chamber_temperatures": "0",
+    "filament_dev_ams_drying_ams_limitations": [
+      "1",
+      "0"
+    ],
+    "filament_dev_ams_drying_temperature": [
+      "45",
+      "45",
+      "45",
+      "45"
+    ],
+    "filament_dev_ams_drying_time": [
+      "12",
+      "12",
+      "12",
+      "12"
+    ],
+    "filament_dev_drying_softening_temperature": [
+      "50"
+    ],
+    "filament_dev_ams_drying_heat_distortion_temperature": [
+      "45"
+    ],
+    "filament_dev_drying_cooling_temperature": [
+      "45"
+    ],
+    "filament_dev_chamber_drying_bed_temperature": [
+      "70"
+    ],
+    "filament_dev_chamber_drying_time": [
+      "12.0"
+    ]
+  },
+  "Polymaker PLA-HT": {
+    "type": "PLA",
+    "filament_id": "QFL24",
+    "nozzle_temperature": [
+      190,
+      240
+    ],
+    "filament_vendor": "Polymaker",
+    "box_temperature_range_high": ["0"],
+    "box_temperature_range_low": ["0"],
+    "filament_is_support": "0",
+    "chamber_temperatures": "0",
+    "filament_dev_ams_drying_ams_limitations": [
+      "1",
+      "0"
+    ],
+    "filament_dev_ams_drying_temperature": [
+      "45",
+      "45",
+      "45",
+      "45"
+    ],
+    "filament_dev_ams_drying_time": [
+      "12",
+      "12",
+      "12",
+      "12"
+    ],
+    "filament_dev_drying_softening_temperature": [
+      "50"
+    ],
+    "filament_dev_ams_drying_heat_distortion_temperature": [
+      "45"
+    ],
+    "filament_dev_drying_cooling_temperature": [
+      "45"
+    ],
+    "filament_dev_chamber_drying_bed_temperature": [
+      "70"
+    ],
+    "filament_dev_chamber_drying_time": [
+      "12.0"
+    ]
+  }
+}

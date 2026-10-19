@@ -1,0 +1,27 @@
+{
+  "message": "Code:QDE_004_057",
+  "message_translation": {
+    "zh_CN": "退料时间超时，检查耗材盘是不是跳出来了。",
+    "en_US": "The filament unloading time has expired. Check whether the filament spool has jumped out.",
+    "ja_JP": "フィラメントのアンロード時間が経過しました。フィラメントスプールが飛び出していないか確認してください。",
+    "ru_RU": "Время выгрузки нити истекло. Проверьте, не выскочила ли катушка с нитью.",
+    "fr_FR": "Le temps de déchargement du filament est expiré. Vérifiez si la bobine de filament a sauté.",
+    "de_DE": "Die Filament-Entladezeit ist abgelaufen. Überprüfen Sie, ob die Filamentspule herausgesprungen ist.",
+    "it_IT": "Il tempo di scaricamento del filamento è scaduto. Controllare se la bobina del filamento è saltata fuori.",
+    "es_ES": "Ha transcurrido el tiempo de descarga del filamento. Compruebe si el carrete de filamento se ha salido.",
+    "ko_KR": "필라멘트 언로드 시간이 만료되었습니다. 필라멘트 스풀이 튀어나왔는지 확인하세요.",
+    "pt_PT": "O tempo de descarga do filamento expirou. Verifique se o carretel do filamento saltou."
+  },
+  "prossess_msg_translation": {
+    "zh_CN": "执行退料失败，请检查耗材盘是否正确放置。",
+    "en_US": "Failed to execute filament unloading, please check whether the filament spool is placed correctly.",
+    "ja_JP": "フィラメントのアンロードの実行に失敗しました。フィラメントのスプールが正しく配置されているか確認してください。",
+    "ru_RU": "Не удалось выполнить выгрузку нити. Проверьте, правильно ли установлена ​​катушка с нитью.",
+    "fr_FR": "Échec du déchargement du filament, veuillez vérifier si la bobine de filament est correctement placée.",
+    "de_DE": "Das Entladen des Filaments konnte nicht durchgeführt werden. Bitte überprüfen Sie, ob die Filamentspule richtig platziert ist.",
+    "it_IT": "Impossibile eseguire lo scaricamento del filamento, verificare se la bobina del filamento è posizionata correttamente.",
+    "es_ES": "No se pudo ejecutar la descarga del filamento; verifique si el carrete de filamento está colocado correctamente.",
+    "ko_KR": "필라멘트 언로드를 실행하지 못했습니다. 필라멘트 스풀이 올바르게 장착되었는지 확인하세요.",
+    "pt_PT": "Falha ao executar o descarregamento do filamento, verifique se a bobina do filamento está colocada corretamente."
+  }
+}

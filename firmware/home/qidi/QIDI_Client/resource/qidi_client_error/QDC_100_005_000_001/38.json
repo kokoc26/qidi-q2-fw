@@ -1,0 +1,27 @@
+{
+  "message": "Code:QDE_004_052",
+  "message_translation": {
+    "zh_CN": "进料时，对应的BOX挤出机没有检测到耗材。",
+    "en_US": "When filament is loading, the corresponding BOXextruder does not detect filament.",
+    "ja_JP": "フィラメントのロード中に、対応するBOXエクストルーダーがフィラメントを検出しません。",
+    "ru_RU": "При загрузке нити соответствующий экструдер BOX не обнаруживает нить.",
+    "fr_FR": "Lors du chargement du filament, l'extrudeuse BOX correspondante ne détecte pas le filament.",
+    "de_DE": "Wenn Filament geladen wird, erkennt der entsprechende BOX-Extruder kein Filament.",
+    "it_IT": "Durante il caricamento del filamento, l'estrusore BOX corrispondente non rileva il filamento.",
+    "es_ES": "Cuando se está cargando filamento, el extrusor BOX correspondiente no detecta el filamento.",
+    "ko_KR": "필라멘트가 로딩 중일 때 해당 BOX압출기가 필라멘트를 감지하지 못합니다.",
+    "pt_PT": "Quando o filamento está sendo carregado, a extrusora BOX correspondente não detecta o filamento."
+  },
+  "prossess_msg_translation": {
+    "zh_CN": "执行进料失败，请先装载耗材。",
+    "en_US": "Failed to execute filament loading. Please load filament first.",
+    "ja_JP": "フィラメントのロードに失敗しました。最初にフィラメントをロードしてください。",
+    "ru_RU": "Не удалось выполнить загрузку нити. Пожалуйста, сначала загрузите нить.",
+    "fr_FR": "Échec de l'exécution du chargement du filament. Veuillez d'abord charger le filament.",
+    "de_DE": "Das Laden des Filaments konnte nicht ausgeführt werden. Bitte laden Sie zuerst Filament.",
+    "it_IT": "Impossibile eseguire il caricamento del filamento. Si prega di caricare prima il filamento.",
+    "es_ES": "No se pudo ejecutar la carga del filamento. Cargue el filamento primero.",
+    "ko_KR": "필라멘트 로딩을 실행하지 못했습니다. 먼저 필라멘트를 로드해 주세요.",
+    "pt_PT": "Falha ao executar o carregamento do filamento. Por favor carregue o filamento primeiro."
+  }
+}

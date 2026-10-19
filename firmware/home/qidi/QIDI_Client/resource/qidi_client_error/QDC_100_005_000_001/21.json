@@ -1,0 +1,27 @@
+{
+  "message": "Code:QDE_004_035",
+  "message_translation": {
+    "zh_CN": "喷头有料，BOX五通都没有触发，可能耗材断在四氟管，需要清理。",
+    "en_US": "The toolhead has data, but the BOXinternal hub is not triggered. Maybe the filament is broken in PTFE tube and needs to be cleaned.",
+    "ja_JP": "ツールヘッドにはデータがありますが、BOX 内部ハブがトリガーされていません。 PTFE tube でフィラメントが壊れているため、クリーニングが必要である可能性があります。",
+    "ru_RU": "На инструментальной головке есть данные, но внутренний концентратор BOX не срабатывает. Возможно, в PTFE tube нить сломана и ее необходимо почистить.",
+    "fr_FR": "la tête d'outil contient des données, mais le hub interne BOX n'est pas déclenché. Peut-être que le filament est cassé dans PTFE tube et doit être nettoyé.",
+    "de_DE": "Der Toolhead verfügt über Daten, aber der interne BOX-Hub wird nicht ausgelöst. Möglicherweise ist das Filament im PTFE tube gebrochen und muss gereinigt werden.",
+    "it_IT": "Il toolhead contiene dati, ma l'hub interno BOX non è attivato. Forse il filamento è rotto nel PTFE tube e deve essere pulito.",
+    "es_ES": "El cabezal de la herramienta tiene datos, pero el concentrador interno BOX no se activa. Quizás el filamento esté roto en PTFE tube y deba limpiarse.",
+    "ko_KR": "툴헤드에 데이터가 있지만 BOX 내부 허브가 트리거되지 않습니다. PTFE tube의 필라멘트가 파손되어 청소가 필요할 수 있습니다.",
+    "pt_PT": "O cabeçote possui dados, mas o hub interno BOX não é acionado. Talvez o filamento em PTFE tube esteja quebrado e precise ser limpo."
+  },
+  "prossess_msg_translation": {
+    "zh_CN": "请将工具头中的耗材退出",
+    "en_US": "Please exit filament in toolhead",
+    "ja_JP": "ツールヘッドのフィラメントを終了してください",
+    "ru_RU": "Пожалуйста, вытащите нить из головки инструмента.",
+    "fr_FR": "Veuillez quitter le filament dans la tête d'outil",
+    "de_DE": "Bitte lassen Sie das Filament im Werkzeugkopf aus",
+    "it_IT": "Uscire dal filamento nella testa dell'utensile",
+    "es_ES": "Salga del filamento en el cabezal de la herramienta",
+    "ko_KR": "툴헤드의 필라멘트를 종료해 주세요.",
+    "pt_PT": "Por favor, retire o filamento no cabeçote da ferramenta"
+  }
+}

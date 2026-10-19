@@ -1,0 +1,27 @@
+{
+  "message": "Code:QDE_004_060",
+  "message_translation": {
+    "zh_CN": "退料时BOX离线。",
+    "en_US": "BOX is offline during filament unloading.",
+    "ja_JP": "フィラメントのアンロード中に BOX がオフラインになります。",
+    "ru_RU": "BOX находится в автономном режиме во время выгрузки нити.",
+    "fr_FR": "BOX est hors ligne pendant le déchargement du filament.",
+    "de_DE": "BOX ist während des Filament-Entladens offline.",
+    "it_IT": "BOX è offline durante lo scaricamento del filamento.",
+    "es_ES": "BOX está fuera de línea durante la descarga de filamento.",
+    "ko_KR": "필라멘트 언로드 중에 BOX가 오프라인 상태입니다.",
+    "pt_PT": "BOX está offline durante o descarregamento do filamento."
+  },
+  "prossess_msg_translation": {
+    "zh_CN": "执行退料失败，请检查BOX电源线是否松动",
+    "en_US": "Failed to execute filament unloading. Please check whether the BOX power cord is loose.",
+    "ja_JP": "フィラメントアンロードの実行に失敗しました。 BOX の電源コードが緩んでいないか確認してください。",
+    "ru_RU": "Не удалось выполнить выгрузку нити. Проверьте, не ослаблен ли шнур питания BOX.",
+    "fr_FR": "Échec de l'exécution du déchargement du filament. Veuillez vérifier si le cordon d'alimentation du BOX est lâche.",
+    "de_DE": "Das Entladen des Filaments konnte nicht ausgeführt werden. Bitte prüfen Sie, ob das BOX-Netzkabel locker ist.",
+    "it_IT": "Impossibile eseguire lo scaricamento del filamento. Controllare se il cavo di alimentazione del BOX è allentato.",
+    "es_ES": "No se pudo ejecutar la descarga de filamento. Compruebe si el cable de alimentación del BOX está suelto.",
+    "ko_KR": "필라멘트 언로드 실행에 실패했습니다. BOX 전원 코드가 헐거운지 확인하세요.",
+    "pt_PT": "Não foi possível executar o descarregamento do filamento. Verifique se o cabo de alimentação do BOX está solto."
+  }
+}

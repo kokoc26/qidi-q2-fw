@@ -216,6 +216,66 @@ DRIP_TIME = 0.100
 class DripModeEndSignal(Exception):
     pass
 
+
+def _query_unload_box_empty(printer):
+    box485 = printer.lookup_object('box485', None)
+    if box485 is None or not hasattr(box485, 'query_current_box_channel_filament_once'):
+        logging.warning("box485 object unavailable during unload status query")
+        return False
+    try:
+        channel_status = box485.query_current_box_channel_filament_once()
+    except Exception as e:
+        logging.warning("Unload status query failed: %s", e)
+        return False
+    is_empty = not any(channel_status)
+    logging.info(
+        "Unload final channel status=%s is_empty=%s",
+        channel_status, is_empty
+    )
+    return is_empty
+
+
+QDE_004_042_ERROR_CODE = 19
+QDE_004_055_ERROR_CODE = 20
+QDE_004_056_ERROR_CODE = 21
+QDE_004_043_ERROR_CODE = 22
+QDE_004_057_ERROR_CODE = 23
+
+
+class ActivityMoveResult:
+    def __init__(self, success, error_code=0):
+        self.success = bool(success)
+        self.error_code = int(error_code or 0)
+
+    def __bool__(self):
+        return self.success
+
+    def __iter__(self):
+        yield self.success
+        yield self.error_code
+
+    def __len__(self):
+        return 2
+
+    def __getitem__(self, index):
+        return (self.success, self.error_code)[index]
+
+    def __repr__(self):
+        return f"({self.success}, {self.error_code})"
+
+    __str__ = __repr__
+
+    def __eq__(self, other):
+        if isinstance(other, bool):
+            return self.success == other
+        if isinstance(other, (tuple, list)):
+            return (self.success, self.error_code) == tuple(other)
+        return NotImplemented
+
+
+def _activity_move_result(success, error_code=0):
+    return ActivityMoveResult(success, error_code)
+
 # Main code to track events (and their timing) on the printer toolhead
 class ToolHead:
     def __init__(self, config):
@@ -259,6 +319,8 @@ class ToolHead:
         self.special_queuing_state = "NeedPrime"
         self.priming_timer = None
         self.drip_completion = None
+        self.feed_completion = None
+        self.unload_completion = None
         # Flush tracking
         self.flush_timer = self.reactor.register_timer(self._flush_handler)
         self.do_kick_flush_timer = True
@@ -275,6 +337,7 @@ class ToolHead:
         self.step_generators = []
         # Create kinematics class
         gcode = self.printer.lookup_object('gcode')
+        self.gcode = self.printer.lookup_object('gcode')
         self.Coord = gcode.Coord
         self.extruder = kinematics.extruder.DummyExtruder(self.printer)
         kin_name = config.get('kinematics')
@@ -573,6 +636,99 @@ class ToolHead:
             self.note_mcu_movequeue_activity(npt + self.kin_flush_delay,
                                              set_step_gen_time=True)
             self._advance_move_time(npt)
+
+    def _wait_remote_activity(self, completion, timeout, activity_owner):
+        """Wait for a BOX operation without extending the toolhead timeline."""
+        box2base = self.printer.lookup_object('box2base')
+        deadline = self.reactor.monotonic() + max(0., float(timeout))
+        while True:
+            if completion.test():
+                return "complete", 0
+            if not box2base.is_activity_box_online(activity_owner):
+                logging.info("remote activity aborted because target BOX went offline")
+                return "offline", 0
+            error_status = int(getattr(activity_owner, 'error_status', 0) or 0)
+            if error_status:
+                logging.info("remote activity reported BOX error %s", error_status)
+                return "error", error_status
+
+            curtime = self.reactor.monotonic()
+            if curtime >= deadline:
+                logging.info("remote activity timed out after %.3f seconds",
+                             max(0., float(timeout)))
+                return "timeout", 0
+
+            # Wake periodically so BOX offline/error status is observed promptly.
+            completion.wait(min(deadline, curtime + 0.5))
+
+    def _stop_remote_activity(self, stop_activity, activity_name):
+        try:
+            stop_activity()
+        except Exception:
+            logging.exception("failed to stop BOX %s activity", activity_name)
+
+    def _begin_remote_activity(self, activity_state, completion):
+        # Finish any preceding local motion before starting the remote motor.
+        self.wait_moves()
+        self.special_queuing_state = activity_state
+        self.need_check_pause = self.reactor.NEVER
+        self.reactor.update_timer(self.flush_timer, self.reactor.NEVER)
+        self.do_kick_flush_timer = False
+        if activity_state == "Feed":
+            self.feed_completion = completion
+        else:
+            self.unload_completion = completion
+
+    def _finish_remote_activity(self, activity_state, activity_owner=None):
+        timer_name = {
+            "Feed": "_filament_in_timer",
+            "Unload": "_filament_out_timer",
+        }.get(activity_state)
+        if (activity_owner is not None and timer_name is not None and
+                hasattr(activity_owner, timer_name) and
+                hasattr(activity_owner, "reactor")):
+            activity_owner.reactor.update_timer(
+                getattr(activity_owner, timer_name), activity_owner.reactor.NEVER)
+
+        if self.special_queuing_state != activity_state:
+            return
+
+        if activity_state == "Feed":
+            self.feed_completion = None
+        else:
+            self.unload_completion = None
+
+        # Return to the normal pre-move state without changing print_time.
+        self.reactor.update_timer(self.flush_timer, self.reactor.NOW)
+        self.do_kick_flush_timer = True
+        self.flush_step_generation()
+    def _wait_target_box_flow_state_idle(self, timeout=5.0):
+        flush_delay = DRIP_TIME + STEPCOMPRESS_FLUSH_TIME + self.kin_flush_delay
+        end_time = self.reactor.monotonic() + timeout
+        next_print_time = self.print_time + timeout
+        while self.print_time < next_print_time:
+            target_device = self.printer.lookup_object('box2base').target_device
+            if target_device is None:
+                return
+            if getattr(target_device, 'flow_state', 0) == 0:
+                return
+
+            curtime = self.reactor.monotonic()
+            if curtime >= end_time:
+                logging.info("wait flow_state idle timeout, current flow_state=%s",
+                             getattr(target_device, 'flow_state', None))
+                return
+
+            est_time = self._estimated_print_time(curtime)
+            wait_time = self.print_time - est_time - flush_delay
+            if wait_time > 0. and self.can_pause:
+                self.reactor.pause(curtime + min(wait_time, end_time - curtime))
+                continue
+
+            npt = min(self.print_time + DRIP_SEGMENT_TIME, next_print_time)
+            self.note_mcu_movequeue_activity(npt + self.kin_flush_delay,
+                                             set_step_gen_time=True)
+            self._advance_move_time(npt)
     def drip_move(self, newpos, speed, drip_completion):
         self.dwell(self.kin_flush_delay)
         # Transition from "NeedPrime"/"Priming"/main state to "Drip" state
@@ -600,6 +756,114 @@ class ToolHead:
         # Exit "Drip" state
         self.reactor.update_timer(self.flush_timer, self.reactor.NOW)
         self.flush_step_generation()
+
+    def feed_move(self, start_feed_activity, stop_feed_activity, timeout, feed_completion):
+        self._begin_remote_activity("Feed", feed_completion)
+        box2base = self.printer.lookup_object('box2base')
+        start_feed_owner = getattr(start_feed_activity, "__self__", None)
+        if (start_feed_owner is not None and
+                hasattr(start_feed_owner, "_filament_in_timer") and
+                hasattr(start_feed_owner, "reactor")):
+            start_feed_owner.reactor.update_timer(
+                start_feed_owner._filament_in_timer, start_feed_owner.reactor.NEVER)
+        try:
+            if not box2base.is_activity_box_online(start_feed_owner):
+                return _activity_move_result(False)
+            if not start_feed_activity():
+                self._stop_remote_activity(stop_feed_activity, "feed")
+                return _activity_move_result(False, QDE_004_042_ERROR_CODE)
+            if (start_feed_owner is not None and
+                    hasattr(start_feed_owner, "_filament_in_timer") and
+                    hasattr(start_feed_owner, "reactor")):
+                start_feed_owner.reactor.update_timer(
+                    start_feed_owner._filament_in_timer, start_feed_owner.reactor.NOW)
+
+            wait_status, error_code = self._wait_remote_activity(
+                feed_completion, timeout, start_feed_owner)
+            if wait_status == "offline":
+                self._stop_remote_activity(stop_feed_activity, "feed")
+                return _activity_move_result(False)
+            if wait_status == "error":
+                self._stop_remote_activity(stop_feed_activity, "feed")
+                return _activity_move_result(False, error_code)
+            if wait_status == "timeout":
+                self._stop_remote_activity(stop_feed_activity, "feed")
+                if start_feed_owner is not None and hasattr(
+                        start_feed_owner, "slot_red_double_blink"):
+                    start_feed_owner.slot_red_double_blink()
+                return _activity_move_result(False, QDE_004_056_ERROR_CODE)
+
+            if not box2base.is_activity_box_online(start_feed_owner):
+                self._stop_remote_activity(stop_feed_activity, "feed")
+                return _activity_move_result(False)
+            target_device = start_feed_owner
+            error_code = int(getattr(target_device, 'error_status', 0) or 0)
+            if error_code:
+                return _activity_move_result(False, error_code)
+            if int(getattr(target_device, 'flow_state', 0) or 0) != 0:
+                self._stop_remote_activity(stop_feed_activity, "feed")
+                return _activity_move_result(False, QDE_004_056_ERROR_CODE)
+            if self.printer.lookup_object(
+                    'filament_switch_sensor filament_switch_sensor'
+                    ).runout_helper.filament_present:
+                return _activity_move_result(True)
+            if start_feed_owner is not None and hasattr(
+                    start_feed_owner, "slot_red_double_blink"):
+                start_feed_owner.slot_red_double_blink()
+            return _activity_move_result(False, QDE_004_055_ERROR_CODE)
+        finally:
+            self._finish_remote_activity("Feed", start_feed_owner)
+
+    def unload_move(self, start_unload_activity, stop_unload_activity,
+                    timeout, unload_completion):
+        self._begin_remote_activity("Unload", unload_completion)
+        box2base = self.printer.lookup_object('box2base')
+        start_unload_owner = getattr(start_unload_activity, "__self__", None)
+        if (start_unload_owner is not None and
+                hasattr(start_unload_owner, "_filament_out_timer") and
+                hasattr(start_unload_owner, "reactor")):
+            start_unload_owner.reactor.update_timer(
+                start_unload_owner._filament_out_timer, start_unload_owner.reactor.NEVER)
+        try:
+            if not box2base.is_activity_box_online(start_unload_owner):
+                return _activity_move_result(False)
+            self.gcode.respond_info("start_unload_activity")
+            if not start_unload_activity():
+                self._stop_remote_activity(stop_unload_activity, "unload")
+                return _activity_move_result(False, QDE_004_043_ERROR_CODE)
+            if (start_unload_owner is not None and
+                    hasattr(start_unload_owner, "_filament_out_timer") and
+                    hasattr(start_unload_owner, "reactor")):
+                start_unload_owner.reactor.update_timer(
+                    start_unload_owner._filament_out_timer, start_unload_owner.reactor.NOW)
+
+            wait_status, error_code = self._wait_remote_activity(
+                unload_completion, timeout, start_unload_owner)
+            if wait_status == "offline":
+                self._stop_remote_activity(stop_unload_activity, "unload")
+                return _activity_move_result(False)
+            if wait_status == "error":
+                self._stop_remote_activity(stop_unload_activity, "unload")
+                return _activity_move_result(False, error_code)
+            if wait_status == "timeout":
+                self._stop_remote_activity(stop_unload_activity, "unload")
+                if start_unload_owner is not None and hasattr(
+                        start_unload_owner, "slot_red_double_blink"):
+                    start_unload_owner.slot_red_double_blink()
+                if _query_unload_box_empty(self.printer):
+                    return _activity_move_result(True)
+                return _activity_move_result(False, QDE_004_057_ERROR_CODE)
+
+            if not box2base.is_activity_box_online(start_unload_owner):
+                self._stop_remote_activity(stop_unload_activity, "unload")
+                return _activity_move_result(False)
+            error_code = int(getattr(start_unload_owner, 'error_status', 0) or 0)
+            if error_code:
+                return _activity_move_result(False, error_code)
+            return _activity_move_result(True)
+        finally:
+            self._finish_remote_activity("Unload", start_unload_owner)
+        
     # Misc commands
     def stats(self, eventtime):
         max_queue_time = max(self.print_time, self.last_flush_time)

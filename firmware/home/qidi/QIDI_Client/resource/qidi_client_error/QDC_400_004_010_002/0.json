@@ -1,0 +1,31 @@
+{
+    "message": "设备连接异常。",
+    "message_translation": {
+        "zh_CN": "设备连接异常",
+        "en_US": "Device connection error",
+        "ja_JP": "デバイス接続エラー",
+        "ru_RU": "Ошибка подключения устройства",
+        "fr_FR": "Erreur de connexion de l'appareil",
+        "de_DE": "Geräteverbindungsfehler",
+        "it_IT": "Errore di connessione del dispositivo",
+        "es_ES": "Error de conexión del dispositivo",
+        "ko_KR": "장치 연결 오류",
+        "pt_PT": "Erro de conexão do dispositivo"
+    },
+    "error_code": "QDC_400_004_010_002",
+    "error_qr_code_path": "/QDC/400_004_010_002",
+    "prossess_msg_translation": {
+        "zh_CN": "设备连接异常，直播、文件发送等功能可能无法正常使用。请检查设备与手机网络后重试或联系客服。",
+        "en_US": "Device connection error. Live streaming, file sending and other features may not work properly. Please check your device and phone network and retry, or contact support.",
+        "ja_JP": "デバイス接続エラー。ライブ配信、ファイル送信などの機能が正常に動作しない可能性があります。デバイスと携帯電話のネットワークを確認して再試行するか、カスタマーサポートにお問い合わせください。",
+        "ru_RU": "Ошибка подключения устройства. Функции прямой трансляции, отправки файлов и другие могут работать неправильно. Проверьте сеть устройства и телефона и повторите попытку или обратитесь в службу поддержки.",
+        "fr_FR": "Erreur de connexion de l'appareil. La diffusion en direct, l'envoi de fichiers et d'autres fonctionnalités peuvent ne pas fonctionner correctement. Veuillez vérifier le réseau de votre appareil et de votre téléphone et réessayer, ou contacter le support.",
+        "de_DE": "Geräteverbindungsfehler. Live-Streaming, Dateisendung und andere Funktionen funktionieren möglicherweise nicht ordnungsgemäß. Bitte überprüfen Sie die Netzwerkverbindung Ihres Geräts und Telefons und versuchen Sie es erneut, oder kontaktieren Sie den Support.",
+        "it_IT": "Errore di connessione del dispositivo. Lo streaming in diretta, l'invio di file e altre funzionalità potrebbero non funzionare correttamente. Controllare la rete del dispositivo e del telefono e riprovare, oppure contattare l'assistenza.",
+        "es_ES": "Error de conexión del dispositivo. La transmisión en vivo, el envío de archivos y otras funciones pueden no funcionar correctamente. Verifique la red de su dispositivo y teléfono e intente de nuevo, o contacte a soporte.",
+        "ko_KR": "장치 연결 오류. 라이브 스트리밍, 파일 전송 등의 기능이 제대로 작동하지 않을 수 있습니다. 장치와 휴대폰 네트워크를 확인하고 다시 시도하거나 고객 지원에 문의하세요.",
+        "pt_PT": "Erro de conexão do dispositivo. A transmissão ao vivo, o envio de arquivos e outras funcionalidades podem não funcionar corretamente. Verifique a rede do seu dispositivo e telefone e tente novamente, ou entre em contato com o suporte."
+    },
+    "error_type": 2,
+    "weight": 10
+}

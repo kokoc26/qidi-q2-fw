@@ -1,0 +1,48 @@
+{
+    "message": "BOX 4 drying timeout",
+    "message_translation": {
+        "zh_CN": "BOX 4 烘干超时",
+        "en_US": "BOX 4 drying timeout",
+        "ja_JP": "BOX 4 乾燥タイムアウト",
+        "ru_RU": "Тайм-аут сушки BOX 4",
+        "fr_FR": "Délai de séchage dépassé pour la BOX 4",
+        "de_DE": "Zeitüberschreitung beim Trocknen von BOX 4",
+        "it_IT": "Timeout di asciugatura della BOX 4",
+        "es_ES": "Tiempo de secado agotado en la BOX 4",
+        "ko_KR": "BOX 4 건조 시간 초과",
+        "pt_PT": "Tempo limite de secagem da BOX 4 excedido"
+    },
+    "error_code": "QDC_300_002_005_012",
+    "error_qr_code_path": "/QDC/300_002_005_012_max4",
+    "prossess_msg_translation": {
+        "zh_CN": "BOX 4 烘干时发生加热超时，已关闭烘干功能。",
+        "en_US": "BOX 4 experienced heating timeout during drying and has automatically turned off drying. Please check if the lid is closed.",
+        "ja_JP": "BOX 4 の乾燥中に加熱タイムアウトが発生したため、乾燥を自動停止しました。蓋が閉じているか確認してください。",
+        "ru_RU": "Во время сушки BOX 4 превышено время нагрева, поэтому сушка автоматически отключена. Проверьте, закрыта ли крышка.",
+        "fr_FR": "Le chauffage a dépassé le délai imparti pendant le séchage de la BOX 4. Le séchage a été arrêté automatiquement. Vérifiez que le couvercle est fermé.",
+        "de_DE": "Beim Trocknen von BOX 4 trat eine Zeitüberschreitung der Heizung auf. Die Trocknung wurde automatisch beendet. Prüfen Sie, ob der Deckel geschlossen ist.",
+        "it_IT": "Durante l'asciugatura della BOX 4 si è verificato un timeout del riscaldamento e l'asciugatura è stata disattivata automaticamente. Verificare che il coperchio sia chiuso.",
+        "es_ES": "Se agotó el tiempo de calentamiento durante el secado de la BOX 4 y el secado se desactivó automáticamente. Compruebe que la tapa esté cerrada.",
+        "ko_KR": "BOX 4 건조 중 가열 시간 초과가 발생하여 건조 기능이 자동으로 꺼졌습니다. 덮개가 닫혀 있는지 확인하십시오.",
+        "pt_PT": "O aquecimento excedeu o tempo limite durante a secagem da BOX 4 e a secagem foi desligada automaticamente. Verifique se a tampa está fechada."
+    },
+    "error_type": 1,
+    "weight": 5,
+    "popup_stlye": {
+        "main_pic": "NO_PIC",
+        "is_model": false,
+        "left_text": {
+            "zh_CN": "确定",
+            "en_US": "OK",
+            "ja_JP": "確認",
+            "ru_RU": "ОК",
+            "fr_FR": "OK",
+            "de_DE": "OK",
+            "it_IT": "OK",
+            "es_ES": "Aceptar",
+            "ko_KR": "확인",
+            "pt_PT": "OK"
+        },
+        "right_text": {}
+    }
+}

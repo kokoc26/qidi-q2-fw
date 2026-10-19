@@ -1,0 +1,27 @@
+{
+  "message": "Code:QDE_004_048",
+  "message_translation": {
+    "zh_CN": "退料长时间没有退出五通限位，是否五通没有回弹或者耗材盘跳出",
+    "en_US": "filament unloading does not exit the internal hubsensor for a long time, whether the internal hub does not rebound or the filament spool jumps out",
+    "ja_JP": "内部ハブがリバウンドしないのか、フィラメント スプールが飛び出ないのか、フィラメントのアンロードが長時間内部ハブセンサーから出ない",
+    "ru_RU": "выгрузка нити долгое время не выходит из внутреннего датчика ступицы, не отскакивает ли внутренняя ступица или выскакивает катушка с нитью",
+    "fr_FR": "le déchargement du filament ne sort pas du capteur du moyeu interne pendant une longue période, que le moyeu interne ne rebondisse pas ou que la bobine de filament saute",
+    "de_DE": "Das Entladen des Filaments verlässt den internen Hubsensor längere Zeit nicht, unabhängig davon, ob der interne Hub nicht zurückfedert oder die Filamentspule herausspringt",
+    "it_IT": "lo scarico del filamento non esce dal sensore hub interno per molto tempo, sia che l'hub interno non rimbalzi sia che la bobina del filamento salti fuori",
+    "es_ES": "la descarga de filamento no sale del hubsensor interno durante mucho tiempo, ya sea que el hub interno no rebote o el carrete de filamento salte",
+    "ko_KR": "내부 허브가 반동하지 않거나 필라멘트 스풀이 튀어나오든 필라멘트 언로드가 오랫동안 내부 허브 센서에서 나오지 않습니다.",
+    "pt_PT": "a descarga do filamento não sai do sensor do cubo interno por um longo tempo, quer o cubo interno não recupere ou o carretel do filamento salte para fora"
+  },
+  "prossess_msg_translation": {
+    "zh_CN": "执行退料失败，请检查耗材盘是否正确放置。",
+    "en_US": "Failed to execute filament unloading, please check whether the filament spool is placed correctly.",
+    "ja_JP": "フィラメントのアンロードの実行に失敗しました。フィラメントのスプールが正しく配置されているかどうかを確認してください。",
+    "ru_RU": "Не удалось выполнить выгрузку нити. Проверьте, правильно ли установлена катушка с нитью.",
+    "fr_FR": "Échec du déchargement du filament, veuillez vérifier si la bobine de filament est correctement placée.",
+    "de_DE": "Das Entladen des Filaments ist fehlgeschlagen. Bitte überprüfen Sie, ob die Filamentspule richtig platziert ist.",
+    "it_IT": "Impossibile eseguire lo scaricamento del filamento, verificare se la bobina del filamento è posizionata correttamente.",
+    "es_ES": "No se pudo ejecutar la descarga del filamento; verifique si el carrete de filamento está colocado correctamente.",
+    "ko_KR": "필라멘트 언로드를 실행하지 못했습니다. 필라멘트 스풀이 올바르게 배치되었는지 확인하십시오.",
+    "pt_PT": "Falha ao executar o descarregamento do filamento, verifique se a bobina do filamento está colocada corretamente."
+  }
+}

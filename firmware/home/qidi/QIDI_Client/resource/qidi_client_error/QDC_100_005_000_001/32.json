@@ -1,0 +1,27 @@
+{
+  "message": "Code:QDE_004_046",
+  "message_translation": {
+    "zh_CN": "进料时，检测到耗材进料速度异常，检查是否缠料或者编码器异常。",
+    "en_US": "When filament loading, abnormal filament loading speed is detected, check whether tangled filament or encoder is abnormal.",
+    "ja_JP": "フィラメントローディング時、フィラメントローディング速度異常を検出し、フィラメントの絡みやエンコーダに異常がないか確認してください。",
+    "ru_RU": "При загрузке нити обнаруживается ненормальная скорость загрузки нити, проверьте, не является ли запутавшаяся нить или кодировщик ненормальной.",
+    "fr_FR": "Lors du chargement du filament, une vitesse de chargement anormale du filament est détectée, vérifiez si le filament emmêlé ou l'encodeur est anormal.",
+    "de_DE": "Beim Laden des Filaments wird eine abnormale Filamentladegeschwindigkeit festgestellt. Überprüfen Sie, ob das Filament verwickelt ist oder der Encoder abnormal ist.",
+    "it_IT": "Quando si carica il filamento, viene rilevata una velocità di caricamento anomala del filamento, controllare se il filamento aggrovigliato o l'encoder sono anomali.",
+    "es_ES": "Cuando se carga el filamento, se detecta una velocidad de carga anormal del filamento, verifique si el filamento enredado o el codificador son anormales.",
+    "ko_KR": "필라멘트 로딩시 비정상적인 필라멘트 로딩 속도가 감지되면 엉킨 필라멘트나 엔코더가 비정상인지 확인하십시오.",
+    "pt_PT": "Ao carregar o filamento, é detectada uma velocidade anormal de carregamento do filamento, verifique se o filamento emaranhado ou o codificador estão anormais."
+  },
+  "prossess_msg_translation": {
+    "zh_CN": "执行进料失败，请检查耗材是否缠料。",
+    "en_US": "Failed to execute filament loading. Please check whether filament is tangled filament.",
+    "ja_JP": "フィラメントのロードに失敗しました。フィラメントが絡まっていないか確認してください。",
+    "ru_RU": "Не удалось выполнить загрузку нити. Пожалуйста, проверьте, не запуталась ли нить.",
+    "fr_FR": "Échec de l'exécution du chargement du filament. Veuillez vérifier si le filament est emmêlé.",
+    "de_DE": "Das Laden des Filaments konnte nicht ausgeführt werden. Bitte prüfen Sie, ob es sich bei dem Filament um verwickeltes Filament handelt.",
+    "it_IT": "Impossibile eseguire il caricamento del filamento. Si prega di verificare se il filamento è aggrovigliato.",
+    "es_ES": "No se pudo ejecutar la carga del filamento. Compruebe si el filamento está enredado.",
+    "ko_KR": "필라멘트 로딩을 실행하지 못했습니다. 필라멘트가 엉켜있는지 확인해주세요.",
+    "pt_PT": "Falha ao executar o carregamento do filamento. Verifique se o filamento está emaranhado."
+  }
+}

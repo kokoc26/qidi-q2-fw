@@ -1,0 +1,27 @@
+{
+  "message": "Code:QDE_004_040",
+  "message_translation": {
+    "zh_CN": "执行读取rfid时 对应的BOX离线，检查接线。",
+    "en_US": "When reading rfid, the corresponding BOX is offline, check the wiring.",
+    "ja_JP": "rfid を読み取るときに、対応する BOX がオフラインになっているため、配線を確認してください。",
+    "ru_RU": "При чтении RFID соответствующее устройство BOX находится в автономном режиме, проверьте проводку.",
+    "fr_FR": "Lors de la lecture du rfid, le BOX correspondant est hors ligne, vérifiez le câblage.",
+    "de_DE": "Beim Lesen von RFID ist das entsprechende BOX offline, überprüfen Sie die Verkabelung.",
+    "it_IT": "Durante la lettura dell'RFID, il BOX corrispondente è offline, controllare il cablaggio.",
+    "es_ES": "Al leer rfid, el BOX correspondiente está fuera de línea, verifique el cableado.",
+    "ko_KR": "rfid를 읽을 때 해당 BOX가 오프라인입니다. 배선을 확인하십시오.",
+    "pt_PT": "Ao ler RFID, o BOX correspondente está offline, verifique a fiação."
+  },
+  "prossess_msg_translation": {
+    "zh_CN": "执行RFID读取时，检测到BOX离线，请正确连接BOX。",
+    "en_US": "When performing RFID reading, it is detected that BOX is offline. Please connect BOX correctly.",
+    "ja_JP": "RFID 読み取りを実行すると、BOX がオフラインであることが検出されます。 BOXを正しく接続してください。",
+    "ru_RU": "При выполнении чтения RFID обнаруживается, что BOX находится в автономном режиме. Пожалуйста, подключите BOX правильно.",
+    "fr_FR": "Lors de la lecture du RFID, il est détecté que BOX est hors ligne. Veuillez connecter correctement le BOX.",
+    "de_DE": "Beim Durchführen des RFID-Lesens wird erkannt, dass BOX offline ist. Bitte schließen Sie BOX richtig an.",
+    "it_IT": "Quando si esegue la lettura RFID, viene rilevato che BOX è offline. Collegare correttamente BOX.",
+    "es_ES": "Al realizar la lectura de RFID, se detecta que BOX está fuera de línea. Conecte BOX correctamente.",
+    "ko_KR": "RFID 읽기를 수행할 때 BOX가 오프라인인 것으로 감지됩니다. BOX를 올바르게 연결하십시오.",
+    "pt_PT": "Ao realizar a leitura do RFID, é detectado que o BOX está offline. Conecte o BOX corretamente."
+  }
+}

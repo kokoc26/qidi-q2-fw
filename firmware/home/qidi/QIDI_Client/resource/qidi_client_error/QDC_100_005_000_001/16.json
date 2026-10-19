@@ -1,0 +1,27 @@
+{
+  "message": "Code:QDE_004_030",
+  "message_translation": {
+    "zh_CN": "打印时切换耗材时，喷头有料，识别到当前进料的耗材对应的BOX离线。",
+    "en_US": "When switching filament during printing, filament was detected in the toolhead, but the BOX associated with the currently fed filament was offline.",
+    "ja_JP": "印刷中のフィラメント切り替え時にツールヘッド内のフィラメントを検出しましたが、現在供給中のフィラメントに対応するBOXがオフラインです。",
+    "ru_RU": "При смене филамента во время печати в печатающей головке был обнаружен филамент, но BOX, соответствующий подаваемому филаменту, находится не в сети.",
+    "fr_FR": "Lors du changement de filament pendant l'impression, du filament a été détecté dans la tête d'impression, mais la BOX associée au filament en cours d'alimentation est hors ligne.",
+    "de_DE": "Beim Filamentwechsel während des Drucks wurde Filament im Druckkopf erkannt, aber die dem aktuell zugeführten Filament zugeordnete BOX ist offline.",
+    "it_IT": "Durante il cambio del filamento in fase di stampa, è stato rilevato del filamento nella testina, ma il BOX associato al filamento attualmente alimentato è offline.",
+    "es_ES": "Al cambiar el filamento durante la impresión, se detectó filamento en el cabezal, pero el BOX asociado al filamento que se está alimentando está desconectado.",
+    "ko_KR": "인쇄 중 필라멘트를 전환할 때 툴헤드에 필라멘트가 감지되었지만 현재 공급 중인 필라멘트에 해당하는 BOX가 오프라인 상태입니다.",
+    "pt_PT": "Ao mudar o filamento durante a impressão, foi detetado filamento na cabeça de impressão, mas a BOX associada ao filamento atualmente alimentado está offline."
+  },
+  "prossess_msg_translation": {
+    "zh_CN": "执行换料时，BOX离线，请将BOX正确开启。",
+    "en_US": "The BOX is offline during the filament change. Please power on the BOX correctly.",
+    "ja_JP": "フィラメント交換中にBOXがオフラインになっています。BOXの電源を正しく入れてください。",
+    "ru_RU": "Во время смены филамента BOX находится не в сети. Правильно включите BOX.",
+    "fr_FR": "La BOX est hors ligne pendant le changement de filament. Mettez correctement la BOX sous tension.",
+    "de_DE": "Die BOX ist während des Filamentwechsels offline. Schalten Sie die BOX ordnungsgemäß ein.",
+    "it_IT": "Il BOX è offline durante il cambio del filamento. Accendere correttamente il BOX.",
+    "es_ES": "El BOX está desconectado durante el cambio de filamento. Encienda correctamente el BOX.",
+    "ko_KR": "필라멘트 교체 중 BOX가 오프라인 상태입니다. BOX의 전원을 올바르게 켜십시오.",
+    "pt_PT": "A BOX está offline durante a mudança de filamento. Ligue corretamente a BOX."
+  }
+}

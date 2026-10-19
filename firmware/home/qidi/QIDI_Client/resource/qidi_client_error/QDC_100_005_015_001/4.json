@@ -1,0 +1,27 @@
+{
+  "message": "reports overcurrent alarm, check the stepper connection or current settings and reboot the machine",
+  "message_translation": {
+    "zh_CN": "闭环步进电机过流报警",
+    "en_US": "Closed-loop stepper overcurrent alarm",
+    "ja_JP": "閉ループステッピングモーターの過電流アラーム",
+    "ru_RU": "Сигнал перегрузки по току шагового двигателя с замкнутым контуром",
+    "fr_FR": "Alarme de surintensité du moteur pas à pas en boucle fermée",
+    "de_DE": "Überstromalarm des Closed-Loop-Schrittmotors",
+    "it_IT": "Allarme di sovracorrente del motore passo-passo ad anello chiuso",
+    "es_ES": "Alarma de sobrecorriente del motor paso a paso de bucle cerrado",
+    "ko_KR": "폐루프 스테퍼 모터 과전류 경고",
+    "pt_PT": "Alarme de sobrecorrente do motor passo a passo de malha fechada"
+  },
+  "prossess_msg_translation": {
+    "zh_CN": "请检查步进电机连接或电流设置，然后重启机器。",
+    "en_US": "Check the stepper connection or current settings and reboot the machine.",
+    "ja_JP": "ステッピングモーターの接続または電流設定を確認し、機器を再起動してください。",
+    "ru_RU": "Проверьте подключение шагового двигателя или настройки тока и перезагрузите устройство.",
+    "fr_FR": "Vérifiez la connexion du moteur pas à pas ou les réglages du courant, puis redémarrez la machine.",
+    "de_DE": "Überprüfen Sie den Anschluss des Schrittmotors oder die Stromeinstellungen und starten Sie das Gerät neu.",
+    "it_IT": "Controllare il collegamento del motore passo-passo o le impostazioni della corrente e riavviare la macchina.",
+    "es_ES": "Compruebe la conexión del motor paso a paso o los ajustes de corriente y reinicie la máquina.",
+    "ko_KR": "스테퍼 모터 연결 또는 전류 설정을 확인한 후 장비를 다시 시작하십시오.",
+    "pt_PT": "Verifique a ligação do motor passo a passo ou as definições de corrente e reinicie a máquina."
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "message": "Code:QDE_004_047",
+  "message_translation": {
+    "zh_CN": "进料时，长时间未触发传感器，请检查四氟管是否脱落。",
+    "en_US": "When filament is loading, the sensor is not triggered for a long time. Please check whether the PTFE tube has fallen off.",
+    "ja_JP": "フィラメントのロード中、センサーが長時間トリガーされません。 PTFE tube が外れていないか確認してください。",
+    "ru_RU": "При загрузке нити датчик долгое время не срабатывает. Пожалуйста, проверьте, не отвалился ли PTFTUBEDEVICE.",
+    "fr_FR": "Lors du chargement du filament, le capteur ne se déclenche pas pendant une longue période. Veuillez vérifier si le PTFE tube est tombé.",
+    "de_DE": "Beim Laden des Filaments wird der Sensor längere Zeit nicht ausgelöst. Bitte prüfen Sie, ob das PTFE tube heruntergefallen ist.",
+    "it_IT": "Durante il caricamento del filamento, il sensore non viene attivato per molto tempo. Si prega di verificare se il PTFE tube è caduto.",
+    "es_ES": "Cuando se carga el filamento, el sensor no se activa durante mucho tiempo. Compruebe si el PTFE tube se ha caído.",
+    "ko_KR": "필라멘트 로딩 중 센서가 오랫동안 작동되지 않습니다. PTFE tube가 떨어졌는지 확인하세요.",
+    "pt_PT": "Quando o filamento está carregando, o sensor não é acionado por um longo tempo. Verifique se o PTFE tube caiu."
+  },
+  "prossess_msg_translation": {
+    "zh_CN": "执行进料失败，请检查四氟管是否弯折或者四氟管是否正确插入工具头。",
+    "en_US": "Failed to execute filament loading. Please check whether the PTFE tube is bent or whether the PTFE tube is correctly inserted into the toolhead.",
+    "ja_JP": "フィラメントのロードに失敗しました。 PTFE tube が曲がっていないか、または PTFE tube がツールヘッドに正しく挿入されているかどうかを確認してください。",
+    "ru_RU": "Не удалось выполнить загрузку нити. Пожалуйста, проверьте, не погнут ли PTFE tube и правильно ли он вставлен в головку инструмента.",
+    "fr_FR": "Échec de l'exécution du chargement du filament. Veuillez vérifier si le PTFE tube est plié ou si le PTFE tube est correctement inséré dans la tête d'outil.",
+    "de_DE": "Das Laden des Filaments konnte nicht ausgeführt werden. Bitte prüfen Sie, ob das PTFE tube verbogen ist bzw. ob das PTFE tube richtig in den Werkzeugkopf eingesetzt ist.",
+    "it_IT": "Impossibile eseguire il caricamento del filamento. Controllare se il PTFE tube è piegato o se il PTFE tube è inserito correttamente nella testa dell'utensile.",
+    "es_ES": "No se pudo ejecutar la carga del filamento. Compruebe si el PTFE tube está doblado o si está correctamente insertado en el cabezal de la herramienta.",
+    "ko_KR": "필라멘트 로딩을 실행하지 못했습니다. PTFE tube가 구부러졌는지, PTFE tube가 툴헤드에 올바르게 삽입되었는지 확인하세요.",
+    "pt_PT": "Falha ao executar o carregamento do filamento. Verifique se o PTFE tube está dobrado ou se o PTFE tube está inserido corretamente no cabeçote da ferramenta."
+  }
+}

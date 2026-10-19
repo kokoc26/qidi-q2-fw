@@ -1,0 +1,27 @@
+{
+  "message": "Code:QDE_004_065",
+  "message_translation": {
+    "zh_CN": "执行RFID读取时，检测到有BOX被加载。",
+    "en_US": "Loaded filament was detected during RFID reading.",
+    "ja_JP": "RFIDの読み取り中に、ロードされたフィラメントが検出されました。",
+    "ru_RU": "Во время чтения RFID обнаружен загруженный филамент.",
+    "fr_FR": "Un filament chargé a été détecté pendant la lecture RFID.",
+    "de_DE": "Beim RFID-Lesen wurde geladenes Filament erkannt.",
+    "it_IT": "Durante la lettura RFID è stato rilevato del filamento caricato.",
+    "es_ES": "Se detectó filamento cargado durante la lectura RFID.",
+    "ko_KR": "RFID 읽기 중 로드된 필라멘트가 감지되었습니다.",
+    "pt_PT": "Foi detetado filamento carregado durante a leitura RFID."
+  },
+  "prossess_msg_translation": {
+    "zh_CN": "检测到耗材被加载，请先退出耗材后再进行RFID读取。",
+    "en_US": "Loaded filament was detected. Please unload the filament before reading RFID.",
+    "ja_JP": "ロードされたフィラメントが検出されました。フィラメントをアンロードしてからRFIDを読み取ってください。",
+    "ru_RU": "Обнаружен загруженный филамент. Выгрузите филамент перед чтением RFID.",
+    "fr_FR": "Un filament chargé a été détecté. Déchargez le filament avant de lire le RFID.",
+    "de_DE": "Geladenes Filament wurde erkannt. Entladen Sie das Filament, bevor Sie RFID lesen.",
+    "it_IT": "È stato rilevato del filamento caricato. Scaricare il filamento prima di leggere l'RFID.",
+    "es_ES": "Se detectó filamento cargado. Descargue el filamento antes de leer RFID.",
+    "ko_KR": "로드된 필라멘트가 감지되었습니다. 필라멘트를 언로드한 후 RFID를 읽으십시오.",
+    "pt_PT": "Foi detetado filamento carregado. Descarregue o filamento antes de ler o RFID."
+  }
+}

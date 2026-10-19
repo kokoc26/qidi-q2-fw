@@ -1,0 +1,27 @@
+{
+  "message": "Code:QDE_004_034",
+  "message_translation": {
+    "zh_CN": "耗材映射失败 原因1.打印开始后 有BOX被拔掉了 2.切片value_t设置错误",
+    "en_US": "filament mapping failed. Reason 1. BOX was unplugged after printing started. 2. Slice value_t setting is wrong.",
+    "ja_JP": "フィラメントのマッピングに失敗しました。理由 1. 印刷開始後に BOX が抜かれました。 2. スライス value_t の設定が間違っています。",
+    "ru_RU": "не удалось выполнить сопоставление нитей. Причина 1. BOX был отключен от сети после начала печати. 2. Неправильная настройка значения среза_t.",
+    "fr_FR": "échec de la cartographie des filaments. Raison 1. BOX a été débranché après le démarrage de l'impression. 2. Le paramètre Slice value_t est incorrect.",
+    "de_DE": "Filamentzuordnung fehlgeschlagen. Grund 1. BOX wurde nach Beginn des Druckvorgangs vom Stromnetz getrennt. 2. Die Einstellung für den Slice-Wert_t ist falsch.",
+    "it_IT": "mappatura del filamento fallita. Motivo 1. BOX è stato scollegato dopo l'avvio della stampa. 2. L'impostazione Slice value_t è errata.",
+    "es_ES": "falló el mapeo del filamento. Razón 1. BOX se desconectó después de que comenzó la impresión. 2. La configuración del valor de segmento_t es incorrecta.",
+    "ko_KR": "필라멘트 매핑에 실패했습니다. 이유 1. 인쇄가 시작된 후 BOX의 플러그가 뽑혔습니다. 2. 슬라이스 value_t 설정이 잘못되었습니다.",
+    "pt_PT": "falha no mapeamento do filamento. Razão 1. BOX foi desconectado após o início da impressão. 2. A configuração do valor da fatia_t está errada."
+  },
+  "prossess_msg_translation": {
+    "zh_CN": "耗材映射失败，请确认BOX是否正确连接。",
+    "en_US": "filament mapping failed, please confirm whether BOX is connected correctly.",
+    "ja_JP": "フィラメントのマッピングに失敗しました。BOX が正しく接続されているかどうかを確認してください。",
+    "ru_RU": "не удалось выполнить сопоставление нитей. Убедитесь, что BOX подключен правильно.",
+    "fr_FR": "échec de la cartographie des filaments, veuillez confirmer si BOX est correctement connecté.",
+    "de_DE": "Filamentzuordnung fehlgeschlagen, bitte überprüfen Sie, ob BOX richtig angeschlossen ist.",
+    "it_IT": "mappatura del filamento fallita, verificare se BOX è collegato correttamente.",
+    "es_ES": "error en el mapeo del filamento, confirme si BOX está conectado correctamente.",
+    "ko_KR": "필라멘트 매핑 실패. BOX가 올바르게 연결되었는지 확인하세요.",
+    "pt_PT": "falha no mapeamento do filamento, confirme se o BOX está conectado corretamente."
+  }
+}

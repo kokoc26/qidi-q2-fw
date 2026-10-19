@@ -1,0 +1,27 @@
+{
+  "message": "Code:QDE_004_055",
+  "message_translation": {
+    "zh_CN": "进料时，缓冲器顶到底了，并且五通电机也推不动，四氟管阻力可能过大。",
+    "en_US": "When loading filament, the buffer is pushed to the bottom, and the internal hub motor cannot push it. The resistance of PTFE tube may be too large.",
+    "ja_JP": "フィラメントをロードすると、バッファーが底部に押し込まれ、内部ハブ モーターがバッファーを押すことができなくなります。 PTFE tube の抵抗が大きすぎる可能性があります。",
+    "ru_RU": "При загрузке нити буфер опускается вниз, и внутренний мотор-редуктор не может его протолкнуть. Сопротивление PTFE tube может быть слишком большим.",
+    "fr_FR": "Lors du chargement du filament, le tampon est poussé vers le bas et le moteur du moyeu interne ne peut pas le pousser. La résistance du PTFE tube est peut-être trop importante.",
+    "de_DE": "Beim Laden des Filaments wird der Puffer nach unten gedrückt und der interne Nabenmotor kann ihn nicht schieben. Der Widerstand von PTFE tube ist möglicherweise zu groß.",
+    "it_IT": "Quando si carica il filamento, il buffer viene spinto verso il basso e il motore del mozzo interno non può spingerlo. La resistenza di PTFE tube potrebbe essere eccessiva.",
+    "es_ES": "Al cargar filamento, el amortiguador se empuja hacia el fondo y el motor del cubo interno no puede empujarlo. La resistencia de PTFE tube puede ser demasiado grande.",
+    "ko_KR": "필라멘트 로딩시 버퍼가 아래쪽으로 밀려 내부 허브 모터가 밀어낼 수 없습니다. PTFE tube의 저항이 너무 클 수 있습니다.",
+    "pt_PT": "Ao carregar o filamento, o buffer é empurrado para baixo e o motor do cubo interno não consegue empurrá-lo. A resistência de PTFE tube pode ser muito grande."
+  },
+  "prossess_msg_translation": {
+    "zh_CN": "执行进料失败，请检查四氟管是否发生弯折。",
+    "en_US": "Failed to execute filament loading, please check whether PTFE tube is bent.",
+    "ja_JP": "フィラメントのロードに失敗しました。PTFE tube が曲がっていないか確認してください。",
+    "ru_RU": "Не удалось выполнить загрузку нити. Проверьте, не погнут ли PTFE tube.",
+    "fr_FR": "Échec de l'exécution du chargement du filament, veuillez vérifier si PTFE tube est plié.",
+    "de_DE": "Das Laden des Filaments konnte nicht durchgeführt werden. Bitte überprüfen Sie, ob das PTFE tube verbogen ist.",
+    "it_IT": "Impossibile eseguire il caricamento del filamento, verificare se PTFE tube è piegato.",
+    "es_ES": "No se pudo ejecutar la carga del filamento; verifique si PTFE tube está doblado.",
+    "ko_KR": "필라멘트 로딩을 실행하지 못했습니다. PTFE tube가 구부러졌는지 확인하세요.",
+    "pt_PT": "Falha ao executar o carregamento do filamento, verifique se PTFE tube está dobrado."
+  }
+}

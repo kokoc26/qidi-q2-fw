@@ -1,0 +1,27 @@
+{
+  "message": "Code:QDE_004_028",
+  "message_translation": {
+    "zh_CN": "检测到缠料。",
+    "en_US": "Filament entanglement detected.",
+    "ja_JP": "フィラメントの絡まりを検出しました。",
+    "ru_RU": "Обнаружено запутывание филамента.",
+    "fr_FR": "Enchevêtrement du filament détecté.",
+    "de_DE": "Filamentverwicklung erkannt.",
+    "it_IT": "Rilevato aggrovigliamento del filamento.",
+    "es_ES": "Se ha detectado un enredo del filamento.",
+    "ko_KR": "필라멘트 엉킴이 감지되었습니다.",
+    "pt_PT": "Foi detetado um emaranhamento do filamento."
+  },
+  "prossess_msg_translation": {
+    "zh_CN": "请检查耗材是否缠料。",
+    "en_US": "Please check whether the filament is tangled.",
+    "ja_JP": "フィラメントが絡まっていないか確認してください。",
+    "ru_RU": "Проверьте, не запутан ли филамент.",
+    "fr_FR": "Vérifiez si le filament est enchevêtré.",
+    "de_DE": "Prüfen Sie, ob sich das Filament verwickelt hat.",
+    "it_IT": "Verificare se il filamento è aggrovigliato.",
+    "es_ES": "Compruebe si el filamento está enredado.",
+    "ko_KR": "필라멘트가 엉켜 있는지 확인하십시오.",
+    "pt_PT": "Verifique se o filamento está emaranhado."
+  }
+}

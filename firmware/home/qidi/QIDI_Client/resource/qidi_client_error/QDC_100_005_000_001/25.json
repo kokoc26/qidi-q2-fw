@@ -1,0 +1,27 @@
+{
+  "message": "Code:QDE_004_039",
+  "message_translation": {
+    "zh_CN": "没有可续料耗材。",
+    "en_US": "No refillable filament.",
+    "ja_JP": "詰め替え可能なフィラメントはありません。",
+    "ru_RU": "Нет многоразовой нити.",
+    "fr_FR": "Pas de filament rechargeable.",
+    "de_DE": "Kein nachfüllbares Filament.",
+    "it_IT": "nessun filamento ricaricabile.",
+    "es_ES": "Sin filamento recargable.",
+    "ko_KR": "리필 가능한 필라멘트가 없습니다.",
+    "pt_PT": "Sem filamento recarregável."
+  },
+  "prossess_msg_translation": {
+    "zh_CN": "没有可续料耗材，请装载耗材。",
+    "en_US": "There is no refillable filament, please load filament.",
+    "ja_JP": "詰め替え可能なフィラメントがありません。フィラメントを装填してください。",
+    "ru_RU": "Нет многоразовой нити. Загрузите нить.",
+    "fr_FR": "Il n'y a pas de filament rechargeable, veuillez charger le filament.",
+    "de_DE": "Es ist kein nachfüllbares Filament vorhanden. Bitte laden Sie Filament ein.",
+    "it_IT": "Non è presente alcun filamento ricaricabile, caricare il filamento.",
+    "es_ES": "No hay filamento recargable, cargue el filamento.",
+    "ko_KR": "리필 가능한 필라멘트가 없습니다. 필라멘트를 채워주세요.",
+    "pt_PT": "Não há filamento recarregável, carregue o filamento."
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "message": "Code:QDE_004_053",
+  "message_translation": {
+    "zh_CN": "退料时，对应的BOX挤出机没有检测到耗材。",
+    "en_US": "When filament is unloading, the corresponding BOXextruder does not detect filament.",
+    "ja_JP": "フィラメントのアンロード中、対応する BOX エクストルーダーはフィラメントを検出しません。",
+    "ru_RU": "При выгрузке нити соответствующий экструдер BOX не обнаруживает нить.",
+    "fr_FR": "Lors du déchargement du filament, l'extrudeuse BOX correspondante ne détecte pas le filament.",
+    "de_DE": "Beim Entladen des Filaments erkennt der entsprechende BOX-Extruder kein Filament.",
+    "it_IT": "Durante lo scarico del filamento, l'estrusore BOX corrispondente non rileva il filamento.",
+    "es_ES": "Cuando se está descargando filamento, el extrusor BOX correspondiente no detecta filamento.",
+    "ko_KR": "필라멘트가 언로드될 때 해당 BOX압출기가 필라멘트를 감지하지 못합니다.",
+    "pt_PT": "Quando o filamento está descarregando, a extrusora BOX correspondente não detecta o filamento."
+  },
+  "prossess_msg_translation": {
+    "zh_CN": "执行退料失败，请先清理四氟管中的耗材。",
+    "en_US": "Failed to execute filament unloading, please clean up the filament in PTFE tube first.",
+    "ja_JP": "フィラメントのアンロードの実行に失敗しました。最初に PTFE tube 内のフィラメントをクリーンアップしてください。",
+    "ru_RU": "Не удалось выполнить выгрузку нити. Сначала очистите нить в PTFE tube.",
+    "fr_FR": "Échec du déchargement du filament, veuillez d'abord nettoyer le filament dans PTFE tube.",
+    "de_DE": "Das Entladen des Filaments ist fehlgeschlagen. Bitte reinigen Sie zuerst das Filament im PTFE tube.",
+    "it_IT": "Impossibile eseguire lo scaricamento del filamento, pulire prima il filamento in PTFE tube.",
+    "es_ES": "No se pudo ejecutar la descarga del filamento. Primero limpie el filamento en PTFE tube.",
+    "ko_KR": "필라멘트 언로드를 실행하지 못했습니다. 먼저 PTFE tube의 필라멘트를 청소하십시오.",
+    "pt_PT": "Falha ao executar o descarregamento do filamento, limpe primeiro o filamento em PTFE tube."
+  }
+}

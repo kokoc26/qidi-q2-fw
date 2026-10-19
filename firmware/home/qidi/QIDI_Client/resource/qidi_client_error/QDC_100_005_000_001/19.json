@@ -1,0 +1,27 @@
+{
+  "message": "Code:QDE_004_033",
+  "message_translation": {
+    "zh_CN": "缓冲器离线",
+    "en_US": "buffer offline",
+    "ja_JP": "バッファはオフラインです",
+    "ru_RU": "буфер отключен",
+    "fr_FR": "tampon hors ligne",
+    "de_DE": "Puffer offline",
+    "it_IT": "buffer offline",
+    "es_ES": "búfer fuera de línea",
+    "ko_KR": "버퍼 오프라인",
+    "pt_PT": "buffer off-line"
+  },
+  "prossess_msg_translation": {
+    "zh_CN": "检测到QIDI HUB离线，请确认接线。",
+    "en_US": "It is detected that QIDI HUB is offline, please confirm the wiring.",
+    "ja_JP": "QIDI HUB がオフラインであることが検出されました。配線を確認してください。",
+    "ru_RU": "Обнаружено, что QIDI HUB отключен от сети, проверьте подключение.",
+    "fr_FR": "Il est détecté que QIDI HUB est hors ligne, veuillez confirmer le câblage.",
+    "de_DE": "Es wurde erkannt, dass QIDI HUB offline ist. Bitte bestätigen Sie die Verkabelung.",
+    "it_IT": "Viene rilevato che QIDI HUB è offline, confermare il cablaggio.",
+    "es_ES": "Se detecta que QIDI HUB está fuera de línea, confirme el cableado.",
+    "ko_KR": "QIDI HUB가 오프라인인 것으로 감지되었습니다. 배선을 확인하십시오.",
+    "pt_PT": "Foi detectado que QIDI HUB está offline, confirme a fiação."
+  }
+}

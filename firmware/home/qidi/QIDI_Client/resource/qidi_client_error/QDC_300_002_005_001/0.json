@@ -1,0 +1,48 @@
+{
+    "message": "BOX 1 temperature and humidity sensor abnormal",
+    "message_translation": {
+        "zh_CN": "BOX 1 温湿度传感器异常",
+        "en_US": "BOX 1 temperature and humidity sensor abnormal",
+        "ja_JP": "BOX 1 温湿度センサー異常",
+        "ru_RU": "Неисправность датчика температуры и влажности BOX 1",
+        "fr_FR": "Défaillance du capteur de température et d'humidité de la BOX 1",
+        "de_DE": "Fehler am Temperatur- und Feuchtigkeitssensor von BOX 1",
+        "it_IT": "Errore del sensore di temperatura e umidità della BOX 1",
+        "es_ES": "Error del sensor de temperatura y humedad de la BOX 1",
+        "ko_KR": "BOX 1 온습도 센서 이상",
+        "pt_PT": "Erro no sensor de temperatura e humidade da BOX 1"
+    },
+    "error_code": "QDC_300_002_005_001",
+    "error_qr_code_path": "/QDC/300_002_005_001_max4",
+    "prossess_msg_translation": {
+        "zh_CN": "BOX 1 温湿度传感器异常，已关闭加热功能。",
+        "en_US": "BOX 1 temperature and humidity sensor abnormal, heating and drying functions have been turned off.",
+        "ja_JP": "BOX 1 の温湿度センサーに異常があるため、加熱および乾燥機能を停止しました。",
+        "ru_RU": "Датчик температуры и влажности BOX 1 неисправен. Функции нагрева и сушки отключены.",
+        "fr_FR": "Le capteur de température et d'humidité de la BOX 1 est défaillant. Les fonctions de chauffage et de séchage ont été désactivées.",
+        "de_DE": "Der Temperatur- und Feuchtigkeitssensor von BOX 1 ist fehlerhaft. Die Heiz- und Trocknungsfunktionen wurden deaktiviert.",
+        "it_IT": "Il sensore di temperatura e umidità della BOX 1 è anomalo. Le funzioni di riscaldamento e asciugatura sono state disattivate.",
+        "es_ES": "El sensor de temperatura y humedad de la BOX 1 presenta una anomalía. Se han desactivado las funciones de calentamiento y secado.",
+        "ko_KR": "BOX 1의 온습도 센서에 이상이 있어 가열 및 건조 기능이 중지되었습니다.",
+        "pt_PT": "O sensor de temperatura e humidade da BOX 1 está com anomalia. As funções de aquecimento e secagem foram desativadas."
+    },
+    "error_type": 1,
+    "weight": 5,
+    "popup_stlye": {
+        "main_pic": "NO_PIC",
+        "is_model": false,
+        "left_text": {
+            "zh_CN": "确定",
+            "en_US": "OK",
+            "ja_JP": "確認",
+            "ru_RU": "ОК",
+            "fr_FR": "OK",
+            "de_DE": "OK",
+            "it_IT": "OK",
+            "es_ES": "Aceptar",
+            "ko_KR": "확인",
+            "pt_PT": "OK"
+        },
+        "right_text": {}
+    }
+}

@@ -1,0 +1,27 @@
+{
+  "message": "Code:QDE_004_062",
+  "message_translation": {
+    "zh_CN": "退料时，编码器检测不到速度。",
+    "en_US": "When filament is unloading, the encoder cannot detect the speed.",
+    "ja_JP": "フィラメントがアンロードされているとき、エンコーダーは速度を検出できません。",
+    "ru_RU": "Когда нить выгружается, энкодер не может определить скорость.",
+    "fr_FR": "Lorsque le filament est en cours de déchargement, l'encodeur ne peut pas détecter la vitesse.",
+    "de_DE": "Beim Entladen des Filaments kann der Encoder die Geschwindigkeit nicht erkennen.",
+    "it_IT": "Durante lo scarico del filamento, l'encoder non può rilevare la velocità.",
+    "es_ES": "Cuando se descarga el filamento, el codificador no puede detectar la velocidad.",
+    "ko_KR": "필라멘트가 언로드 중일 때 인코더가 속도를 감지할 수 없습니다.",
+    "pt_PT": "Quando o filamento está descarregando, o codificador não consegue detectar a velocidade."
+  },
+  "prossess_msg_translation": {
+    "zh_CN": "执行退料失败，请检查耗材是否卡在四氟管中。",
+    "en_US": "Failed to execute filament unloading, please check whether filament is stuck in PTFE tube.",
+    "ja_JP": "フィラメントのアンロードの実行に失敗しました。PTFE tube にフィラメントが詰まっていないか確認してください。",
+    "ru_RU": "Не удалось выполнить выгрузку нити. Проверьте, не застряла ли нить в PTFE tube.",
+    "fr_FR": "Échec du déchargement du filament, veuillez vérifier si le filament est coincé dans le PTFE tube.",
+    "de_DE": "Das Entladen des Filaments ist fehlgeschlagen. Bitte überprüfen Sie, ob das Filament im PTFE tube festsitzt.",
+    "it_IT": "Impossibile eseguire lo scaricamento del filamento, verificare se il filamento è bloccato in PTFE tube.",
+    "es_ES": "No se pudo ejecutar la descarga del filamento; verifique si el filamento está atascado en PTFE tube.",
+    "ko_KR": "필라멘트 언로드를 실행하지 못했습니다. 필라멘트가 PTFE tube에 끼어 있는지 확인하세요.",
+    "pt_PT": "Falha ao executar o descarregamento do filamento, verifique se o filamento está preso em PTFE tube."
+  }
+}

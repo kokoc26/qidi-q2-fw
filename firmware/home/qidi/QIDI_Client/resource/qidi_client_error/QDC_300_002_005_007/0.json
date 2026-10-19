@@ -1,0 +1,48 @@
+{
+    "message": "BOX 3 heating timeout",
+    "message_translation": {
+        "zh_CN": "BOX 3 加热超时",
+        "en_US": "BOX 3 heating timeout",
+        "ja_JP": "BOX 3 加熱タイムアウト",
+        "ru_RU": "Тайм-аут нагрева BOX 3",
+        "fr_FR": "Délai de chauffage dépassé pour la BOX 3",
+        "de_DE": "Zeitüberschreitung beim Heizen von BOX 3",
+        "it_IT": "Timeout di riscaldamento della BOX 3",
+        "es_ES": "Tiempo de calentamiento agotado en la BOX 3",
+        "ko_KR": "BOX 3 가열 시간 초과",
+        "pt_PT": "Tempo limite de aquecimento da BOX 3 excedido"
+    },
+    "error_code": "QDC_300_002_005_007",
+    "error_qr_code_path": "/QDC/300_002_005_007_max4",
+    "prossess_msg_translation": {
+        "zh_CN": "BOX 3 加热时发生加热超时，已关闭加热功能。",
+        "en_US": "BOX 3 experienced a heating timeout during heating and has automatically turned off the heating. Please check if the lid is closed.",
+        "ja_JP": "BOX 3 の加熱中にタイムアウトが発生したため、加熱を自動停止しました。蓋が閉じているか確認してください。",
+        "ru_RU": "Во время нагрева BOX 3 превышено время ожидания, поэтому нагрев автоматически отключён. Проверьте, закрыта ли крышка.",
+        "fr_FR": "Le chauffage de la BOX 3 a dépassé le délai imparti et a été arrêté automatiquement. Vérifiez que le couvercle est fermé.",
+        "de_DE": "Beim Heizen von BOX 3 trat eine Zeitüberschreitung auf. Die Heizung wurde automatisch abgeschaltet. Prüfen Sie, ob der Deckel geschlossen ist.",
+        "it_IT": "Durante il riscaldamento della BOX 3 si è verificato un timeout e il riscaldamento è stato disattivato automaticamente. Verificare che il coperchio sia chiuso.",
+        "es_ES": "Se agotó el tiempo de calentamiento de la BOX 3 y el calentamiento se desactivó automáticamente. Compruebe que la tapa esté cerrada.",
+        "ko_KR": "BOX 3 가열 중 시간 초과가 발생하여 가열 기능이 자동으로 꺼졌습니다. 덮개가 닫혀 있는지 확인하십시오.",
+        "pt_PT": "O aquecimento da BOX 3 excedeu o tempo limite e foi desligado automaticamente. Verifique se a tampa está fechada."
+    },
+    "error_type": 1,
+    "weight": 5,
+    "popup_stlye": {
+        "main_pic": "NO_PIC",
+        "is_model": false,
+        "left_text": {
+            "zh_CN": "确定",
+            "en_US": "OK",
+            "ja_JP": "確認",
+            "ru_RU": "ОК",
+            "fr_FR": "OK",
+            "de_DE": "OK",
+            "it_IT": "OK",
+            "es_ES": "Aceptar",
+            "ko_KR": "확인",
+            "pt_PT": "OK"
+        },
+        "right_text": {}
+    }
+}

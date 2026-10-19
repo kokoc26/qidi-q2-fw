@@ -567,6 +567,16 @@ class KlippyConnection:
     def _process_gcode_response(self, response: str) -> None:
         self.server.send_event("server:gcode_response", response)
 
+    def _deep_merge(self, target: Dict[str, Any], source: Dict[str, Any]) -> None:
+        """深度合并两个字典，递归合并嵌套的字典对象"""
+        for key, value in source.items():
+            if key in target and isinstance(target[key], dict) and isinstance(value, dict):
+                # 如果两边都是字典，递归合并
+                self._deep_merge(target[key], value)
+            else:
+                # 否则直接替换
+                target[key] = value
+
     def _process_status_update(
         self, eventtime: float, status: Dict[str, Dict[str, Any]]
     ) -> None:
@@ -578,7 +588,11 @@ class KlippyConnection:
                     for obj in objects:
                         if isinstance(obj, dict) and 'polygon' in obj:
                             del obj['polygon']
-            self.subscription_cache.setdefault(field, {}).update(item)
+            # 使用深合并替代浅合并，确保嵌套字典数据不丢失
+            if field not in self.subscription_cache:
+                self.subscription_cache[field] = item
+            else:
+                self._deep_merge(self.subscription_cache[field], item)
         if 'webhooks' in status:
             wh: Dict[str, str] = status['webhooks']
             state_message: str = self._state.message
@@ -602,31 +616,28 @@ class KlippyConnection:
         for conn, sub in self.subscriptions.items():
             conn_status: Dict[str, Any] = {}
 
-            # --- 新增：识别 MQTT 并检查 30s 定时 ---
-            is_mqtt = getattr(conn, "is_mqtt", False)
-            # 假设你在 MQTT 连接类里维护了 last_full_push_time
-            should_push_full = is_mqtt and (eventtime - conn.last_full_push_time >= 30.0)
-            if should_push_full:
-                # 【核心逻辑】：从权威账本中提取该 MQTT 订阅的所有字段
-                for name, fields in sub.items():
-                    # 从 authoritative cache 拿数据，而不是从增量 status 拿
-                    if name in self.subscription_cache:
-                        val = dict(self.subscription_cache[name])
-                        if fields is not None:
-                            val = {k: v for k, v in val.items() if k in fields}
-                        if val:
-                            conn_status[name] = val
-                
-                conn.last_full_push_time = eventtime
-                logging.info("MQTT: Periodic full sync from authoritative cache")
-            else:
-                for name, fields in sub.items():
-                    if name in status:
-                        val: Dict[str, Any] = dict(status[name])
-                        if fields is not None:
-                            val = {k: v for k, v in val.items() if k in fields}
-                        if val:
-                            conn_status[name] = val
+            # --- 注释掉：30s全量同步逻辑（由 mqtt.py 的 focus_full_sync_interval 管理）---
+            # is_mqtt = getattr(conn, "is_mqtt", False)
+            # should_push_full = is_mqtt and (eventtime - conn.last_full_push_time >= 30.0)
+            # if should_push_full:
+            #     for name, fields in sub.items():
+            #         if name in self.subscription_cache:
+            #             val = dict(self.subscription_cache[name])
+            #             if fields is not None:
+            #                 val = {k: v for k, v in val.items() if k in fields}
+            #             if val:
+            #                 conn_status[name] = val
+            #
+            #     conn.last_full_push_time = eventtime
+            #     logging.info("MQTT: Periodic full sync from authoritative cache")
+            # else:
+            for name, fields in sub.items():
+                if name in status:
+                    val: Dict[str, Any] = dict(status[name])
+                    if fields is not None:
+                        val = {k: v for k, v in val.items() if k in fields}
+                    if val:
+                        conn_status[name] = val
             conn.send_status(conn_status, eventtime)
 
     async def request(self, web_request: WebRequest) -> Any:

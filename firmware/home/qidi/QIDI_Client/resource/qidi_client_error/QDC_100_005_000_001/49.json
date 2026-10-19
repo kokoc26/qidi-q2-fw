@@ -1,0 +1,27 @@
+{
+  "message": "Code:QDE_004_063",
+  "message_translation": {
+    "zh_CN": "加热时加热超时。",
+    "en_US": "Heating timed out.",
+    "ja_JP": "加熱がタイムアウトしました。",
+    "ru_RU": "Истекло время ожидания нагрева.",
+    "fr_FR": "Le délai de chauffage a expiré.",
+    "de_DE": "Zeitüberschreitung beim Heizen.",
+    "it_IT": "Timeout del riscaldamento.",
+    "es_ES": "Se agotó el tiempo de espera del calentamiento.",
+    "ko_KR": "가열 시간이 초과되었습니다.",
+    "pt_PT": "O tempo limite de aquecimento foi excedido."
+  },
+  "prossess_msg_translation": {
+    "zh_CN": "执行BOX加热时，加热超时，请确认BOX是否关上盖子。",
+    "en_US": "Heating timed out while heating the BOX. Please make sure the BOX lid is closed.",
+    "ja_JP": "BOXの加熱中に加熱がタイムアウトしました。BOXの上蓋が閉まっていることを確認してください。",
+    "ru_RU": "Во время нагрева BOX истекло время ожидания. Убедитесь, что верхняя крышка BOX закрыта.",
+    "fr_FR": "Le chauffage du BOX a expiré. Vérifiez que le couvercle supérieur du BOX est fermé.",
+    "de_DE": "Beim Aufheizen der BOX ist eine Zeitüberschreitung aufgetreten. Stellen Sie sicher, dass der obere Deckel der BOX geschlossen ist.",
+    "it_IT": "Il riscaldamento del BOX è scaduto. Verificare che il coperchio superiore del BOX sia chiuso.",
+    "es_ES": "Se agotó el tiempo de calentamiento del BOX. Compruebe que la tapa superior del BOX esté cerrada.",
+    "ko_KR": "BOX 가열 중 시간이 초과되었습니다. BOX 상단 덮개가 닫혀 있는지 확인하십시오.",
+    "pt_PT": "O aquecimento do BOX excedeu o tempo limite. Confirme se a tampa superior do BOX está fechada."
+  }
+}

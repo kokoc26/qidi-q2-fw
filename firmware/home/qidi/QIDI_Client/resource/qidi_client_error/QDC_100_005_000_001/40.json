@@ -1,0 +1,27 @@
+{
+  "message": "Code:QDE_004_054",
+  "message_translation": {
+    "zh_CN": "进料时，缓冲器没有检测到耗材进入喷头，首先检查缓冲器数值，其次有可能四氟管脱落。",
+    "en_US": "When filament is loading, the buffer does not detect that filament enters the toolhead. First, check the buffer value. Secondly, PTFE tube may fall off.",
+    "ja_JP": "フィラメントのロード中、バッファはフィラメントがツールヘッドに入ったことを検出しません。まず、バッファ値を確認します。次に、PTFE tube が落ちる可能性があります。",
+    "ru_RU": "При загрузке нити буфер не обнаруживает, что нить попадает в головку инструмента. Сначала проверьте значение буфера. Во-вторых, PTFE tube может отвалиться.",
+    "fr_FR": "Lors du chargement du filament, le tampon ne détecte pas que le filament entre dans la tête d'outil. Tout d’abord, vérifiez la valeur du tampon. Deuxièmement, PTFE tube peut tomber.",
+    "de_DE": "Beim Laden von Filament erkennt der Puffer nicht, dass Filament in den Werkzeugkopf gelangt. Überprüfen Sie zunächst den Pufferwert. Zweitens kann das PTFE tube herunterfallen.",
+    "it_IT": "Durante il caricamento del filamento, il buffer non rileva che il filamento entra nella testa dell'utensile. Innanzitutto, controlla il valore del buffer. In secondo luogo, PTFE tube potrebbe cadere.",
+    "es_ES": "Cuando se carga el filamento, el buffer no detecta que el filamento ingresa al cabezal de la herramienta. Primero, verifique el valor del búfer. En segundo lugar, PTFE tube puede caerse.",
+    "ko_KR": "필라멘트가 로딩 중일 때 버퍼는 필라멘트가 툴헤드에 들어가는 것을 감지하지 않습니다. 먼저 버퍼값을 확인해보세요. 둘째, PTFE tube가 떨어질 수 있습니다.",
+    "pt_PT": "Quando o filamento está sendo carregado, o buffer não detecta que o filamento entra no cabeçote da ferramenta. Primeiro, verifique o valor do buffer. Em segundo lugar, PTFE tube pode cair."
+  },
+  "prossess_msg_translation": {
+    "zh_CN": "执行进料失败，请检查四氟管是否正确安装。",
+    "en_US": "Failed to execute filament loading, please check whether PTFE tube is installed correctly.",
+    "ja_JP": "フィラメントのロードの実行に失敗しました。PTFE tube が正しくインストールされているかどうかを確認してください。",
+    "ru_RU": "Не удалось выполнить загрузку нити. Проверьте, правильно ли установлен PTFE tube.",
+    "fr_FR": "Échec de l'exécution du chargement du filament, veuillez vérifier si PTFE tube est correctement installé.",
+    "de_DE": "Das Laden des Filaments konnte nicht ausgeführt werden. Bitte überprüfen Sie, ob PTFE tube korrekt installiert ist.",
+    "it_IT": "Impossibile eseguire il caricamento del filamento, verificare se PTFE tube è installato correttamente.",
+    "es_ES": "No se pudo ejecutar la carga del filamento; verifique si PTFE tube está instalado correctamente.",
+    "ko_KR": "필라멘트 로딩을 실행하지 못했습니다. PTFE tube가 올바르게 설치되었는지 확인하세요.",
+    "pt_PT": "Falha ao executar o carregamento do filamento, verifique se o PTFE tube está instalado corretamente."
+  }
+}

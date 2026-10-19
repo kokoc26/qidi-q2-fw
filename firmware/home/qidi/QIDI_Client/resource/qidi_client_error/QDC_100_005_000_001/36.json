@@ -1,0 +1,27 @@
+{
+  "message": "Code:QDE_004_050",
+  "message_translation": {
+    "zh_CN": "退料时检测到五通没有耗材，程序在执行前会先判断，可能是人为拔出耗材或者误触。",
+    "en_US": "When filament is unloaded, it is detected that there is no filament in the internal hub. The program will judge first before execution. It may be that the filament was manually pulled out or accidentally touched.",
+    "ja_JP": "フィラメントがアンロードされると、内部ハブにフィラメントがないことが検出されます。プログラムは実行前に最初に判断します。フィラメントが手で引き抜かれたか、誤って触れてしまった可能性があります。",
+    "ru_RU": "Когда нить выгружена, обнаруживается, что во внутренней втулке нет нити. Программа сначала оценивает, прежде чем выполнять. Возможно, нить вытащили вручную или случайно задели.",
+    "fr_FR": "Lorsque le filament est déchargé, il est détecté qu'il n'y a pas de filament dans le moyeu interne. Le programme jugera d'abord avant l'exécution. Il se peut que le filament ait été retiré manuellement ou accidentellement touché.",
+    "de_DE": "Beim Entladen des Filaments wird erkannt, dass sich kein Filament in der Innennabe befindet. Das Programm beurteilt zuerst, bevor es ausgeführt wird. Möglicherweise wurde das Filament manuell herausgezogen oder versehentlich berührt.",
+    "it_IT": "Quando il filamento viene scaricato, viene rilevato che non è presente alcun filamento nel mozzo interno. Il programma giudicherà prima dell'esecuzione. È possibile che il filamento sia stato estratto manualmente o toccato accidentalmente.",
+    "es_ES": "Cuando se descarga el filamento, se detecta que no hay filamento en el cubo interno. El programa juzgará primero antes de la ejecución. Puede ser que el filamento se haya extraído manualmente o se haya tocado accidentalmente.",
+    "ko_KR": "필라멘트가 언로드되면 내부 허브에 필라멘트가 없는 것으로 감지됩니다. 프로그램은 실행되기 전에 먼저 판단합니다. 필라멘트를 수동으로 빼냈거나 실수로 만졌을 수도 있습니다.",
+    "pt_PT": "Quando o filamento é descarregado, detecta-se que não há filamento no cubo interno. O programa julgará primeiro antes da execução. Pode ser que o filamento tenha sido puxado manualmente ou tocado acidentalmente."
+  },
+  "prossess_msg_translation": {
+    "zh_CN": "执行退料失败，请检查五通部件。",
+    "en_US": "Failed to execute filament unloading, please check the internal hub component.",
+    "ja_JP": "フィラメントのアンロードの実行に失敗しました。ハブの内部コンポーネントを確認してください。",
+    "ru_RU": "Не удалось выполнить выгрузку нити, проверьте внутренний компонент втулки.",
+    "fr_FR": "Échec du déchargement du filament, veuillez vérifier le composant interne du moyeu.",
+    "de_DE": "Das Entladen des Filaments konnte nicht durchgeführt werden. Bitte überprüfen Sie die interne Nabenkomponente.",
+    "it_IT": "Impossibile eseguire lo scaricamento del filamento, controllare il componente interno del mozzo.",
+    "es_ES": "No se pudo ejecutar la descarga del filamento; verifique el componente del concentrador interno.",
+    "ko_KR": "필라멘트 언로드를 실행하지 못했습니다. 내부 허브 구성 요소를 확인하십시오.",
+    "pt_PT": "Falha ao executar o descarregamento do filamento, verifique o componente interno do cubo."
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "message": "Code:QDE_004_061",
+  "message_translation": {
+    "zh_CN": "RFID读取时，无刷往里进拉不动耗材，编码器没有检测到速度",
+    "en_US": "When reading RFID, the BLDC motor cannot pull the filament in, and the encoder does not detect the speed.",
+    "ja_JP": "RFID を読み取るときに、BLDC モーターがフィラメントを引き込むことができず、エンコーダーが速度を検出しません。",
+    "ru_RU": "При чтении RFID двигатель BLDC не может втянуть нить накала, а энкодер не определяет скорость.",
+    "fr_FR": "Lors de la lecture du RFID, le moteur BLDC ne peut pas tirer le filament et l'encodeur ne détecte pas la vitesse.",
+    "de_DE": "Beim Lesen von RFID kann der BLDC-Motor das Filament nicht einziehen und der Encoder erkennt die Geschwindigkeit nicht.",
+    "it_IT": "Durante la lettura di RFID, il motore BLDC non può inserire il filamento e l'encoder non rileva la velocità.",
+    "es_ES": "Al leer RFID, el motor BLDC no puede tirar del filamento y el codificador no detecta la velocidad.",
+    "ko_KR": "RFID를 읽을 때 BLDC 모터가 필라멘트를 끌어당길 수 없으며 인코더가 속도를 감지하지 못합니다.",
+    "pt_PT": "Ao ler RFID, o motor BLDC não consegue puxar o filamento e o codificador não detecta a velocidade."
+  },
+  "prossess_msg_translation": {
+    "zh_CN": "执行RFID读取失败，请检查耗材是否缠料。",
+    "en_US": "Failed to read RFID, please check whether the filament is tangled filament.",
+    "ja_JP": "RFID の読み取りに失敗しました。フィラメントが絡まっているかどうかを確認してください。",
+    "ru_RU": "Не удалось прочитать RFID. Проверьте, не запуталась ли нить.",
+    "fr_FR": "Échec de la lecture du RFID, veuillez vérifier si le filament est un filament emmêlé.",
+    "de_DE": "RFID konnte nicht gelesen werden. Bitte überprüfen Sie, ob es sich bei dem Filament um ein verwickeltes Filament handelt.",
+    "it_IT": "Impossibile leggere RFID, controllare se il filamento è aggrovigliato.",
+    "es_ES": "No se pudo leer el DISPOSITIVO RFID; verifique si el filamento está enredado.",
+    "ko_KR": "RFID 장치를 읽지 못했습니다. 필라멘트가 엉켜 있는지 확인하세요.",
+    "pt_PT": "Falha ao ler RFID, verifique se o filamento está emaranhado."
+  }
+}

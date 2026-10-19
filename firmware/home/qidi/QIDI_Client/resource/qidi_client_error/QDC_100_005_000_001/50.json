@@ -1,0 +1,27 @@
+{
+  "message": "Code:QDE_004_064",
+  "message_translation": {
+    "zh_CN": "烘干时加热超时。",
+    "en_US": "Heating timed out during drying.",
+    "ja_JP": "乾燥中に加熱がタイムアウトしました。",
+    "ru_RU": "Во время сушки истекло время ожидания нагрева.",
+    "fr_FR": "Le chauffage a expiré pendant le séchage.",
+    "de_DE": "Zeitüberschreitung beim Heizen während des Trocknens.",
+    "it_IT": "Timeout del riscaldamento durante l'asciugatura.",
+    "es_ES": "Se agotó el tiempo de calentamiento durante el secado.",
+    "ko_KR": "건조 중 가열 시간이 초과되었습니다.",
+    "pt_PT": "O aquecimento excedeu o tempo limite durante a secagem."
+  },
+  "prossess_msg_translation": {
+    "zh_CN": "执行BOX烘干时，加热超时，请确认BOX是否关上盖子。",
+    "en_US": "Heating timed out while drying the BOX. Please make sure the BOX lid is closed.",
+    "ja_JP": "BOXの乾燥中に加熱がタイムアウトしました。BOXの上蓋が閉まっていることを確認してください。",
+    "ru_RU": "Во время сушки BOX истекло время ожидания нагрева. Убедитесь, что верхняя крышка BOX закрыта.",
+    "fr_FR": "Le chauffage a expiré pendant le séchage du BOX. Vérifiez que le couvercle supérieur du BOX est fermé.",
+    "de_DE": "Beim Trocknen der BOX ist eine Zeitüberschreitung beim Heizen aufgetreten. Stellen Sie sicher, dass der obere Deckel der BOX geschlossen ist.",
+    "it_IT": "Il riscaldamento è scaduto durante l'asciugatura del BOX. Verificare che il coperchio superiore del BOX sia chiuso.",
+    "es_ES": "Se agotó el tiempo de calentamiento durante el secado del BOX. Compruebe que la tapa superior del BOX esté cerrada.",
+    "ko_KR": "BOX 건조 중 가열 시간이 초과되었습니다. BOX 상단 덮개가 닫혀 있는지 확인하십시오.",
+    "pt_PT": "O aquecimento excedeu o tempo limite durante a secagem do BOX. Confirme se a tampa superior do BOX está fechada."
+  }
+}

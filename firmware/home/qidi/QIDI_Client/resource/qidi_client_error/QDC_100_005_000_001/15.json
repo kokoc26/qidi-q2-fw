@@ -1,0 +1,27 @@
+{
+  "message": "Code:QDE_004_029",
+  "message_translation": {
+    "zh_CN": "打印时切换耗材时，无法识别已进到喷头的耗材。",
+    "en_US": "When switching filament during printing, the filament already loaded into the toolhead could not be identified.",
+    "ja_JP": "印刷中のフィラメント切り替え時に、ツールヘッドに入っているフィラメントを識別できませんでした。",
+    "ru_RU": "При смене филамента во время печати не удалось распознать филамент, уже поданный в печатающую головку.",
+    "fr_FR": "Lors du changement de filament pendant l'impression, le filament déjà chargé dans la tête d'impression n'a pas pu être identifié.",
+    "de_DE": "Beim Filamentwechsel während des Drucks konnte das bereits in den Druckkopf eingeführte Filament nicht erkannt werden.",
+    "it_IT": "Durante il cambio del filamento in fase di stampa, non è stato possibile identificare il filamento già caricato nella testina di stampa.",
+    "es_ES": "Al cambiar el filamento durante la impresión, no se pudo identificar el filamento que ya estaba cargado en el cabezal de impresión.",
+    "ko_KR": "인쇄 중 필라멘트를 전환할 때 툴헤드에 이미 들어간 필라멘트를 식별할 수 없습니다.",
+    "pt_PT": "Ao mudar o filamento durante a impressão, não foi possível identificar o filamento já carregado na cabeça de impressão."
+  },
+  "prossess_msg_translation": {
+    "zh_CN": "无法获取耗材映射，请将已加载至挤出机的耗材退出。",
+    "en_US": "Unable to obtain the filament mapping. Please unload the filament currently loaded in the extruder.",
+    "ja_JP": "フィラメントのマッピングを取得できません。エクストルーダーに装填されているフィラメントをアンロードしてください。",
+    "ru_RU": "Не удалось получить сопоставление филамента. Выгрузите филамент, загруженный в экструдер.",
+    "fr_FR": "Impossible d'obtenir l'affectation du filament. Déchargez le filament actuellement chargé dans l'extrudeuse.",
+    "de_DE": "Die Filamentzuordnung konnte nicht ermittelt werden. Entladen Sie das derzeit in den Extruder eingelegte Filament.",
+    "it_IT": "Impossibile ottenere la mappatura del filamento. Scaricare il filamento attualmente caricato nell'estrusore.",
+    "es_ES": "No se pudo obtener la asignación del filamento. Descargue el filamento que está cargado en el extrusor.",
+    "ko_KR": "필라멘트 매핑을 가져올 수 없습니다. 익스트루더에 장착된 필라멘트를 언로드하십시오.",
+    "pt_PT": "Não foi possível obter o mapeamento do filamento. Descarregue o filamento atualmente carregado na extrusora."
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "message": "Code:QDE_004_038",
+  "message_translation": {
+    "zh_CN": "耗材无法进入挤出机(喷头光电已经被触发)。",
+    "en_US": "filament cannot enter extruder (toolhead photoelectric has been triggered).",
+    "ja_JP": "フィラメントが押出機に入ることができません (ツールヘッドの光電がトリガーされました)。",
+    "ru_RU": "нить не может войти в экструдер (сработал фотоэлектрический элемент головки инструмента).",
+    "fr_FR": "le filament ne peut pas entrer dans l'extrudeuse (le photoélectrique de la tête d'outil a été déclenché).",
+    "de_DE": "Filament kann nicht in den Extruder gelangen (Fotoelektrik des Werkzeugkopfes wurde ausgelöst).",
+    "it_IT": "il filamento non può entrare nell'estrusore (la fotoelettrica della testa dell'utensile è stata attivata).",
+    "es_ES": "el filamento no puede entrar en la extrusora (se ha activado la fotoeléctrica del cabezal de herramienta).",
+    "ko_KR": "필라멘트가 압출기에 들어갈 수 없습니다(툴헤드 광전 장치가 작동됨).",
+    "pt_PT": "o filamento não pode entrar na extrusora (a fotoelétrica do cabeçote foi acionada)."
+  },
+  "prossess_msg_translation": {
+    "zh_CN": "耗材无法进入挤出机，请确认是否堵头。",
+    "en_US": "filament cannot enter extruder, please confirm whether it is clogged nozzle.",
+    "ja_JP": "フィラメントがエクストルーダーに入りません。ノズルが詰まっていないか確認してください。",
+    "ru_RU": "нить не может войти в экструдер. Проверьте, не засорено ли сопло.",
+    "fr_FR": "le filament ne peut pas entrer dans l’extrudeuse, veuillez confirmer s’il s’agit d’une buse bouchée.",
+    "de_DE": "Filament kann nicht in den Extruder gelangen. Bitte überprüfen Sie, ob die Düse verstopft ist.",
+    "it_IT": "il filamento non può entrare nell'estrusore, verificare se l'ugello è ostruito.",
+    "es_ES": "el filamento no puede ingresar al extrusor, confirme si la boquilla está obstruida.",
+    "ko_KR": "필라멘트가 Extruder에 들어갈 수 없습니다. 노즐이 막혔는지 확인하십시오.",
+    "pt_PT": "o filamento não pode entrar na extrusora, confirme se o bico está entupido."
+  }
+}

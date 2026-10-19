@@ -1,0 +1,27 @@
+{
+  "message": "Code:QDE_004_058",
+  "message_translation": {
+    "zh_CN": "检测到BOX离线。",
+    "en_US": "BOX detected offline.",
+    "ja_JP": "BOX がオフラインを検出しました。",
+    "ru_RU": "BOX обнаружен в автономном режиме.",
+    "fr_FR": "BOX détecté hors ligne.",
+    "de_DE": "BOX offline erkannt.",
+    "it_IT": "BOX rilevato offline.",
+    "es_ES": "BOX detectado fuera de línea.",
+    "ko_KR": "BOX가 오프라인으로 감지되었습니다.",
+    "pt_PT": "BOX detectado off-line."
+  },
+  "prossess_msg_translation": {
+    "zh_CN": "检测到BOX离线，请检查BOX是否正常连接。",
+    "en_US": "It is detected that BOX is offline. Please check whether BOX is connected normally.",
+    "ja_JP": "BOX がオフラインであることが検出されました。 BOXが正常に接続されているか確認してください。",
+    "ru_RU": "Обнаружено, что BOX находится в автономном режиме. Пожалуйста, проверьте, правильно ли подключен BOX.",
+    "fr_FR": "Il est détecté que BOX est hors ligne. Veuillez vérifier si BOX est connecté normalement.",
+    "de_DE": "Es wurde erkannt, dass BOX offline ist. Bitte überprüfen Sie, ob BOX normal angeschlossen ist.",
+    "it_IT": "viene rilevato che BOX è offline. Verificare se BOX è collegato normalmente.",
+    "es_ES": "Se detecta que BOX está fuera de línea. Compruebe si BOX está conectado normalmente.",
+    "ko_KR": "BOX가 오프라인 상태인 것으로 감지되었습니다. BOX가 정상적으로 연결되어 있는지 확인해주세요.",
+    "pt_PT": "Foi detectado que BOX está offline. Verifique se o BOX está conectado normalmente."
+  }
+}

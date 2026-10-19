@@ -1,0 +1,27 @@
+{
+  "message": "Code:QDE_004_056",
+  "message_translation": {
+    "zh_CN": "进料时时间超时，检查是否是四氟管长度过长。",
+    "en_US": "The time times out during filament loading. Check whether the length of PTFE tube is too long.",
+    "ja_JP": "フィラメントのロード中にタイムアウトが発生しました。 PTFE tube の長さが長すぎないか確認してください。",
+    "ru_RU": "Истечение времени во время загрузки нити. Проверьте, не является ли длина PTFE tube слишком большой.",
+    "fr_FR": "Le délai expire lors du chargement du filament. Vérifiez si la longueur de PTFE tube est trop longue.",
+    "de_DE": "Beim Laden des Filaments läuft die Zeit ab. Überprüfen Sie, ob die Länge des PTFE tube zu lang ist.",
+    "it_IT": "Il tempo scade durante il caricamento del filamento. Controllare se la lunghezza di PTFE tube è eccessiva.",
+    "es_ES": "El tiempo se agota durante la carga del filamento. Compruebe si la longitud de PTFE tube es demasiado larga.",
+    "ko_KR": "필라멘트 로딩 중에 시간이 초과되었습니다. PTFE tube의 길이가 너무 긴지 확인하세요.",
+    "pt_PT": "O tempo expira durante o carregamento do filamento. Verifique se o comprimento de PTFE tube é muito longo."
+  },
+  "prossess_msg_translation": {
+    "zh_CN": "执行进料失败，请检查四氟管是否正确插入工具头。",
+    "en_US": "Failed to execute filament loading. Please check whether PTFE tube is correctly inserted into the toolhead.",
+    "ja_JP": "フィラメントのロードに失敗しました。 PTFE tube がツールヘッドに正しく挿入されているかどうかを確認してください。",
+    "ru_RU": "Не удалось выполнить загрузку нити. Пожалуйста, проверьте, правильно ли вставлен PTFE tube в головку инструмента.",
+    "fr_FR": "Échec de l'exécution du chargement du filament. Veuillez vérifier si PTFE tube est correctement inséré dans la tête d'outil.",
+    "de_DE": "Das Laden des Filaments konnte nicht ausgeführt werden. Bitte prüfen Sie, ob PTFE tube richtig in den Werkzeugkopf eingesetzt ist.",
+    "it_IT": "Impossibile eseguire il caricamento del filamento. Controllare se PTFE tube è inserito correttamente nella testa dell'utensile.",
+    "es_ES": "No se pudo ejecutar la carga del filamento. Compruebe si PTFE tube está insertado correctamente en el cabezal de la herramienta.",
+    "ko_KR": "필라멘트 로딩을 실행하지 못했습니다. PTFE tube가 툴헤드에 올바르게 삽입되었는지 확인하십시오.",
+    "pt_PT": "Falha ao executar carregamento do filamento. Verifique se PTFE tube está inserido corretamente no cabeçote da ferramenta."
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "message": "Code:QDE_004_066",
+  "message_translation": {
+    "zh_CN": "检测到阻力过大",
+    "en_US": "Excessive resistance detected",
+    "ja_JP": "過大な抵抗を検出しました",
+    "ru_RU": "Обнаружено чрезмерное сопротивление",
+    "fr_FR": "Résistance excessive détectée",
+    "de_DE": "Übermäßiger Widerstand erkannt",
+    "it_IT": "Resistenza eccessiva rilevata",
+    "es_ES": "Resistencia excesiva detectada",
+    "ko_KR": "과도한 저항이 감지되었습니다",
+    "pt_PT": "Resistência excessiva detetada"
+  },
+  "prossess_msg_translation": {
+    "zh_CN": "检测到阻力过大，请检查耗材在四氟管中是否通畅。",
+    "en_US": "Excessive resistance detected. Please check whether the filament passes smoothly through the PTFE tube.",
+    "ja_JP": "過大な抵抗を検出しました。フィラメントがPTFEチューブ内をスムーズに通るか確認してください。",
+    "ru_RU": "Обнаружено чрезмерное сопротивление. Проверьте, свободно ли проходит филамент через PTFE-трубку.",
+    "fr_FR": "Résistance excessive détectée. Veuillez vérifier que le filament circule librement dans le tube PTFE.",
+    "de_DE": "Übermäßiger Widerstand erkannt. Bitte prüfen Sie, ob das Filament ungehindert durch den PTFE-Schlauch läuft.",
+    "it_IT": "Resistenza eccessiva rilevata. Verificare che il filamento scorra liberamente nel tubo PTFE.",
+    "es_ES": "Resistencia excesiva detectada. Compruebe si el filamento pasa sin obstrucciones por el tubo de PTFE.",
+    "ko_KR": "과도한 저항이 감지되었습니다. 필라멘트가 PTFE 튜브 안에서 원활하게 통과하는지 확인하십시오.",
+    "pt_PT": "Resistência excessiva detetada. Verifique se o filamento passa sem obstruções pelo tubo de PTFE."
+  }
+}

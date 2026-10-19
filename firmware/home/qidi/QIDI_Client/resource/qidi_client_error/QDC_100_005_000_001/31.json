@@ -1,0 +1,27 @@
+{
+  "message": "Code:QDE_004_045",
+  "message_translation": {
+    "zh_CN": "进料时，通过五通限位后，超过3秒没有检测到转速，检查编码器。",
+    "en_US": "When filament is loading, after passing the internal hubsensor, the rotation speed is not detected for more than 3 seconds. Check the encoder.",
+    "ja_JP": "フィラメントがロードされているとき、内部ハブセンサーを通過した後、回転速度が 3 秒以上検出されません。エンコーダを確認してください。",
+    "ru_RU": "При загрузке нити после прохождения внутреннего датчика ступицы скорость вращения не определяется более 3 секунд. Проверьте энкодер.",
+    "fr_FR": "Lors du chargement du filament, après avoir passé le capteur interne du moyeu, la vitesse de rotation n'est pas détectée pendant plus de 3 secondes. Vérifiez l'encodeur.",
+    "de_DE": "Beim Laden des Filaments wird die Rotationsgeschwindigkeit nach Passieren des internen Nabensensors länger als 3 Sekunden nicht erkannt. Überprüfen Sie den Encoder.",
+    "it_IT": "Durante il caricamento del filamento, dopo aver superato il sensore del mozzo interno, la velocità di rotazione non viene rilevata per più di 3 secondi. Controllare l'encoder.",
+    "es_ES": "Cuando se carga el filamento, después de pasar el hubsensor interno, no se detecta la velocidad de rotación durante más de 3 segundos. Verifique el codificador.",
+    "ko_KR": "필라멘트 로딩시 내부 허브센서를 통과한 후 3초 이상 회전속도가 감지되지 않습니다. 인코더를 확인하세요.",
+    "pt_PT": "Quando o filamento está sendo carregado, após passar pelo hubsensor interno, a velocidade de rotação não é detectada por mais de 3 segundos. Verifique o codificador."
+  },
+  "prossess_msg_translation": {
+    "zh_CN": "执行进料失败，请检查五通是否发生堵塞或者四氟管是否正确连接。",
+    "en_US": "Failed to execute filament loading. Please check whether the internal hub is blocked or whether PTFE tube is correctly connected.",
+    "ja_JP": "フィラメントのロードに失敗しました。内部ハブがブロックされていないか、PTFE tube が正しく接続されているかを確認してください。",
+    "ru_RU": "Не удалось выполнить загрузку нити. Проверьте, заблокирован ли внутренний концентратор или правильно ли подключен PTFE tube.",
+    "fr_FR": "Échec de l'exécution du chargement du filament. Veuillez vérifier si le hub interne est bloqué ou si PTFE tube est correctement connecté.",
+    "de_DE": "Das Laden des Filaments konnte nicht ausgeführt werden. Bitte prüfen Sie, ob die interne Nabe blockiert ist oder ob das PTFE tube richtig angeschlossen ist.",
+    "it_IT": "Impossibile eseguire il caricamento del filamento. Verificare se l'hub interno è bloccato o se PTFE tube è collegato correttamente.",
+    "es_ES": "No se pudo ejecutar la carga del filamento. Compruebe si el concentrador interno está bloqueado o si PTFE tube está conectado correctamente.",
+    "ko_KR": "필라멘트 로딩을 실행하지 못했습니다. 내부 허브가 막혀 있는지, PTFE tube가 올바르게 연결되어 있는지 확인하세요.",
+    "pt_PT": "Falha ao executar o carregamento do filamento. Verifique se o hub interno está bloqueado ou se o PTFE tube está conectado corretamente."
+  }
+}

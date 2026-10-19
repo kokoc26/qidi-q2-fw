@@ -1,0 +1,27 @@
+{
+  "message": "Code:QDE_004_051",
+  "message_translation": {
+    "zh_CN": "RFID读取时异常，可能是编码器信号异常没有读到速度，或者耗材卡住/缠料。",
+    "en_US": "RFID is abnormal when reading. It may be that the encoder signal is abnormal and the reading speed is not fast, or the filament is stuck/tangled filament.",
+    "ja_JP": "RFID 読み取り時に異常です。エンコーダ信号が異常で読み取り速度が遅くなっている、またはフィラメントが詰まっている・絡まっている可能性があります。",
+    "ru_RU": "RFID работает неправильно при чтении. Возможно, сигнал энкодера ненормальный, скорость чтения невысокая, или нить застряла/запуталась.",
+    "fr_FR": "RFID est anormal lors de la lecture. Il se peut que le signal de l'encodeur soit anormal et que la vitesse de lecture ne soit pas rapide, ou que le filament soit coincé/emmêlé.",
+    "de_DE": "RFID ist beim Lesen abnormal. Es kann sein, dass das Encodersignal abnormal ist und die Lesegeschwindigkeit nicht hoch ist oder dass das Filament festsitzt bzw. sich verheddert.",
+    "it_IT": "RFID è anomalo durante la lettura. È possibile che il segnale dell'encoder sia anomalo e che la velocità di lettura non sia elevata oppure che il filamento sia bloccato/aggrovigliato.",
+    "es_ES": "RFID es anormal al leer. Puede ser que la señal del codificador sea anormal y la velocidad de lectura no sea rápida, o que el filamento esté atascado/enredado.",
+    "ko_KR": "RFID를 읽을 때 비정상입니다. 엔코더 신호가 비정상이고 읽기 속도가 빠르지 않거나, 필라멘트가 걸리거나 엉키는 경우일 수 있습니다.",
+    "pt_PT": "RFID está anormal durante a leitura. Pode ser que o sinal do codificador esteja anormal e a velocidade de leitura não seja rápida ou o filamento esteja preso/emaranhado."
+  },
+  "prossess_msg_translation": {
+    "zh_CN": "RFID读取失败，请检查耗材是否缠料。",
+    "en_US": "RFID failed to read, please check whether the filament is tangled filament.",
+    "ja_JP": "RFID の読み取りに失敗しました。フィラメントが絡まっているかどうかを確認してください。",
+    "ru_RU": "RFID не удалось прочитать. Проверьте, не запуталась ли нить.",
+    "fr_FR": "RFID n'a pas réussi à lire, veuillez vérifier si le filament est un filament emmêlé.",
+    "de_DE": "RFID konnte nicht lesen. Bitte überprüfen Sie, ob es sich bei dem Filament um ein verwickeltes Filament handelt.",
+    "it_IT": "Impossibile leggere RFID, verificare se il filamento è aggrovigliato.",
+    "es_ES": "El DISPOSITIVO RFID no pudo leer, verifique si el filamento está enredado.",
+    "ko_KR": "RFID가 판독에 실패했습니다. 필라멘트가 엉켜 있는지 확인하십시오.",
+    "pt_PT": "RFID não conseguiu ler, verifique se o filamento está emaranhado."
+  }
+}

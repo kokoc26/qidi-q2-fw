@@ -1,0 +1,27 @@
+{
+  "message": "Code:QDE_004_042",
+  "message_translation": {
+    "zh_CN": "进料时检测到BOX通讯异常，检查接线。",
+    "en_US": "BOX communication abnormality was detected during filament loading, check the wiring.",
+    "ja_JP": "フィラメントロード中に BOX 通信異常を検出しました。配線を確認してください。",
+    "ru_RU": "Во время загрузки нити накаливания обнаружена неисправность связи BOX, проверьте проводку.",
+    "fr_FR": "Une anomalie de communication du BOX a été détectée lors du chargement du filament, vérifier le câblage.",
+    "de_DE": "Beim Laden des Filaments wurde eine BOX-Kommunikationsstörung festgestellt. Überprüfen Sie die Verkabelung.",
+    "it_IT": "Rilevata anomalia nella comunicazione BOX durante il caricamento del filamento, controllare il cablaggio.",
+    "es_ES": "Se detectó una anomalía en la comunicación del BOX durante la carga del filamento, verifique el cableado.",
+    "ko_KR": "필라멘트 로딩 중에 BOX 통신 이상이 감지되었습니다. 배선을 확인하십시오.",
+    "pt_PT": "Foi detectada anormalidade de comunicação BOX durante o carregamento do filamento, verifique a fiação."
+  },
+  "prossess_msg_translation": {
+    "zh_CN": "进料时BOX发生离线，请确认BOX是否正确连接。",
+    "en_US": "BOX goes offline during filament loading. Please confirm whether BOX is connected correctly.",
+    "ja_JP": "フィラメントのロード中に BOX がオフラインになります。 BOX が正しく接続されているか確認してください。",
+    "ru_RU": "BOX отключается во время загрузки нити. Пожалуйста, подтвердите, правильно ли подключен BOX.",
+    "fr_FR": "BOX se déconnecte pendant le chargement du filament. Veuillez confirmer si BOX est correctement connecté.",
+    "de_DE": "BOX geht während des Filamentladens offline. Bitte bestätigen Sie, ob BOX richtig angeschlossen ist.",
+    "it_IT": "BOX va offline durante il caricamento del filamento. Conferma se BOX è collegato correttamente.",
+    "es_ES": "BOX se desconecta durante la carga del filamento. Confirme si BOX está conectado correctamente.",
+    "ko_KR": "필라멘트 로딩 중에 BOX가 오프라인 상태가 됩니다. BOX가 올바르게 연결되어 있는지 확인해주세요.",
+    "pt_PT": "BOX fica offline durante o carregamento do filamento. Confirme se o BOX está conectado corretamente."
+  }
+}

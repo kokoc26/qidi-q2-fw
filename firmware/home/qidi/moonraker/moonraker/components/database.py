@@ -122,13 +122,20 @@ DEFAULT_CONFIGA_ITEM = {
     "general.expert_mode": "0",
     "general.wlan": "1",
     "general.self_check_state": "0",
+    "general.url_domain": "uat-cn",
     "user.nickname": "",
     "user.avatarUrl": "",
     "user.token": "",
+    "user.userId": "",
     "user.region": "NA",
     "user.alias": _alias_default,
     "mqtt.account": "",
     "mqtt.password": "",
+    "mqtt.shard": "",
+    "p2p.license": "",
+    "p2p.connect": "",
+    "p2p.peer": "",
+    "p2p.p2pPassword": "",
     "nozzle.type": ["hardened_steel"],
     "nozzle.diameter": ["0.4"],
     "update.close_loop_hd_version": ""
@@ -546,7 +553,7 @@ class MoonrakerDatabase:
                 raw_val = item.get('value')
                 self.config_items[key] = _smart_decode(raw_val)
                 final_val = self.config_items[key]
-                logging.info(f"Fixed item -> {key}: {final_val} (Type: {type(final_val)})")
+                # logging.debug(f"Fixed item -> {key}: {final_val} (Type: {type(final_val)})")
 
     async def _on_job_state_changed(
         self,
@@ -1207,6 +1214,9 @@ class MoonrakerDatabase:
                 if local_str == "user.token":
                     self.server.send_event("account:user_login_status", len(self.config_items[local_str]) > 0)
                 
+                if local_str == "user.userId":
+                    self.server.send_event("account:user_id_updated")
+
                 if local_str == "user.password":
                     self.server.send_event("account:user_account_password")
 

@@ -1,0 +1,27 @@
+{
+  "message": "Code:QDE_004_037",
+  "message_translation": {
+    "zh_CN": "执行进料时，喷头已经被触发。",
+    "en_US": "When executing filament loading, toolhead has been triggered.",
+    "ja_JP": "フィラメントロード実行時にツールヘッドがトリガーされました。",
+    "ru_RU": "При загрузке нити сработала головка инструмента.",
+    "fr_FR": "Lors de l'exécution du chargement du filament, la tête d'outil a été déclenchée.",
+    "de_DE": "Beim Ausführen des Filamentladens wurde der Werkzeugkopf ausgelöst.",
+    "it_IT": "Durante l'esecuzione del caricamento del filamento, la testa utensile è stata attivata.",
+    "es_ES": "Al ejecutar la carga de filamento, se ha activado el cabezal de herramienta.",
+    "ko_KR": "필라멘트 로딩을 실행할 때 툴헤드가 트리거되었습니다.",
+    "pt_PT": "Ao executar o carregamento do filamento, o cabeçote foi acionado."
+  },
+  "prossess_msg_translation": {
+    "zh_CN": "请先清理工具头中的耗材。",
+    "en_US": "Please clean up the filament in toolhead first.",
+    "ja_JP": "最初にツールヘッド内のフィラメントをクリーンアップしてください。",
+    "ru_RU": "Сначала очистите нить в головке инструмента.",
+    "fr_FR": "Veuillez d'abord nettoyer le filament dans la tête d'outil.",
+    "de_DE": "Bitte reinigen Sie zuerst das Filament im Werkzeugkopf.",
+    "it_IT": "Pulire prima il filamento nella testa dell'utensile.",
+    "es_ES": "Primero limpie el filamento del cabezal de la herramienta.",
+    "ko_KR": "먼저 툴헤드의 필라멘트를 청소해 주세요.",
+    "pt_PT": "Limpe primeiro o filamento no cabeçote da ferramenta."
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "message": "Code:QDE_004_067",
+  "message_translation": {
+    "zh_CN": "BOX温度被限制到安全值。",
+    "en_US": "BOX temperature has been limited to a safe value.",
+    "ja_JP": "BOX温度は安全値に制限されました。",
+    "ru_RU": "Температура BOX ограничена до безопасного значения.",
+    "fr_FR": "La température du BOX a été limitée à une valeur sûre.",
+    "de_DE": "Die BOX-Temperatur wurde auf einen sicheren Wert begrenzt.",
+    "it_IT": "La temperatura del BOX è stata limitata a un valore sicuro.",
+    "es_ES": "La temperatura del BOX se ha limitado a un valor seguro.",
+    "ko_KR": "BOX 온도가 안전 값으로 제한되었습니다.",
+    "pt_PT": "A temperatura do BOX foi limitada a um valor seguro."
+  },
+  "prossess_msg_translation": {
+    "zh_CN": "BOX温度被其他耗材限制到安全温度(不影响正常打印)。",
+    "en_US": "BOX temperature has been limited to a safe temperature by other filaments (normal printing is not affected).",
+    "ja_JP": "BOX温度は他のフィラメントにより安全温度に制限されました（通常の印刷には影響しません）。",
+    "ru_RU": "Температура BOX была ограничена другими филаментами до безопасной температуры (на нормальную печать это не влияет).",
+    "fr_FR": "La température du BOX a été limitée à une température sûre par d'autres filaments (cela n'affecte pas l'impression normale).",
+    "de_DE": "Die BOX-Temperatur wurde durch anderes Filament auf eine sichere Temperatur begrenzt (der normale Druck wird nicht beeinträchtigt).",
+    "it_IT": "La temperatura del BOX è stata limitata a una temperatura sicura da altro filamento (non influisce sulla stampa normale).",
+    "es_ES": "La temperatura del BOX se ha limitado a una temperatura segura por otros filamentos (no afecta a la impresión normal).",
+    "ko_KR": "BOX 온도가 다른 필라멘트에 의해 안전 온도로 제한되었습니다(정상 인쇄에는 영향을 주지 않습니다).",
+    "pt_PT": "A temperatura do BOX foi limitada a uma temperatura segura por outros filamentos (não afeta a impressão normal)."
+  }
+}

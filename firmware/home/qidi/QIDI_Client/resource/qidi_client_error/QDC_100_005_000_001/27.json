@@ -1,0 +1,27 @@
+{
+  "message": "Code:QDE_004_041",
+  "message_translation": {
+    "zh_CN": "打印时检测到空打，检查是否堵头。",
+    "en_US": "Printing without extrusion is detected during printing and checks whether it is clogged nozzle.",
+    "ja_JP": "印刷中にはみ出しのない印刷を検知し、ノズル詰まりがないかチェックします。",
+    "ru_RU": "Печать без экструзии обнаруживается во время печати и проверяет, не засорено ли сопло.",
+    "fr_FR": "L'impression sans extrusion est détectée pendant l'impression et vérifie si la buse est obstruée.",
+    "de_DE": "Das Drucken ohne Extrusion wird beim Drucken erkannt und überprüft, ob die Düse verstopft ist.",
+    "it_IT": "La stampa senza estrusione viene rilevata durante la stampa e controlla se l'ugello è ostruito.",
+    "es_ES": "Se detecta impresión sin extrusión durante la impresión y se comprueba si la boquilla está obstruida.",
+    "ko_KR": "인쇄 중 압출되지 않은 인쇄가 감지되어 노즐이 막혔는지 확인합니다.",
+    "pt_PT": "A impressão sem extrusão é detectada durante a impressão e verifica se o bico está entupido."
+  },
+  "prossess_msg_translation": {
+    "zh_CN": "检测到发生空打，请确认工具头是否发生堵塞。",
+    "en_US": "It is detected that printing without extrusion occurs, please confirm whether blockage occurs in toolhead.",
+    "ja_JP": "はみ出しのない印刷が発生していることを検出しました。ツールヘッドで詰まりが発生していないか確認してください。",
+    "ru_RU": "Обнаружено, что происходит печать без экструзии. Проверьте, не засорилась ли головка инструмента.",
+    "fr_FR": "Il est détecté qu'une impression sans extrusion se produit. Veuillez confirmer si un blocage se produit dans la tête d'outil.",
+    "de_DE": "Es wurde festgestellt, dass ohne Extrusion gedruckt wird. Bitte überprüfen Sie, ob eine Blockierung im Werkzeugkopf vorliegt.",
+    "it_IT": "È stato rilevato che si verifica una stampa senza estrusione, verificare se si verifica un blocco nella testa utensile.",
+    "es_ES": "Se detecta que se produce impresión sin extrusión; confirme si se produce un bloqueo en el cabezal de la herramienta.",
+    "ko_KR": "압출되지 않은 인쇄가 발생하는 것으로 감지되었습니다. 툴헤드에 막힘이 발생하는지 확인하십시오.",
+    "pt_PT": "Foi detectado que ocorre impressão sem extrusão, confirme se ocorre bloqueio no cabeçote da ferramenta."
+  }
+}

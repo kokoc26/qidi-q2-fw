@@ -1,0 +1,27 @@
+{
+  "message": "Code:QDE_004_049",
+  "message_translation": {
+    "zh_CN": "进料时检测到五通已经被触发，进料加热前已经判断过，可能是误触或者人为插入。",
+    "en_US": "It is detected that the internal hub has been triggered during filament loading. The filament loading has been judged before heating. It may be an accidental touch or manual insertion.",
+    "ja_JP": "フィラメントのロード中に内部ハブがトリガーされたことが検出されます。フィラメントの負荷は加熱前に判定されています。誤って触れてしまったか、手動で挿入された可能性があります。",
+    "ru_RU": "Обнаружено, что во время загрузки нити сработал внутренний концентратор. Загрузка нити оценивалась перед нагревом. Это может быть случайное касание или вставка вручную.",
+    "fr_FR": "Il est détecté que le moyeu interne s'est déclenché lors du chargement du filament. La charge du filament a été jugée avant chauffage. Il peut s'agir d'un contact accidentel ou d'une insertion manuelle.",
+    "de_DE": "Es wurde erkannt, dass der interne Hub während des Filamentladens ausgelöst wurde. Die Filamentbelastung wurde vor dem Erhitzen beurteilt. Es kann sich um eine versehentliche Berührung oder manuelles Einführen handeln.",
+    "it_IT": "È stato rilevato che l'hub interno è stato attivato durante il caricamento del filamento. Il caricamento del filamento è stato valutato prima del riscaldamento. Potrebbe trattarsi di un tocco accidentale o di un inserimento manuale.",
+    "es_ES": "Se detecta que el buje interno se ha disparado durante la carga del filamento. La carga del filamento se ha evaluado antes del calentamiento. Puede ser un toque accidental o una inserción manual.",
+    "ko_KR": "필라멘트 로딩 중에 내부 허브가 작동된 것으로 감지되었습니다. 필라멘트 로딩은 가열 전에 판단되었습니다. 실수로 만졌거나 수동으로 삽입했을 수도 있습니다.",
+    "pt_PT": "É detectado que o hub interno foi acionado durante o carregamento do filamento. A carga do filamento foi avaliada antes do aquecimento. Pode ser um toque acidental ou inserção manual."
+  },
+  "prossess_msg_translation": {
+    "zh_CN": "执行进料失败，请检查五通部件。",
+    "en_US": "Failed to execute filament loading, please check the internal hub component.",
+    "ja_JP": "フィラメントのロードの実行に失敗しました。内部のハブ コンポーネントを確認してください。",
+    "ru_RU": "Не удалось выполнить загрузку нити, проверьте внутренний компонент втулки.",
+    "fr_FR": "Échec du chargement du filament, veuillez vérifier le composant interne du moyeu.",
+    "de_DE": "Das Laden des Filaments konnte nicht ausgeführt werden. Bitte überprüfen Sie die interne Nabenkomponente.",
+    "it_IT": "Impossibile eseguire il caricamento del filamento, controllare il componente interno del mozzo.",
+    "es_ES": "No se pudo ejecutar la carga del filamento; verifique el componente del concentrador interno.",
+    "ko_KR": "필라멘트 로딩을 실행하지 못했습니다. 내부 허브 구성 요소를 확인하십시오.",
+    "pt_PT": "Falha ao executar o carregamento do filamento, verifique o componente interno do hub."
+  }
+}

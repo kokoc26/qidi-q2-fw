@@ -103,6 +103,9 @@ class KlippyAPI(APITransport):
         self.server.register_endpoint(
             "/printer/print/power_off_print", RequestType.POST, self.power_off_print
         )
+        self.server.register_endpoint(
+            "/printer/multi_color_controller/flow_stop", RequestType.POST, self.multi_color_flow_stop
+        )
 
     def _on_klippy_disconnect(self) -> None:
         self.host_subscription.clear()
@@ -161,6 +164,9 @@ class KlippyAPI(APITransport):
         database: MoonrakerDatabase = self.server.lookup_component("database")
         script = await database.generate_power_off_print_gcode()
         return await self.run_gcode(script)
+
+    async def multi_color_flow_stop(self, web_request: WebRequest) -> Dict[str, Any]:
+        return await self.flow_stop()
 
     async def _send_klippy_request(
         self,
@@ -275,6 +281,13 @@ class KlippyAPI(APITransport):
         logging.info("Requesting job cancel...")
         return await self._send_klippy_request(
             "pause_resume/cancel", {}, default)
+
+    async def flow_stop(
+        self, default: Union[Sentinel, _T] = Sentinel.MISSING
+    ) -> Union[_T, str]:
+        logging.info("Cancel multicolor flow queue...")
+        return await self._send_klippy_request(
+            "multi_color_controller/flow_stop", {}, default)
 
     async def breakheater(
         self, default: Union[Sentinel, _T] = Sentinel.MISSING

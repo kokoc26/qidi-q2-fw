@@ -1,0 +1,27 @@
+{
+  "message": "Code:QDE_004_031",
+  "message_translation": {
+    "zh_CN": "切换耗材时，检测到当前耗材在BOX挤出机没有触发了，且没有开启自动续料。",
+    "en_US": "When switching filament, it was detected that the current filament was not triggered in BOXextruder, and automatic filament refill was not turned on.",
+    "ja_JP": "フィラメントの切り替え時に、現在のフィラメントがBOXエクストルーダーで検出されず、自動フィラメント補充が有効になっていないことが検出されました。",
+    "ru_RU": "При переключении нити было обнаружено, что текущая нить не была активирована в экструдере BOX, и автоматическая заправка нити не была включена.",
+    "fr_FR": "Lors du changement de filament, il a été détecté que le filament actuel n'était pas déclenché dans l'extrudeuse BOX et que la recharge automatique du filament n'était pas activée.",
+    "de_DE": "Beim Wechseln des Filaments wurde festgestellt, dass das aktuelle Filament im BOX-Extruder nicht ausgelöst wurde und die automatische Filamentnachfüllung nicht aktiviert war.",
+    "it_IT": "Quando si cambia filamento, è stato rilevato che il filamento corrente non era attivato nell'estrusore BOX e la ricarica automatica del filamento non era attivata.",
+    "es_ES": "Al cambiar el filamento, se detectó que el filamento actual no se activó en el extrusor BOX y la recarga automática de filamento no estaba activada.",
+    "ko_KR": "필라멘트를 전환할 때 현재 필라멘트가 BOX 익스트루더에서 감지되지 않고 자동 필라멘트 리필이 활성화되지 않은 것으로 감지되었습니다.",
+    "pt_PT": "Ao trocar o filamento, foi detectado que o filamento atual não foi acionado na extrusora BOX e a recarga automática do filamento não foi ativada."
+  },
+  "prossess_msg_translation": {
+    "zh_CN": "耗材被用尽，请重新装载耗材。",
+    "en_US": "filament is used up, please reload filament.",
+    "ja_JP": "フィラメントが使い果たされました。フィラメントをリロードしてください。",
+    "ru_RU": "закончилась нить, пожалуйста, загрузите нить.",
+    "fr_FR": "le filament est épuisé, veuillez recharger le filament.",
+    "de_DE": "Filament ist aufgebraucht, bitte Filament nachladen.",
+    "it_IT": "il filamento è esaurito, ricaricare il filamento.",
+    "es_ES": "el filamento está agotado, vuelva a cargarlo.",
+    "ko_KR": "필라멘트를 모두 사용했습니다. 필라멘트를 다시 로드해 주세요.",
+    "pt_PT": "o filamento está esgotado, recarregue o filamento."
+  }
+}

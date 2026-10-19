@@ -1,0 +1,37 @@
+{
+    "message": "BOX connection limit reached",
+    "message_translation": {
+        "zh_CN": "BOX 连接数量已达上限",
+        "en_US": "BOX connection limit reached",
+        "ja_JP": "BOX 接続数が上限に達しました",
+        "ru_RU": "Достигнут предел подключений BOX",
+        "fr_FR": "Limite de connexion des BOX atteinte",
+        "de_DE": "Maximale Anzahl verbundener BOX-Geräte erreicht",
+        "it_IT": "Limite di connessione delle BOX raggiunto",
+        "es_ES": "Se alcanzó el límite de conexión de BOX",
+        "ko_KR": "BOX 연결 수가 한도에 도달함",
+        "pt_PT": "Limite de ligações BOX atingido"
+    },
+    "error_code": "QDC_300_005_005_002",
+    "error_qr_code_path": "/QDC/300_005_005_002_max4",
+    "prossess_msg_translation": {
+        "zh_CN": "已连接的 BOX 数量已达到上限，如需更换请重新排序 BOX。",
+        "en_US": "A new BOX has been detected, and the current number of connected BOX has reached its limit. Please click to manually reorder the BOX.",
+        "ja_JP": "新しい BOX が検出されましたが、接続済みの BOX 数が上限に達しています。手動で BOX の順序を変更してください。",
+        "ru_RU": "Обнаружена новая BOX, но количество подключённых BOX достигло предела. Измените порядок BOX вручную.",
+        "fr_FR": "Une nouvelle BOX a été détectée, mais le nombre de BOX connectées a atteint la limite. Réorganisez manuellement les BOX.",
+        "de_DE": "Eine neue BOX wurde erkannt, aber die maximale Anzahl verbundener BOX-Geräte ist erreicht. Ordnen Sie die BOX-Geräte manuell neu.",
+        "it_IT": "È stata rilevata una nuova BOX, ma il numero di BOX connesse ha raggiunto il limite. Riordinare manualmente le BOX.",
+        "es_ES": "Se ha detectado una nueva BOX, pero el número de BOX conectadas ha alcanzado el límite. Reordene manualmente las BOX.",
+        "ko_KR": "새 BOX가 감지되었지만 연결된 BOX 수가 한도에 도달했습니다. BOX 순서를 수동으로 다시 지정하십시오.",
+        "pt_PT": "Foi detetada uma nova BOX, mas o número de BOX ligadas atingiu o limite. Reordene manualmente as BOX."
+    },
+    "error_type": 1,
+    "weight": 5,
+    "popup_stlye": {
+        "main_pic": "",
+        "is_model": false,
+        "left_text": {},
+        "right_text": {}
+    }
+}
