@@ -36,7 +36,19 @@
 
 
 
+
 ## Changelog
+
+### V01.01.03.01 - 2026/10/16
+
+#### Firmware Link:
+
+- [Download archive](https://github.com/kokoc26/qidi-q2-fw/releases/download/V01.01.03.01/QD_Q2_01.01.03.01.zip)
+
+#### Changes:
+
+  - 
+
 
 ### V01.01.02.04 - 2026/08/04
 
