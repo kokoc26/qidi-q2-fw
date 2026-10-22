@@ -47,7 +47,24 @@
 
 #### Changes:
 
-  - 
+> [!IMPORTANT]
+> After this firmware update, only the latest versions of QIDI Maker App and QIDI Studio are supported. Please update them accordingly.
+
+#### New
+- Added recording management page with batch delete support
+- Added support for new BOX firmware
+- Updated built-in models
+- Added prompt for starting print without leveling data and leveling not selected
+
+#### Optimized
+- Optimized firmware page version display and update pop-up info
+
+#### Fixed
+- Fixed accidental user unbinding in certain scenarios
+- Fixed abnormal display of print file thumbnail and other metadata in certain scenarios
+- Fixed temperature not resetting to zero after external filament loading ends
+- Fixed text display issues in Russian
+- Fixed abnormal enabling of AI function
 
 
 ### V01.01.02.04 - 2026/08/04

@@ -101,30 +101,49 @@ jobs:
             VERSION=$(jq -r '.data.version | ltrimstr("V")' <<<"$RESPONSE")
             SIZE=$(jq -r '.data.apkSize' <<<"$RESPONSE")
             DOWNLOAD_URL=$(jq -r '.data.url' <<<"$RESPONSE")
-            DESCRIPTION_URL=$(jq -r '.data.description' <<<"$RESPONSE")
             RAW_DATE=$(echo "$DOWNLOAD_URL" | grep -oE '[0-9]{8}')
             DATE=$(echo "$RAW_DATE" | sed -E 's/([0-9]{4})([0-9]{2})([0-9]{2})/\1\/\2\/\3/')
             
-            curl -s "$DESCRIPTION_URL" > wiki_raw.html
-            DESCRIPTION_EN=$(awk -v ver="$VERSION" '
-              BEGIN { found = 0; IGNORECASE = 1 }
-              gsub(/^[Vv]/, "", ver);
-              (/<h[1-6]/ || /id=/) && $0 ~ ver && !found { found = 1; next }
-              found && (/<h2/ || (/<h3/ && $0 ~ /V[0-9]/) || $0 ~ /id="v[0-9]/) { exit }
-              found {
-                gsub(/<[^>]*>/, "", $0);
-                gsub(/¶/, "", $0);
-                if ($0 ~ /^[ \t]*[Ff]ixes[ \t]*$/ || $0 ~ /[Dd]ate:/ || $0 ~ /[Ss]ize:/ || $0 ~ /[Oo]ptimization/) next;
-                clean_line = $0;
-                gsub(/^[ \t\r\n]+|[ \t\r\n]+$/, "", clean_line);
-                if (length(clean_line) > 0) {
-                  gsub(/^[-•*][ \t]*/, "", clean_line);
-                  print clean_line
-                }
-              }
-            ' wiki_raw.html)
+            RELEASED_PAYLOAD='{"hardwareModel":"QD_Q2","isReleased":true,"operatingSystem":"3DPrinter","pageNum":1,"pageSize":5}'
+            RELEASED_NONCE=$(openssl rand -hex 16)
+            RELEASED_SIG=$(printf '%s' "qidi3d $RELEASED_PAYLOAD" | \
+              openssl dgst -sha256 -hmac 'qid3d-from-2025-CAFE-BABE' | \
+              sed 's/^.* //')
 
-            DESCRIPTION_RU=$(echo "$DESCRIPTION_EN" | trans -b :ru)
+            RELEASED_RESPONSE=$(curl --silent --show-error -X POST \
+              'https://www.qidimaker.com/backend/v1/fireware/version/released' \
+              -H 'Accept: application/json' \
+              -H 'Accept-Language: en_US' \
+              -H 'Content-Type: application/json' \
+              -H 'User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64)' \
+              -H 'X-DeviceId: a3f8c2e91b4d7f6e5c0a8b2d4e6f1a9' \
+              -H 'X-DeviceType: Chrome' \
+              -H "X-Nonce: $RELEASED_NONCE" \
+              -H 'X-Platform: Web' \
+              -H 'X-Region: NA' \
+              -H "X-Signature: $RELEASED_SIG" \
+              -H "X-Timestamp: $TIMESTAMP" \
+              -H 'X-Timezone: +03:00' \
+              -H 'X-Version: 1.0.0' \
+              --data "$RELEASED_PAYLOAD")
+
+            RAW_CONTENT=$(jq -r --arg ver "$VERSION" '
+              [(.data.records[]? | select((.versionCode | ltrimstr("V")) == ($ver | ltrimstr("V"))) | .content)][0] //
+              (.data.records[0]?.content // empty)
+            ' <<<"$RELEASED_RESPONSE")
+
+            # Remove redundant top-level changelog header if present
+            DESCRIPTION_EN=$(echo "$RAW_CONTENT" | sed -E '1{ /^##? (Changelog|V[0-9]|v[0-9]|[0-9])/d }')
+
+            if [ -z "$(echo "$DESCRIPTION_EN" | tr -d '[:space:]')" ]; then
+              DESCRIPTION_EN="No changelog provided."
+              DESCRIPTION_RU="Информация об изменениях отсутствует."
+            else
+              DESCRIPTION_RU=$(echo "$DESCRIPTION_EN" | trans -b :ru 2>/dev/null || echo "$DESCRIPTION_EN")
+              if [ -z "$(echo "$DESCRIPTION_RU" | tr -d '[:space:]')" ]; then
+                DESCRIPTION_RU="$DESCRIPTION_EN"
+              fi
+            fi
 
             echo "VERSION=V$VERSION" >> $GITHUB_ENV
             echo "VERSION_NUM=$VERSION" >> $GITHUB_ENV
@@ -132,13 +151,13 @@ jobs:
             echo "DATE=$DATE" >> $GITHUB_ENV
             echo "DOWNLOAD_URL=$DOWNLOAD_URL" >> $GITHUB_ENV
             echo "description_ru<<EOF_RU" >> $GITHUB_OUTPUT
-            echo "$DESCRIPTION_RU" | tr '\r' '\n' | sed 's/^/  - /' >> $GITHUB_OUTPUT
+            echo "$DESCRIPTION_RU" >> $GITHUB_OUTPUT
             echo "EOF_RU" >> $GITHUB_OUTPUT
             echo "description_en<<EOF_EN" >> $GITHUB_OUTPUT
-            echo "$DESCRIPTION_EN" | tr '\r' '\n' | sed 's/^/  - /' >> $GITHUB_OUTPUT
+            echo "$DESCRIPTION_EN" >> $GITHUB_OUTPUT
             echo "EOF_EN" >> $GITHUB_OUTPUT
-            echo "$DESCRIPTION_RU" | tr '\r' '\n' > firmware_description_ru.txt
-            echo "$DESCRIPTION_EN" | tr '\r' '\n' > firmware_description_en.txt
+            echo "$DESCRIPTION_RU" > firmware_description_ru.txt
+            echo "$DESCRIPTION_EN" > firmware_description_en.txt
           fi
 
       - name: Check if release/tag exists
@@ -332,7 +351,7 @@ jobs:
             echo ""
             echo "#### Изменения:"
             echo ""
-            echo "$DESCRIPTION_RU" | sed 's/^/  - /'
+            echo "$DESCRIPTION_RU"
             echo ""
             cat README_CHANGELOG_TEMP  
           } > README_TEMP && mv README_TEMP "$ROOT_README_FILE"
@@ -381,7 +400,7 @@ jobs:
             echo ""
             echo "#### Changes:"
             echo ""
-            echo "$DESCRIPTION_EN" | sed 's/^/  - /'
+            echo "$DESCRIPTION_EN"
             echo ""
             cat README_EN_CHANGELOG_TEMP
           } > README_EN_TEMP && mv README_EN_TEMP "$ROOT_README_EN_FILE"
