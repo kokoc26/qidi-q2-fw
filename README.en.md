@@ -37,7 +37,23 @@
 
 
 
+
 ## Changelog
+
+### V01.01.03.02 - 2026/10/23
+
+#### Firmware Link:
+
+- [Download archive](https://github.com/kokoc26/qidi-q2-fw/releases/download/V01.01.03.02/QD_Q2_01.01.03.02.zip)
+
+#### Changes:
+
+>  **Important:** After this firmware update, only the latest versions of QIDI Maker App and QIDI Studio are supported. Please update them accordingly.
+Notice: Do not manage filament via Fluidd — the new firmware does not support it. Use QIDI Studio for BOX filament settings instead. If error QDC_100_005_000_001 occurs, unload the filament, restore factory settings, and reconfigure the box filament. Never edit box filament through Fluidd.
+### Fixed
+- Fixed ""Load"" incorrectly triggering homing after filament runs out
+- Fixed UI may crash when paging with multiple boxes
+
 
 ### V01.01.03.01 - 2026/10/16
 
