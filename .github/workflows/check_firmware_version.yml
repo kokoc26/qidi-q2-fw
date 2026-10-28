@@ -23,6 +23,7 @@ jobs:
         id: firmware_info
         env:
           QIDI_DEVICE_ID: ${{ secrets.QIDI_DEVICE_ID }}
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
         run: |
           set -euo pipefail
 
@@ -132,32 +133,15 @@ jobs:
               (.data.records[0]?.content // empty)
             ' <<<"$RELEASED_RESPONSE")
 
-            # Remove redundant top-level changelog header if present
-            DESCRIPTION_EN=$(echo "$RAW_CONTENT" | sed -E '1{ /^##? (Changelog|V[0-9]|v[0-9]|[0-9])/d }')
+            echo "$RAW_CONTENT" > raw_changelog.txt
 
-            if [ -z "$(echo "$DESCRIPTION_EN" | tr -d '[:space:]')" ]; then
-              DESCRIPTION_EN="No changelog provided."
-              DESCRIPTION_RU="Информация об изменениях отсутствует."
-            else
-              DESCRIPTION_RU=$(echo "$DESCRIPTION_EN" | trans -b :ru 2>/dev/null || echo "$DESCRIPTION_EN")
-              if [ -z "$(echo "$DESCRIPTION_RU" | tr -d '[:space:]')" ]; then
-                DESCRIPTION_RU="$DESCRIPTION_EN"
-              fi
-            fi
+            python3 .github/scripts/translate.py raw_changelog.txt
 
             echo "VERSION=V$VERSION" >> $GITHUB_ENV
             echo "VERSION_NUM=$VERSION" >> $GITHUB_ENV
             echo "SIZE=$SIZE" >> $GITHUB_ENV
             echo "DATE=$DATE" >> $GITHUB_ENV
             echo "DOWNLOAD_URL=$DOWNLOAD_URL" >> $GITHUB_ENV
-            echo "description_ru<<EOF_RU" >> $GITHUB_OUTPUT
-            echo "$DESCRIPTION_RU" >> $GITHUB_OUTPUT
-            echo "EOF_RU" >> $GITHUB_OUTPUT
-            echo "description_en<<EOF_EN" >> $GITHUB_OUTPUT
-            echo "$DESCRIPTION_EN" >> $GITHUB_OUTPUT
-            echo "EOF_EN" >> $GITHUB_OUTPUT
-            echo "$DESCRIPTION_RU" > firmware_description_ru.txt
-            echo "$DESCRIPTION_EN" > firmware_description_en.txt
           fi
 
       - name: Check if release/tag exists
@@ -416,7 +400,7 @@ jobs:
 
       - name: Remove Temporary Files
         if: steps.release_check.outputs.skip == 'false'
-        run: rm -rf work firmware firmware_description_ru.txt firmware_description_en.txt ZIP_FILENAME README_HEADER_TEMP README_CHANGELOG_TEMP README_EN_HEADER_TEMP README_EN_CHANGELOG_TEMP
+        run: rm -rf work firmware firmware_description_ru.txt firmware_description_en.txt raw_changelog.txt ZIP_FILENAME README_HEADER_TEMP README_CHANGELOG_TEMP README_EN_HEADER_TEMP README_EN_CHANGELOG_TEMP
 
       - name: Inform about skip
         if: steps.release_check.outputs.skip == 'true'

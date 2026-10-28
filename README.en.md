@@ -48,10 +48,14 @@
 
 #### Changes:
 
->  **Important:** After this firmware update, only the latest versions of QIDI Maker App and QIDI Studio are supported. Please update them accordingly.
-Notice: Do not manage filament via Fluidd — the new firmware does not support it. Use QIDI Studio for BOX filament settings instead. If error QDC_100_005_000_001 occurs, unload the filament, restore factory settings, and reconfigure the box filament. Never edit box filament through Fluidd.
+> [!IMPORTANT]
+> After this firmware update, only the latest versions of QIDI Maker App and QIDI Studio are supported. Please update them accordingly.
+
+> [!WARNING]
+> Do not manage filament via Fluidd — the new firmware does not support it. Use QIDI Studio for BOX filament settings instead. If error `QDC_100_005_000_001` occurs, unload the filament, restore factory settings, and reconfigure the box filament. Never edit box filament through Fluidd.
+
 ### Fixed
-- Fixed ""Load"" incorrectly triggering homing after filament runs out
+- Fixed "Load" incorrectly triggering homing after filament runs out
 - Fixed UI may crash when paging with multiple boxes
 
 
