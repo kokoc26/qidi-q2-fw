@@ -17,7 +17,7 @@ jobs:
           fetch-depth: 0
 
       - name: Install necessary tools
-        run: sudo apt-get install -y jq p7zip-full tar translate-shell
+        run: sudo apt-get install -y jq p7zip-full tar
 
       - name: Fetch Firmware Info and Parse JSON
         id: firmware_info
@@ -55,11 +55,12 @@ jobs:
             openssl dgst -sha256 -hmac 'qid3d-from-2025-CAFE-BABE' |
             sed 's/^.* //')
 
-          RESPONSE=$(curl --silent --show-error --get \
+          RESPONSE=$(curl --silent --show-error --retry 3 --retry-delay 2 --retry-all-errors --get \
             'https://api.qidimaker.com/backend/v1/fireware/upgrade-info' \
             --data-urlencode 'hardware=QD_Q2' \
             --data-urlencode "currentVersion=$CURRENT_VERSION" \
             --data-urlencode "deviceId=$DEVICE_ID" \
+            -H 'User-Agent: xindi/4.4.23' \
             -H 'Accept: */*' \
             -H 'Accept-Language: en_US' \
             -H 'Content-Type: application/json' \
@@ -73,9 +74,9 @@ jobs:
             -H 'X-Timezone: +03:00' \
             -H "X-Version: $CURRENT_VERSION")
 
-          if ! jq -e '.code == 200' <<<"$RESPONSE" >/dev/null; then
-            echo "API Error:" >&2
-            jq . <<<"$RESPONSE" >&2
+          if ! jq -e '.code == 200' <<<"$RESPONSE" >/dev/null 2>&1; then
+            echo "API Error: unexpected response from QIDI server:" >&2
+            echo "$RESPONSE" >&2
             exit 1
           fi
 
@@ -111,7 +112,7 @@ jobs:
               openssl dgst -sha256 -hmac 'qid3d-from-2025-CAFE-BABE' | \
               sed 's/^.* //')
 
-            RELEASED_RESPONSE=$(curl --silent --show-error -X POST \
+            RELEASED_RESPONSE=$(curl --silent --show-error --retry 3 --retry-delay 2 --retry-all-errors -X POST \
               'https://www.qidimaker.com/backend/v1/fireware/version/released' \
               -H 'Accept: application/json' \
               -H 'Accept-Language: en_US' \
