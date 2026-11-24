@@ -1,0 +1,27 @@
+{
+  "message": "Code:QDE_004_069",
+  "message_translation": {
+    "zh_CN": "助力电机阻力过大，请检查耗材是否缠绕。",
+    "en_US": "The assist motor resistance is too high. Please check if the filament is tangled.",
+    "ja_JP": "アシストモーターの抵抗が大きすぎます。フィラメントが絡まっていないか確認してください。",
+    "ru_RU": "Сопротивление вспомогательного двигателя слишком велико. Проверьте, не запутался ли филамент.",
+    "fr_FR": "La résistance du moteur d'assistance est trop élevée. Veuillez vérifier si le filament est emmêlé.",
+    "de_DE": "Der Widerstand des Hilfsmotors ist zu hoch. Bitte prüfen Sie, ob das Filament verheddert ist.",
+    "it_IT": "La resistenza del motore di assistenza è troppo elevata. Verificare se il filamento è aggrovigliato.",
+    "es_ES": "La resistencia del motor de asistencia es demasiado alta. Compruebe si el filamento está enredado.",
+    "ko_KR": "어시스트 모터의 저항이 너무 큽니다. 필라멘트가 엉켰는지 확인하십시오.",
+    "pt_PT": "A resistência do motor de assistência é demasiado elevada. Verifique se o filamento está emaranhado."
+  },
+  "prossess_msg_translation": {
+    "zh_CN": "助力电机阻力过大，请检查耗材。",
+    "en_US": "The assist motor resistance is too high. Please check the filament.",
+    "ja_JP": "アシストモーターの抵抗が大きすぎます。フィラメントを確認してください。",
+    "ru_RU": "Сопротивление вспомогательного двигателя слишком велико. Проверьте филамент.",
+    "fr_FR": "La résistance du moteur d'assistance est trop élevée. Veuillez vérifier le filament.",
+    "de_DE": "Der Widerstand des Hilfsmotors ist zu hoch. Bitte prüfen Sie das Filament.",
+    "it_IT": "La resistenza del motore di assistenza è troppo elevata. Verificare il filamento.",
+    "es_ES": "La resistencia del motor de asistencia es demasiado alta. Compruebe el filamento.",
+    "ko_KR": "어시스트 모터의 저항이 너무 큽니다. 필라멘트를 확인하십시오.",
+    "pt_PT": "A resistência do motor de assistência é demasiado elevada. Verifique o filamento."
+  }
+}

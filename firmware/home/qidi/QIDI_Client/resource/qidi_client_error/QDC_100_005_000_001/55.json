@@ -1,0 +1,27 @@
+{
+  "message": "Code:QDE_004_070",
+  "message_translation": {
+    "zh_CN": "BOX与缓冲器的通讯错误。",
+    "en_US": "Communication error between BOX and buffer.",
+    "ja_JP": "BOXとバッファ間の通信エラーです。",
+    "ru_RU": "Ошибка связи между BOX и буфером.",
+    "fr_FR": "Erreur de communication entre le BOX et le tampon.",
+    "de_DE": "Kommunikationsfehler zwischen BOX und Puffer.",
+    "it_IT": "Errore di comunicazione tra BOX e buffer.",
+    "es_ES": "Error de comunicación entre BOX y el búfer.",
+    "ko_KR": "BOX와 버퍼 간 통신 오류입니다.",
+    "pt_PT": "Erro de comunicação entre a BOX e o buffer."
+  },
+  "prossess_msg_translation": {
+    "zh_CN": "BOX与缓冲器的通讯错误，请检查6pin通讯线。",
+    "en_US": "Communication error between BOX and buffer. Please check the 6-pin communication cable.",
+    "ja_JP": "BOXとバッファ間の通信エラーです。6ピン通信ケーブルを確認してください。",
+    "ru_RU": "Ошибка связи между BOX и буфером. Проверьте 6-контактный кабель связи.",
+    "fr_FR": "Erreur de communication entre le BOX et le tampon. Veuillez vérifier le câble de communication à 6 broches.",
+    "de_DE": "Kommunikationsfehler zwischen BOX und Puffer. Bitte prüfen Sie das 6-polige Kommunikationskabel.",
+    "it_IT": "Errore di comunicazione tra BOX e buffer. Verificare il cavo di comunicazione a 6 pin.",
+    "es_ES": "Error de comunicación entre BOX y el búfer. Compruebe el cable de comunicación de 6 pines.",
+    "ko_KR": "BOX와 버퍼 간 통신 오류입니다. 6핀 통신 케이블을 확인하십시오.",
+    "pt_PT": "Erro de comunicação entre a BOX e o buffer. Verifique o cabo de comunicação de 6 pinos."
+  }
+}

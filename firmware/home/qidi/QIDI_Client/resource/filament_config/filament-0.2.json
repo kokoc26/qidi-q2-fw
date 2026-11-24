@@ -12,23 +12,15 @@
     "filament_is_support": "0",
     "chamber_temperatures": "0",
     "filament_dev_ams_drying_ams_limitations": [
-      "1",
-      "0"
+      "1"
     ],
     "filament_dev_ams_drying_temperature": [
-      "45",
-      "45",
       "45",
       "45"
     ],
     "filament_dev_ams_drying_time": [
       "12",
-      "12",
-      "12",
       "12"
-    ],
-    "filament_dev_drying_softening_temperature": [
-      "50"
     ],
     "filament_dev_ams_drying_heat_distortion_temperature": [
       "45"
@@ -56,23 +48,15 @@
     "filament_is_support": "0",
     "chamber_temperatures": "0",
     "filament_dev_ams_drying_ams_limitations": [
-      "1",
-      "0"
+      "1"
     ],
     "filament_dev_ams_drying_temperature": [
-      "45",
-      "45",
       "45",
       "45"
     ],
     "filament_dev_ams_drying_time": [
       "12",
-      "12",
-      "12",
       "12"
-    ],
-    "filament_dev_drying_softening_temperature": [
-      "50"
     ],
     "filament_dev_ams_drying_heat_distortion_temperature": [
       "45"
@@ -100,23 +84,15 @@
     "filament_is_support": "0",
     "chamber_temperatures": "0",
     "filament_dev_ams_drying_ams_limitations": [
-      "1",
-      "0"
+      "1"
     ],
     "filament_dev_ams_drying_temperature": [
-      "45",
-      "45",
       "45",
       "45"
     ],
     "filament_dev_ams_drying_time": [
       "12",
-      "12",
-      "12",
       "12"
-    ],
-    "filament_dev_drying_softening_temperature": [
-      "50"
     ],
     "filament_dev_ams_drying_heat_distortion_temperature": [
       "45"
@@ -131,7 +107,7 @@
       "12.0"
     ]
   },
-  "QIDI PLA Rapido Matte": {
+  "QIDI PLA Matte Rapido": {
     "type": "PLA",
     "filament_id": "QFA03",
     "nozzle_temperature": [
@@ -144,23 +120,15 @@
     "filament_is_support": "0",
     "chamber_temperatures": "0",
     "filament_dev_ams_drying_ams_limitations": [
-      "1",
-      "0"
+      "1"
     ],
     "filament_dev_ams_drying_temperature": [
-      "45",
-      "45",
       "45",
       "45"
     ],
     "filament_dev_ams_drying_time": [
       "12",
-      "12",
-      "12",
       "12"
-    ],
-    "filament_dev_drying_softening_temperature": [
-      "50"
     ],
     "filament_dev_ams_drying_heat_distortion_temperature": [
       "45"
@@ -175,7 +143,7 @@
       "12.0"
     ]
   },
-  "QIDI PLA Rapido Metal": {
+  "QIDI PLA Metal Rapido": {
     "type": "PLA",
     "filament_id": "QFA04",
     "nozzle_temperature": [
@@ -188,23 +156,15 @@
     "filament_is_support": "0",
     "chamber_temperatures": "0",
     "filament_dev_ams_drying_ams_limitations": [
-      "1",
-      "0"
+      "1"
     ],
     "filament_dev_ams_drying_temperature": [
-      "45",
-      "45",
       "45",
       "45"
     ],
     "filament_dev_ams_drying_time": [
       "12",
-      "12",
-      "12",
       "12"
-    ],
-    "filament_dev_drying_softening_temperature": [
-      "50"
     ],
     "filament_dev_ams_drying_heat_distortion_temperature": [
       "45"
@@ -232,38 +192,30 @@
     "filament_is_support": "0",
     "chamber_temperatures": "55",
     "filament_dev_ams_drying_ams_limitations": [
-      "1",
-      "0"
+      "1"
     ],
     "filament_dev_ams_drying_temperature": [
-      "45",
-      "45",
-      "45",
-      "45"
+      "65",
+      "65"
     ],
     "filament_dev_ams_drying_time": [
       "12",
-      "12",
-      "12",
       "12"
     ],
-    "filament_dev_drying_softening_temperature": [
-      "50"
-    ],
     "filament_dev_ams_drying_heat_distortion_temperature": [
-      "45"
+      "100"
     ],
     "filament_dev_drying_cooling_temperature": [
-      "45"
+      "85"
     ],
     "filament_dev_chamber_drying_bed_temperature": [
-      "70"
+      "90"
     ],
     "filament_dev_chamber_drying_time": [
       "12.0"
     ]
   },
-  "QIDI ABS Odorless": {
+  "QIDI Odorless ABS": {
     "type": "ABS",
     "filament_id": "QFB53",
     "nozzle_temperature": [
@@ -276,32 +228,24 @@
     "filament_is_support": "0",
     "chamber_temperatures": "65",
     "filament_dev_ams_drying_ams_limitations": [
-      "1",
-      "0"
+      "1"
     ],
     "filament_dev_ams_drying_temperature": [
-      "45",
-      "45",
-      "45",
-      "45"
+      "65",
+      "65"
     ],
     "filament_dev_ams_drying_time": [
       "12",
-      "12",
-      "12",
       "12"
     ],
-    "filament_dev_drying_softening_temperature": [
-      "50"
-    ],
     "filament_dev_ams_drying_heat_distortion_temperature": [
-      "45"
+      "90"
     ],
     "filament_dev_drying_cooling_temperature": [
-      "45"
+      "75"
     ],
     "filament_dev_chamber_drying_bed_temperature": [
-      "70"
+      "90"
     ],
     "filament_dev_chamber_drying_time": [
       "12.0"
@@ -320,38 +264,30 @@
     "filament_is_support": "0",
     "chamber_temperatures": "55",
     "filament_dev_ams_drying_ams_limitations": [
-      "1",
-      "0"
+      "1"
     ],
     "filament_dev_ams_drying_temperature": [
-      "45",
-      "45",
-      "45",
-      "45"
+      "65",
+      "65"
     ],
     "filament_dev_ams_drying_time": [
       "12",
-      "12",
-      "12",
       "12"
     ],
-    "filament_dev_drying_softening_temperature": [
-      "50"
-    ],
     "filament_dev_ams_drying_heat_distortion_temperature": [
-      "45"
+      "90"
     ],
     "filament_dev_drying_cooling_temperature": [
-      "45"
+      "75"
     ],
     "filament_dev_chamber_drying_bed_temperature": [
-      "70"
+      "90"
     ],
     "filament_dev_chamber_drying_time": [
       "12.0"
     ]
   },
-  "QIDI ABS Rapido Metal": {
+  "QIDI ABS Metal Rapido": {
     "type": "ABS",
     "filament_id": "QFB55",
     "nozzle_temperature": [
@@ -364,32 +300,24 @@
     "filament_is_support": "0",
     "chamber_temperatures": "55",
     "filament_dev_ams_drying_ams_limitations": [
-      "1",
-      "0"
+      "1"
     ],
     "filament_dev_ams_drying_temperature": [
-      "45",
-      "45",
-      "45",
-      "45"
+      "65",
+      "65"
     ],
     "filament_dev_ams_drying_time": [
       "12",
-      "12",
-      "12",
       "12"
     ],
-    "filament_dev_drying_softening_temperature": [
-      "50"
-    ],
     "filament_dev_ams_drying_heat_distortion_temperature": [
-      "45"
+      "90"
     ],
     "filament_dev_drying_cooling_temperature": [
-      "45"
+      "75"
     ],
     "filament_dev_chamber_drying_bed_temperature": [
-      "70"
+      "90"
     ],
     "filament_dev_chamber_drying_time": [
       "12.0"
@@ -408,32 +336,24 @@
     "filament_is_support": "0",
     "chamber_temperatures": "0",
     "filament_dev_ams_drying_ams_limitations": [
-      "1",
-      "0"
+      "1"
     ],
     "filament_dev_ams_drying_temperature": [
-      "45",
-      "45",
-      "45",
-      "45"
+      "65",
+      "65"
     ],
     "filament_dev_ams_drying_time": [
       "12",
-      "12",
-      "12",
       "12"
     ],
-    "filament_dev_drying_softening_temperature": [
-      "50"
-    ],
     "filament_dev_ams_drying_heat_distortion_temperature": [
-      "45"
+      "75"
     ],
     "filament_dev_drying_cooling_temperature": [
-      "45"
+      "55"
     ],
     "filament_dev_chamber_drying_bed_temperature": [
-      "70"
+      "80"
     ],
     "filament_dev_chamber_drying_time": [
       "12.0"
@@ -452,32 +372,24 @@
     "filament_is_support": "0",
     "chamber_temperatures": "0",
     "filament_dev_ams_drying_ams_limitations": [
-      "1",
-      "0"
+      "1"
     ],
     "filament_dev_ams_drying_temperature": [
-      "45",
-      "45",
-      "45",
-      "45"
+      "65",
+      "65"
     ],
     "filament_dev_ams_drying_time": [
       "12",
-      "12",
-      "12",
       "12"
     ],
-    "filament_dev_drying_softening_temperature": [
-      "50"
-    ],
     "filament_dev_ams_drying_heat_distortion_temperature": [
-      "45"
+      "75"
     ],
     "filament_dev_drying_cooling_temperature": [
-      "45"
+      "55"
     ],
     "filament_dev_chamber_drying_bed_temperature": [
-      "70"
+      "80"
     ],
     "filament_dev_chamber_drying_time": [
       "12.0"
@@ -496,32 +408,24 @@
     "filament_is_support": "0",
     "chamber_temperatures": "0",
     "filament_dev_ams_drying_ams_limitations": [
-      "1",
-      "0"
+      "1"
     ],
     "filament_dev_ams_drying_temperature": [
-      "45",
-      "45",
-      "45",
-      "45"
+      "65",
+      "65"
     ],
     "filament_dev_ams_drying_time": [
       "12",
-      "12",
-      "12",
       "12"
     ],
-    "filament_dev_drying_softening_temperature": [
-      "50"
-    ],
     "filament_dev_ams_drying_heat_distortion_temperature": [
-      "45"
+      "75"
     ],
     "filament_dev_drying_cooling_temperature": [
-      "45"
+      "55"
     ],
     "filament_dev_chamber_drying_bed_temperature": [
-      "70"
+      "80"
     ],
     "filament_dev_chamber_drying_time": [
       "12.0"
@@ -540,32 +444,24 @@
     "filament_is_support": "0",
     "chamber_temperatures": "0",
     "filament_dev_ams_drying_ams_limitations": [
-      "1",
-      "0"
+      "1"
     ],
     "filament_dev_ams_drying_temperature": [
-      "45",
-      "45",
-      "45",
-      "45"
+      "65",
+      "65"
     ],
     "filament_dev_ams_drying_time": [
       "12",
-      "12",
-      "12",
       "12"
     ],
-    "filament_dev_drying_softening_temperature": [
-      "50"
-    ],
     "filament_dev_ams_drying_heat_distortion_temperature": [
-      "45"
+      "75"
     ],
     "filament_dev_drying_cooling_temperature": [
-      "45"
+      "55"
     ],
     "filament_dev_chamber_drying_bed_temperature": [
-      "70"
+      "80"
     ],
     "filament_dev_chamber_drying_time": [
       "12.0"
@@ -584,32 +480,24 @@
     "filament_is_support": "0",
     "chamber_temperatures": "55",
     "filament_dev_ams_drying_ams_limitations": [
-      "1",
-      "0"
+      "1"
     ],
     "filament_dev_ams_drying_temperature": [
-      "45",
-      "45",
-      "45",
-      "45"
+      "65",
+      "65"
     ],
     "filament_dev_ams_drying_time": [
       "12",
-      "12",
-      "12",
       "12"
     ],
-    "filament_dev_drying_softening_temperature": [
-      "50"
-    ],
     "filament_dev_ams_drying_heat_distortion_temperature": [
-      "45"
+      "90"
     ],
     "filament_dev_drying_cooling_temperature": [
-      "45"
+      "75"
     ],
     "filament_dev_chamber_drying_bed_temperature": [
-      "70"
+      "90"
     ],
     "filament_dev_chamber_drying_time": [
       "12.0"
@@ -628,32 +516,24 @@
     "filament_is_support": "0",
     "chamber_temperatures": "60",
     "filament_dev_ams_drying_ams_limitations": [
-      "1",
-      "0"
+      "1"
     ],
     "filament_dev_ams_drying_temperature": [
-      "45",
-      "45",
-      "45",
-      "45"
+      "65",
+      "65"
     ],
     "filament_dev_ams_drying_time": [
       "12",
-      "12",
-      "12",
       "12"
     ],
-    "filament_dev_drying_softening_temperature": [
-      "50"
-    ],
     "filament_dev_ams_drying_heat_distortion_temperature": [
-      "45"
+      "105"
     ],
     "filament_dev_drying_cooling_temperature": [
-      "45"
+      "90"
     ],
     "filament_dev_chamber_drying_bed_temperature": [
-      "70"
+      "90"
     ],
     "filament_dev_chamber_drying_time": [
       "12.0"
@@ -672,32 +552,24 @@
     "filament_is_support": "0",
     "chamber_temperatures": "0",
     "filament_dev_ams_drying_ams_limitations": [
-      "1",
-      "0"
+      "1"
     ],
     "filament_dev_ams_drying_temperature": [
-      "45",
-      "45",
-      "45",
-      "45"
+      "65",
+      "65"
     ],
     "filament_dev_ams_drying_time": [
       "12",
-      "12",
-      "12",
       "12"
     ],
-    "filament_dev_drying_softening_temperature": [
-      "50"
-    ],
     "filament_dev_ams_drying_heat_distortion_temperature": [
-      "45"
+      "75"
     ],
     "filament_dev_drying_cooling_temperature": [
-      "45"
+      "55"
     ],
     "filament_dev_chamber_drying_bed_temperature": [
-      "70"
+      "80"
     ],
     "filament_dev_chamber_drying_time": [
       "12.0"
@@ -716,23 +588,15 @@
     "filament_is_support": "0",
     "chamber_temperatures": "0",
     "filament_dev_ams_drying_ams_limitations": [
-      "1",
-      "0"
+      "1"
     ],
     "filament_dev_ams_drying_temperature": [
-      "45",
-      "45",
       "45",
       "45"
     ],
     "filament_dev_ams_drying_time": [
       "12",
-      "12",
-      "12",
       "12"
-    ],
-    "filament_dev_drying_softening_temperature": [
-      "50"
     ],
     "filament_dev_ams_drying_heat_distortion_temperature": [
       "45"
@@ -760,23 +624,15 @@
     "filament_is_support": "0",
     "chamber_temperatures": "0",
     "filament_dev_ams_drying_ams_limitations": [
-      "1",
-      "0"
+      "1"
     ],
     "filament_dev_ams_drying_temperature": [
-      "45",
-      "45",
       "45",
       "45"
     ],
     "filament_dev_ams_drying_time": [
       "12",
-      "12",
-      "12",
       "12"
-    ],
-    "filament_dev_drying_softening_temperature": [
-      "50"
     ],
     "filament_dev_ams_drying_heat_distortion_temperature": [
       "45"
@@ -804,32 +660,24 @@
     "filament_is_support": "0",
     "chamber_temperatures": "55",
     "filament_dev_ams_drying_ams_limitations": [
-      "1",
-      "0"
+      "1"
     ],
     "filament_dev_ams_drying_temperature": [
-      "45",
-      "45",
-      "45",
-      "45"
+      "65",
+      "65"
     ],
     "filament_dev_ams_drying_time": [
       "12",
-      "12",
-      "12",
       "12"
     ],
-    "filament_dev_drying_softening_temperature": [
-      "50"
-    ],
     "filament_dev_ams_drying_heat_distortion_temperature": [
-      "45"
+      "90"
     ],
     "filament_dev_drying_cooling_temperature": [
-      "45"
+      "75"
     ],
     "filament_dev_chamber_drying_bed_temperature": [
-      "70"
+      "90"
     ],
     "filament_dev_chamber_drying_time": [
       "12.0"
@@ -848,32 +696,24 @@
     "filament_is_support": "0",
     "chamber_temperatures": "0",
     "filament_dev_ams_drying_ams_limitations": [
-      "1",
-      "0"
+      "1"
     ],
     "filament_dev_ams_drying_temperature": [
-      "45",
-      "45",
-      "45",
-      "45"
+      "65",
+      "65"
     ],
     "filament_dev_ams_drying_time": [
       "12",
-      "12",
-      "12",
       "12"
     ],
-    "filament_dev_drying_softening_temperature": [
-      "50"
-    ],
     "filament_dev_ams_drying_heat_distortion_temperature": [
-      "45"
+      "75"
     ],
     "filament_dev_drying_cooling_temperature": [
-      "45"
+      "55"
     ],
     "filament_dev_chamber_drying_bed_temperature": [
-      "70"
+      "80"
     ],
     "filament_dev_chamber_drying_time": [
       "12.0"
@@ -892,23 +732,15 @@
     "filament_is_support": "0",
     "chamber_temperatures": "0",
     "filament_dev_ams_drying_ams_limitations": [
-      "1",
-      "0"
+      "1"
     ],
     "filament_dev_ams_drying_temperature": [
-      "45",
-      "45",
       "45",
       "45"
     ],
     "filament_dev_ams_drying_time": [
       "12",
-      "12",
-      "12",
       "12"
-    ],
-    "filament_dev_drying_softening_temperature": [
-      "50"
     ],
     "filament_dev_ams_drying_heat_distortion_temperature": [
       "45"
@@ -936,32 +768,24 @@
     "filament_is_support": "0",
     "chamber_temperatures": "55",
     "filament_dev_ams_drying_ams_limitations": [
-      "1",
-      "0"
+      "1"
     ],
     "filament_dev_ams_drying_temperature": [
-      "45",
-      "45",
-      "45",
-      "45"
+      "65",
+      "65"
     ],
     "filament_dev_ams_drying_time": [
       "12",
-      "12",
-      "12",
       "12"
     ],
-    "filament_dev_drying_softening_temperature": [
-      "50"
-    ],
     "filament_dev_ams_drying_heat_distortion_temperature": [
-      "45"
+      "90"
     ],
     "filament_dev_drying_cooling_temperature": [
-      "45"
+      "75"
     ],
     "filament_dev_chamber_drying_bed_temperature": [
-      "70"
+      "90"
     ],
     "filament_dev_chamber_drying_time": [
       "12.0"
@@ -980,32 +804,24 @@
     "filament_is_support": "0",
     "chamber_temperatures": "0",
     "filament_dev_ams_drying_ams_limitations": [
-      "1",
-      "0"
+      "1"
     ],
     "filament_dev_ams_drying_temperature": [
-      "45",
-      "45",
-      "45",
-      "45"
+      "65",
+      "65"
     ],
     "filament_dev_ams_drying_time": [
       "12",
-      "12",
-      "12",
       "12"
     ],
-    "filament_dev_drying_softening_temperature": [
-      "50"
-    ],
     "filament_dev_ams_drying_heat_distortion_temperature": [
-      "45"
+      "75"
     ],
     "filament_dev_drying_cooling_temperature": [
-      "45"
+      "55"
     ],
     "filament_dev_chamber_drying_bed_temperature": [
-      "70"
+      "80"
     ],
     "filament_dev_chamber_drying_time": [
       "12.0"
@@ -1024,23 +840,15 @@
     "filament_is_support": "0",
     "chamber_temperatures": "0",
     "filament_dev_ams_drying_ams_limitations": [
-      "1",
-      "0"
+      "1"
     ],
     "filament_dev_ams_drying_temperature": [
-      "45",
-      "45",
       "45",
       "45"
     ],
     "filament_dev_ams_drying_time": [
       "12",
-      "12",
-      "12",
       "12"
-    ],
-    "filament_dev_drying_softening_temperature": [
-      "50"
     ],
     "filament_dev_ams_drying_heat_distortion_temperature": [
       "45"
@@ -1068,32 +876,24 @@
     "filament_is_support": "0",
     "chamber_temperatures": "60",
     "filament_dev_ams_drying_ams_limitations": [
-      "1",
-      "0"
+      "1"
     ],
     "filament_dev_ams_drying_temperature": [
-      "45",
-      "45",
-      "45",
-      "45"
+      "65",
+      "65"
     ],
     "filament_dev_ams_drying_time": [
       "12",
-      "12",
-      "12",
       "12"
     ],
-    "filament_dev_drying_softening_temperature": [
-      "50"
-    ],
     "filament_dev_ams_drying_heat_distortion_temperature": [
-      "45"
+      "90"
     ],
     "filament_dev_drying_cooling_temperature": [
-      "45"
+      "75"
     ],
     "filament_dev_chamber_drying_bed_temperature": [
-      "70"
+      "90"
     ],
     "filament_dev_chamber_drying_time": [
       "12.0"
@@ -1112,23 +912,15 @@
     "filament_is_support": "0",
     "chamber_temperatures": "0",
     "filament_dev_ams_drying_ams_limitations": [
-      "1",
-      "0"
+      "1"
     ],
     "filament_dev_ams_drying_temperature": [
-      "45",
-      "45",
       "45",
       "45"
     ],
     "filament_dev_ams_drying_time": [
       "12",
-      "12",
-      "12",
       "12"
-    ],
-    "filament_dev_drying_softening_temperature": [
-      "50"
     ],
     "filament_dev_ams_drying_heat_distortion_temperature": [
       "45"
@@ -1156,32 +948,24 @@
     "filament_is_support": "0",
     "chamber_temperatures": "60",
     "filament_dev_ams_drying_ams_limitations": [
-      "1",
-      "0"
+      "1"
     ],
     "filament_dev_ams_drying_temperature": [
-      "45",
-      "45",
-      "45",
-      "45"
+      "65",
+      "65"
     ],
     "filament_dev_ams_drying_time": [
       "12",
-      "12",
-      "12",
       "12"
     ],
-    "filament_dev_drying_softening_temperature": [
-      "50"
-    ],
     "filament_dev_ams_drying_heat_distortion_temperature": [
-      "45"
+      "90"
     ],
     "filament_dev_drying_cooling_temperature": [
-      "45"
+      "75"
     ],
     "filament_dev_chamber_drying_bed_temperature": [
-      "70"
+      "90"
     ],
     "filament_dev_chamber_drying_time": [
       "12.0"
@@ -1200,23 +984,15 @@
     "filament_is_support": "0",
     "chamber_temperatures": "0",
     "filament_dev_ams_drying_ams_limitations": [
-      "1",
-      "0"
+      "1"
     ],
     "filament_dev_ams_drying_temperature": [
-      "45",
-      "45",
       "45",
       "45"
     ],
     "filament_dev_ams_drying_time": [
       "12",
-      "12",
-      "12",
       "12"
-    ],
-    "filament_dev_drying_softening_temperature": [
-      "50"
     ],
     "filament_dev_ams_drying_heat_distortion_temperature": [
       "45"
@@ -1244,23 +1020,15 @@
     "filament_is_support": "0",
     "chamber_temperatures": "0",
     "filament_dev_ams_drying_ams_limitations": [
-      "1",
-      "0"
+      "1"
     ],
     "filament_dev_ams_drying_temperature": [
-      "45",
-      "45",
       "45",
       "45"
     ],
     "filament_dev_ams_drying_time": [
       "12",
-      "12",
-      "12",
       "12"
-    ],
-    "filament_dev_drying_softening_temperature": [
-      "50"
     ],
     "filament_dev_ams_drying_heat_distortion_temperature": [
       "45"
