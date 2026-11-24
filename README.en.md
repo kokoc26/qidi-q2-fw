@@ -38,7 +38,37 @@
 
 
 
+
 ## Changelog
+
+### V01.01.03.04 - 2026/11/23
+
+#### Firmware Link:
+
+- [Download archive](https://github.com/kokoc26/qidi-q2-fw/releases/download/V01.01.03.04/QD_Q2_01.01.03.04.zip)
+
+#### Changes:
+
+### Added
+
+1. Added nozzle diameter/type validation for print models
+
+2. Removed the URL from the version history popup
+
+### Improved
+
+1. Removed the restriction that blocked offline updates when an online update is available
+
+2. Hid the filament editing page in Fluidd
+
+3. Optimized some configuration parameters
+
+### Fixed
+
+1. Fixed text display issues in some locations
+
+2. Fixed hot bed validation error before printing
+
 
 ### V01.01.03.02 - 2026/10/23
 
